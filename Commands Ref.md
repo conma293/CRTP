@@ -1,6 +1,6 @@
 # Commands
 
-# bypass
+# powershell script bypass
 Start PowerShell from cmd.exe:
 
 powershell.exe -ep bypass
