@@ -269,8 +269,8 @@ https://github.com/mitre/caldera/issues/38#issuecomment-396055260
 
 https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
 
-#Rights Abuse - ACLs
-####AdminSDHolder 
+# Rights Abuse - ACLs
+#### AdminSDHolder 
 
 •  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
 
