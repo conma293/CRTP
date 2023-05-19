@@ -139,7 +139,7 @@ dc machines)
 
 Run PowerUp - are you already localadmin?
 ```
-../PowerUp.ps1
+. ./PowerUp.ps1
 Invoke-AllChecks 
 ```
 
