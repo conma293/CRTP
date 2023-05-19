@@ -115,7 +115,6 @@ dc machines)
 
 
 ```Invoke-ShareFinder –Verbose```
-```Invoke-ShareFinder -ExcludeStandard -ExcludePrint -ExcludeIPC –Verbose```
 
 ```Invoke-FileFinder –Verbose```
 
