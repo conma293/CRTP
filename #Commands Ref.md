@@ -121,6 +121,7 @@ dc machines)
 
 ```Get-NetFileServer```
 
+* * *
 
 #### User Hunting
 
@@ -131,6 +132,8 @@ dc machines)
 ```Invoke-UserHunter``` for users/groups you want - will show all active sessions for users/users of specified groups
 
 ```Invoke-UserHunter -GroupName "RDPUsers"```
+
+* * *
 
 #### Priv Esc
 
