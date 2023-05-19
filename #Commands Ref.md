@@ -135,7 +135,7 @@ dc machines)
 
 * * *
 
-#### Priv Esc
+# Priv Esc
 
 Run PowerUp - are you already localadmin?
 ```
