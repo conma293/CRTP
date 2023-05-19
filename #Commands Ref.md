@@ -84,10 +84,10 @@ OR If already running-
 
 
 
-```Get-NetLocalGroup -ComputerName WKSNTl -ListGroups``` List all the local groups on a machine (needs admin privs on non-
+```Get-NetLocalGroup -ComputerName WKSNTl``` List all the local groups on a machine (needs admin privs on non-
 dc machines)
 
-```Get-NetLocalGroup -ComputerName WKSNTl -Recurse``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
+```Get-NetLocalGroupMember -ComputerName WKSNTl``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
 
 
 ```Get-NetLoggedon –ComputerName <servername>``` (needs localadmin)
