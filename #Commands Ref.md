@@ -66,6 +66,9 @@ OR If already running-
 
 # Powerview
 ```. .\PowerView.ps1```
+
+Readme - https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
+
 #### Machines
 
 ```Get-DomainComputer```
