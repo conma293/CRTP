@@ -269,7 +269,7 @@ misc::skeleton
 ```Invoke-Mimikatz -Command '"misc::memssp"'``` - Logs local logons to C:\Windows\system32\kiwissp.log
 
 
-#### AV Evasion
+#### Patch script if VirtualAlloc Error
 https://github.com/mitre/caldera/issues/38#issuecomment-396055260
 
 https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
