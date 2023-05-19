@@ -84,15 +84,34 @@ OR If already running-
 ```Get-DomainGroup –UserName "bob"```
 #### Machines
 
+```Get-DomainComputer```
+
+```Get-DomainComputer –OperatingSystem "*Server 2016*" ```
+
+```Get-DomainComputer -Ping```
+
+```Get-DomainComputer -FullData```
+
+```Get-ADComputer -Filter * | select Name```
+
+```Get-ADComputer -Filter 'OperatingSystem -like "*Server 2016*"' - Properties OperatingSystem | select Name,OperatingSystem```
+
+```Get-ADComputer -Filter * -Properties *```
+
+```Get-ADComputer -Filter *  -Properties DNSHostName | %{Test- Connection -Count 1 -ComputerName $_.DNSHostName}```
+
+
+
+
 ```Get-NetLocalGroup -ComputerName WKSNTl -ListGroups``` List all the local groups on a machine (needs admin privs on non-
 dc machines)
 
 ```Get-NetLocalGroup -ComputerName WKSNTl -Recurse``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
 
-```-NetLoggedon –ComputerName <servername>``` 
 
+```Get-NetLoggedon –ComputerName <servername>``` (needs localadmin)
 
-```Get-LoggedonLocal -ComputerName``` 
+```Get-LoggedonLocal -ComputerName``` (needs localadmin)
 
 #### Shares, GPOs, etc
 
