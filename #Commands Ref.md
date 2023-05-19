@@ -75,6 +75,7 @@ OR If already running-
 
 #### Group Membership
 ```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
+
 ```Get-DomainGroupMember -Identity "Domain Admin*" | select GroupName, MemberName```
 
 ```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
