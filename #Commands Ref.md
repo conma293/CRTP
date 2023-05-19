@@ -66,30 +66,11 @@ OR If already running-
 
 # Powerview
 ```. .\PowerView.ps1```
-#### User Search
-```Get-DomainUser```
-```Get-DomainUser –Identity bob```
-
-```Get-ADUser -Filter * -Properties *```
-```Get-ADUser -Identity bob -Properties *```
-
-#### Group Membership
-```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
-
-```Get-DomainGroupMember -Identity "Domain Admin*" | select GroupName, MemberName```
-
-```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
-
-
-```Get-DomainGroup –UserName "bob"```
 #### Machines
 
 ```Get-DomainComputer```
-
 ```Get-DomainComputer –OperatingSystem "*Server 2016*" ```
-
 ```Get-DomainComputer -Ping```
-
 ```Get-DomainComputer -FullData```
 
 ```Get-ADComputer -Filter * | select Name```
@@ -112,6 +93,23 @@ dc machines)
 ```Get-NetLoggedon –ComputerName <servername>``` (needs localadmin)
 
 ```Get-LoggedonLocal -ComputerName``` (needs localadmin)
+#### User Search
+```Get-DomainUser```
+```Get-DomainUser –Identity bob```
+
+```Get-ADUser -Filter * -Properties *```
+```Get-ADUser -Identity bob -Properties *```
+
+#### Group Membership
+```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
+
+```Get-DomainGroupMember -Identity "Domain Admin*" | select GroupName, MemberName```
+
+```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
+
+
+```Get-DomainGroup –UserName "bob"```
+
 
 #### Shares, GPOs, etc
 
