@@ -88,7 +88,9 @@ OR If already running-
 
 ```Invoke-ShareFinder –Verbose```
 ```Invoke-ShareFinder -ExcludeStandard -ExcludePrint -ExcludeIPC –Verbose```
+
 ```Invoke-FileFinder –Verbose```
+
 ```Get-NetFileServer```
 
 
