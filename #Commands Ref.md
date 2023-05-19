@@ -51,8 +51,11 @@ Run PowerUp - are you already localadmin?
 Invoke-AllChecks 
 ```
 
+
 ```Get-UnquotedService```
+
 ```Get-ModifiableService```
+
 ```Get-ModifiableServiceFile | select servicename, abusefeature```
 
 # Tickets
