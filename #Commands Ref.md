@@ -82,6 +82,17 @@ OR If already running-
 
 
 ```Get-DomainGroup –UserName "bob"```
+#### Machines
+
+```Get-NetLocalGroup -ComputerName WKSNTl -ListGroups``` List all the local groups on a machine (needs admin privs on non-
+dc machines)
+
+```Get-NetLocalGroup -ComputerName WKSNTl -Recurse``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
+
+```-NetLoggedon –ComputerName <servername>``` 
+
+
+```Get-LoggedonLocal -ComputerName``` 
 
 #### Shares, GPOs, etc
 
