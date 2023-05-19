@@ -270,6 +270,8 @@ misc::skeleton
 
 
 #### Patch script if VirtualAlloc Error
+Patched script working available here - [Tool dump](https://github.com/conma293/mvp) 
+
 https://github.com/mitre/caldera/issues/38#issuecomment-396055260
 
 https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
