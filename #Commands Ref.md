@@ -111,15 +111,15 @@ Readme - https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
 
 * * *
 #### Users and Groups of Machines
-```Get-NetLocalGroup -ComputerName WKSNTl``` List all the local groups on a machine (needs admin privs on non-
+```Get-NetLocalGroup -ComputerName <hostname>``` List all the local groups on a machine (needs admin privs on non-
 dc machines)
 
-```Get-NetLocalGroupMember -ComputerName WKSNTl``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
+```Get-NetLocalGroupMember -ComputerName <hostname>``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
 
 
-```Get-NetLoggedon –ComputerName <servername>``` (needs localadmin)
+```Get-NetLoggedon –ComputerName <hostname>``` (needs localadmin)
 
-```Get-LoggedonLocal -ComputerName``` (needs localadmin)
+```Get-LoggedonLocal -ComputerName <hostname>``` (needs localadmin)
 #### User Hunting
 
 ```Run Find-LocalAdminAccess``` - find all machines on current domain where current user has localadmin access
