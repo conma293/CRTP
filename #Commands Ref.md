@@ -84,18 +84,6 @@ Readme - https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
 
 ```Get-ADComputer -Filter *  -Properties DNSHostName | %{Test- Connection -Count 1 -ComputerName $_.DNSHostName}```
 
-
-
-
-```Get-NetLocalGroup -ComputerName WKSNTl``` List all the local groups on a machine (needs admin privs on non-
-dc machines)
-
-```Get-NetLocalGroupMember -ComputerName WKSNTl``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
-
-
-```Get-NetLoggedon –ComputerName <servername>``` (needs localadmin)
-
-```Get-LoggedonLocal -ComputerName``` (needs localadmin)
 #### User Search
 ```Get-DomainUser```
 ```Get-DomainUser –Identity bob```
@@ -124,7 +112,16 @@ dc machines)
 ```Get-NetFileServer```
 
 * * *
+#### Users and Groups of Machines
+```Get-NetLocalGroup -ComputerName WKSNTl``` List all the local groups on a machine (needs admin privs on non-
+dc machines)
 
+```Get-NetLocalGroupMember -ComputerName WKSNTl``` Get members of all the local groups on a machine (needs admin privs on non-dc machines)
+
+
+```Get-NetLoggedon –ComputerName <servername>``` (needs localadmin)
+
+```Get-LoggedonLocal -ComputerName``` (needs localadmin)
 #### User Hunting
 
 ```Run Find-LocalAdminAccess``` - find all machines on current domain where current user has localadmin access
