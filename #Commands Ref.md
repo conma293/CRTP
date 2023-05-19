@@ -282,3 +282,5 @@ Check ACLs:
 
 ```Get-ObjectAcl -SamAccountName "Domain Admins" - ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
 
+```Get-ObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ?{ ($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll') }```
+
