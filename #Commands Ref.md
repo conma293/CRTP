@@ -81,7 +81,7 @@ OR If already running-
 ```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
 
 
-```Get-NetGroup –UserName "bob"```
+```Get-DomainGroup –UserName "bob"```
 
 #### Shares, GPOs, etc
 
