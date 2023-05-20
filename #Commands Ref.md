@@ -1,4 +1,5 @@
 # Commands
+- [Powershell Basics](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powershell-basics)
 - [Running Powershell](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#running-powershell)
 - [Download Cradles](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#tool-download)
 - [Active Directory Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#active-directory-enumeration)
