@@ -355,16 +355,13 @@ misc::skeleton
 
 #### Check ACLs
 NOT WORKING!!
-```
-Get-ObjectAcl -SamAccountName "Domain Admins" - ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}
-```
+```Get-ObjectAcl -SamAccountName "Domain Admins" - ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
 
 DCSync (not working): 
 
-```
-Get-ObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Josh") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}
-```
+```Get-ObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Josh") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
+This appends the resolved user or group name to each ACE and recurses through:
 ```
 Get-ObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
 ```
