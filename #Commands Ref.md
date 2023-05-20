@@ -23,9 +23,10 @@
   - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
   - [Check ACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 - [Rights Abuse - Security Descriptors](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---security-descriptors)
-- [Remote WMI]()
-- [PS Remoting]()
-- [Remote Registry]()
+  - [Remote WMI](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-wmi---nishang)
+  - [PS Remoting]()
+  - [Remote Registry]()
+-[Kerberoasting]()
 
 
 
