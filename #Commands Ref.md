@@ -22,7 +22,7 @@
   - [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
   - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
   - [Check ACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
-- [Persistence using ACLs - Security Descriptors](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---security-descriptors)
+- [Persistence using ACLs - Security Descriptors](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---security-descriptors)
   - [Remote WMI](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-wmi---nishang)
   - [PS Remoting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ps-remoting)
   - [Remote Registry](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-registry---damp)
