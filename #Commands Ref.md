@@ -23,7 +23,9 @@
   - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
   - [Check ACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 - [Rights Abuse - Security Descriptors](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---security-descriptors)
-- 
+- [Remote WMI]()
+- [PS Remoting]()
+- [Remote Registry]()
 
 
 
@@ -394,7 +396,7 @@ Set-RemotePSRemoting -UserName Josh -ComputerName dc01.ecorp.lab -Verbose
 ```
 
 #### Remote Registry - DAMP
-link to DAMP -
+link to DAMP - https://github.com/HarmJ0y/DAMP
 
 ```
 . .\DAMP-master\Add-RemoteRegBackdoor.ps1
