@@ -6,7 +6,7 @@
   - [Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#machines)
   - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-search)
   - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#group-membership)
-  - [Shares, GPOs etc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#shares-gpos-etc))
+  - [Shares, GPOs etc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#shares-gpos-etc)
   - [Users and Groups of Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
 - [BloodHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
