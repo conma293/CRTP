@@ -430,5 +430,11 @@ Get-RemoteMachineAccountHash -ComputerName dc01.ecorp.lab -Verbose
 ```
 
 
-#Kerberoasting
+# Kerberoasting
+
+
+
+####
+
+####
 
