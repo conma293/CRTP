@@ -8,7 +8,8 @@
   - [Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#machines)
   - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-search)
   - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#group-membership)
-  - [Shares etc]()
+  - [Shares etc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#shares-etc)
+  - [GPOs missing]
   - [Users and Groups of Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
 - [BloodHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
@@ -21,11 +22,11 @@
   - [ScheduledTask via HOST TGS]()
   - [Invoke](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
-  - [Pacthing Invoke-Mimikatz.ps1 in case of VirtualAlloc Error](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#patch-script-if-virtualalloc-error)
+  - [Patching Invoke-Mimikatz.ps1 in case of VirtualAlloc Error](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#patch-script-if-virtualalloc-error)
 - [Rights Abuse](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---acls)
-- [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
-- [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
-- [Check ACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
+  - [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
+  - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
+  - [Check ACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 
 
 
