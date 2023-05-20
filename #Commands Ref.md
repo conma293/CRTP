@@ -367,6 +367,10 @@ misc::skeleton
 #### Check ACLs
 NOT WORKING!!
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
+try:
+```
+Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Josh' }
+```
 
 DCSync (not working): 
 
