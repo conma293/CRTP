@@ -379,7 +379,7 @@ DCSync (not working):
 
 Note:  ```Where-Object```  ==  ``` ? ```
 
-
+#### Recurse through all ACEs for user/group
 This appends the resolved user or group name to each ACE and recurses through:
 ```
 Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
