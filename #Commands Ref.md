@@ -3,14 +3,14 @@
 - [Running Powershell - EP Bypass](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#running-powershell)
 - [Download Cradles](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#tool-download)
 - [Active Directory Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#active-directory-enumeration)
-  -[Users]
-  -[Groups]
+  - [Users]
+  - [Groups]
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
 - [PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
 - [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---tickets)
-- -[Invoke]
-- -[Misc Attacks]
+- - [Invoke]
+- - [Misc Attacks]
 - [Rights Abuse](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---acls)
 
 
