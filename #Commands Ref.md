@@ -150,7 +150,7 @@ Import AD Module without RSAT:
 ```Get-DomainGroup –UserName "bob"```
 
 
-#### Shares, GPOs, etc
+#### Shares, etc
 
 
 ```Invoke-ShareFinder –Verbose```
