@@ -415,7 +415,7 @@ Set-RemotePSRemoting -UserName Josh -ComputerName dc01.ecorp.lab -Verbose
 #### Remote Registry - DAMP
 link to DAMP - https://github.com/HarmJ0y/DAMP
 
-ref - https://posts.specterops.io/remote-hash-extraction-on-demand-via-host-security-descriptor-modification-2cf505ec5c40
+https://posts.specterops.io/remote-hash-extraction-on-demand-via-host-security-descriptor-modification-2cf505ec5c40
 
 ```
 . .\DAMP-master\Add-RemoteRegBackdoor.ps1
