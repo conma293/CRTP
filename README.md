@@ -21,10 +21,12 @@
 
 
 
-# Other
+# Other resources 
 For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
 #### Other CRTP Cheatsheets
 https://github.com/0xJs/CRTP-cheatsheet
+
+https://github.com/0xJs/CRTE-Cheatsheet/blob/main/Lateral-Movement.md
 
 https://github.com/idnahacks/AD_attack_defend_cheatsheet
