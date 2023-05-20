@@ -140,6 +140,11 @@ Import AD Module without RSAT:
 ```Get-ADUser -Identity bob -Properties *```
 
 #### Group Membership
+
+```Get-DomainGroup "admin"```
+
+```Get-DomainGroup –UserName "bob"```
+
 ```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
 
 ```Get-DomainGroupMember -Identity "Domain Admin*" | select GroupName, MemberName```
@@ -147,7 +152,6 @@ Import AD Module without RSAT:
 ```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
 
 
-```Get-DomainGroup –UserName "bob"```
 
 
 #### Shares, GPOs, etc
