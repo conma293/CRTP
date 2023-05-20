@@ -3,18 +3,29 @@
 - [Running Powershell - AMSI and EP Bypass](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#running-powershell)
 - [Download Cradles](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#tool-download)
 - [Active Directory Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#active-directory-enumeration)
-  - [Machines]
-  - [Users]
-  - [Groups]
-  - [Shares]
-  - [Other]
-  - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
+  - [Powerview](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powerview)
+  - [AD Module](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ad-module)
+  - [Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#machines)
+  - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-search)
+  - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#group-membership)
+  - [Shares etc]()
+  - [Users and Groups of Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
+  - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
+- [BloodHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
 - [PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
 - [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---tickets)
-- - [Invoke]
-- - [Misc Attacks]
+  - [DCSync](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dcsync)
+  - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden)
+  - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
+  - [ScheduledTask via HOST TGS]()
+  - [Invoke](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
+  - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
+  - [Pacthing Invoke-Mimikatz.ps1 in case of VirtualAlloc Error](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#patch-script-if-virtualalloc-error)
 - [Rights Abuse](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---acls)
+- [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
+- [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
+- [Check ACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 
 
 
@@ -262,7 +273,7 @@ kerberos::golden
 538555522 /target:dc01.ecorp.local /service:HOST 
 /rc4:731a061e57100b658bc59d71f5176e93 /user:Administrator /ptt
 ```
-
+#### Scheduled Task Creation via TGS
 With HOST Service access you can now create a scheduled task on the target machine:-
 
 ```
