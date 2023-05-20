@@ -89,7 +89,9 @@ OR If already running-
 
 #### MS Bypass
 ```Set-MpPreference -DisableIOAVProtection $true```
+
 ```Set-MpPreference -DisableRealtimeMonitoring $true```
+
 #### Kerberos Tickets
 ```klist```
 
