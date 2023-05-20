@@ -1,4 +1,9 @@
 # Commands
+[Running Powershell](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#running-powershell)
+
+
+
+
 
 # Powershell Basics
 
