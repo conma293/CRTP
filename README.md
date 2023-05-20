@@ -16,9 +16,7 @@
 #### OSCP
 - [OSCP stuff](https://github.com/conma293/OSCP-tools)
 
-#### Other CRTP Cheatsheets
-https://github.com/0xJs/CRTP-cheatsheet
-https://github.com/idnahacks/AD_attack_defend_cheatsheet
+
 
 
 
@@ -26,4 +24,7 @@ https://github.com/idnahacks/AD_attack_defend_cheatsheet
 # Other
 For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
+#### Other CRTP Cheatsheets
+https://github.com/0xJs/CRTP-cheatsheet
 
+https://github.com/idnahacks/AD_attack_defend_cheatsheet
