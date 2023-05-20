@@ -26,7 +26,7 @@
   - [Remote WMI](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-wmi---nishang)
   - [PS Remoting]()
   - [Remote Registry]()
--[Kerberoasting]()
+- [Kerberoasting]()
 
 
 
