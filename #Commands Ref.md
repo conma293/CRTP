@@ -360,3 +360,13 @@ DCSync (not working):
 ```Get-ObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ?{ ($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll') }```
 
 ```Get-ObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}```
+* * * 
+#### WMI Remoting
+link to Nishang
+#### PS Remoting
+link to Nishang
+#### DAMP
+link to DAMP
+
+#Kerberoasting
+
