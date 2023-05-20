@@ -365,7 +365,7 @@ DCSync (not working):
 link to Nishang
 #### PS Remoting
 link to Nishang
-#### DAMP
+#### Remote Registry - DAMP
 link to DAMP
 
 #Kerberoasting
