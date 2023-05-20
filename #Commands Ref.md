@@ -200,7 +200,7 @@ Jump to DC to dump krbtgt hash or via DCSync above -
 
 ```lsadump::lsa /patch```
 
-Note: The top "Administrator" account dumped by Mimikatz with this command is actually the DSRM of the DC
+**Note:** The top "Administrator" account dumped by Mimikatz with this command is actually the DSRM of the DC
 
 Now back on attacker machine you use the NTLM of krbtgt account to create Golden Tickets:-
 
