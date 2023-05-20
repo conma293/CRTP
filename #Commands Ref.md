@@ -148,7 +148,7 @@ Import AD Module without RSAT:
 ```Get-DomainGroup –UserName "bob"```
 
 
-#### Shares, etc
+#### Shares, GPOs, etc
 
 
 ```Invoke-ShareFinder –Verbose```
@@ -156,6 +156,8 @@ Import AD Module without RSAT:
 ```Invoke-FileFinder –Verbose```
 
 ```Get-NetFileServer```
+
+```Get-NetGPO```
 
 * * *
 #### Users and Groups of Machines
