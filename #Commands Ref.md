@@ -48,7 +48,7 @@ Get-Help Get-Item -Examples
 
 ```Get-Process | Select-Object -Property * | Where-Object { $_.* -like '*chrome*' }```
 
-```Get-ANYTHING  | Select-Object -Property * | Where-Object { $_.* -like '*admin*' }```
+```Get-DomainUser  | Select-Object -Property * | Where-Object { $_.* -like '*admin*' }```
 
 # Running Powershell
 #### AMSI Bypass
