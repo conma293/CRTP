@@ -200,6 +200,8 @@ If functions not on remote host:-
 ```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
 ``` ls //Server1.local/c$/temp```
 
+* * *
+
 # Mimikatz - Tickets
 
 NTLM == RC4
