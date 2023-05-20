@@ -18,7 +18,6 @@
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
   - [Invoke-Mimikatz.ps1](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
-  - [Patching Invoke-Mimikatz.ps1 in case of VirtualAlloc Error](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#patch-script-if-virtualalloc-error)
 - [Rights Abuse - ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rights-abuse---acls)
   - [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
   - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
