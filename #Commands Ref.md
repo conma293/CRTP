@@ -171,9 +171,9 @@ dc machines)
 ```Get-LoggedonLocal -ComputerName <hostname>``` (needs localadmin)
 #### User Hunting
 
-```Run Find-LocalAdminAccess``` - find all machines on current domain where current user has localadmin access
+```Find-LocalAdminAccess``` - find all machines on current domain where current user has localadmin access
 
-```Run Find-LocalAdminAccess -CheckAccess``` - list sessions where you have access to the machine
+```Find-LocalAdminAccess -CheckAccess``` - list sessions where you have access to the machine
 
 ```Invoke-UserHunter``` for users/groups you want - will show all active sessions for users/users of specified groups
 
