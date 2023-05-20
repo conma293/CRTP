@@ -143,9 +143,7 @@ Import AD Module without RSAT:
 
 
 ```Get-DomainGroup -FullData```
-
 ```Get-DomainGroup "admin"```
-
 ```Get-DomainGroup –UserName "bob"```
 
 ```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
