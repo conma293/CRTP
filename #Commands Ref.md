@@ -377,6 +377,8 @@ DCSync (not working):
 
 ```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Josh") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
+Note:  ' Where-Object '  ==  ' ? '
+
 This appends the resolved user or group name to each ACE and recurses through:
 ```
 Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
