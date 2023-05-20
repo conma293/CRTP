@@ -348,7 +348,7 @@ misc::skeleton
 
 
 
-# Rights Abuse - ACLs
+# Persistence Using ACLs - Rights Abuse
 #### AdminSDHolder 
 
 •  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
@@ -387,7 +387,7 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 
 * * * 
 
-# Rights Abuse - Security Descriptors
+# Persistence Using ACLs - Security Descriptors
 
 
 #### Remote WMI - Nishang
