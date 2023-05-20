@@ -75,7 +75,7 @@ sET-ItEM ( 'V'+'aR' + 'IA' + 'blE:1q2' + 'uZx' ) ( [TYpE]( "{1}{0}"-F'F','rE' ) 
 #### EP Bypass
 Start PowerShell from cmd.exe:
 
-```Powershell- c <cmd>```
+```Powershell -c <cmd>```
 
 ```powershell.exe -ep bypass```
 
