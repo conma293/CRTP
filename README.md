@@ -32,6 +32,6 @@ https://github.com/0xJs/CRTE-Cheatsheet/blob/main/Lateral-Movement.md
 https://github.com/idnahacks/AD_attack_defend_cheatsheet
 
 #### Other AD cheatsheets 
-
+https://github.com/Sp4c3Tr4v3l3r/OSCP/blob/main/Active%20Directory.md
 
 https://github.com/In3x0rabl3/OSEP/blob/main/osep_reference.md#unconstrained-delegation
