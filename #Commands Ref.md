@@ -512,11 +512,11 @@ OR using ActiveDirectory module:
 
 * * *
 
-OR Invoke-ACLScanner shows us all interesting ACLs modifiable by the current user:
+OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the current user:
 
-```Invoke-ACLScanner -ResolveGUIDs | select ObjectDN,ActiveDirectoryRights,IdentityReferenceName```
+```Find-InterestingDomainAcl -ResolveGUIDs | select ObjectDN,ActiveDirectoryRights,IdentityReferenceName```
 
-```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "DNSAdmins"}```
+```Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
 
 * * *
 
