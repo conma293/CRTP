@@ -23,7 +23,7 @@
 - [Persistence using ACLs - Security Descriptors (Remote WMI, PS Remoting, and Remote Registry)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---security-descriptors)
 - [Privilege Escalation - Kerberoasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberoasting)
 - [Privilege Escalation - Targeted Kerberoasting - AS-REPs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#targeted-kerberoasting---as-reps)
-- [Privilege Escalation - Target a User via Kerberoasting - Set an SPN](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberoasting)
+- [Privilege Escalation - Target a User via Kerberoasting - Set an SPN](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#privilege-escalation---target-a-user-via-kerberoasting-set-spn))
 
 
 # Powershell Basics
