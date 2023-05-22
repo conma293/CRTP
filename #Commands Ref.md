@@ -369,7 +369,7 @@ misc::skeleton
 ```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
 # Check ACLs
-In Progress...
+Check Domain Admins permissions for a specific user:
 
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
 
