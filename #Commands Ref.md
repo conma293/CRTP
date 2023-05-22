@@ -516,6 +516,8 @@ OR Invoke-ACLScanner shows us all interesting ACLs modifiable by the current use
 
 ```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
 
+* * *
+
 #### Get AS-REPs
 
 ```.\Rubeus.exe asreproast```
