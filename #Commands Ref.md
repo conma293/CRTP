@@ -512,7 +512,7 @@ OR using ActiveDirectory module:
 
 #### Get AS-REPs
 
-```.\Rubeus.exe asreproast
+```.\Rubeus.exe asreproast```
 
 #### Cracking hashes
 
