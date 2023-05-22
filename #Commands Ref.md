@@ -516,6 +516,8 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 
 ```Find-InterestingDomainAcl -ResolveGUIDs | select ObjectDN,ActiveDirectoryRights,IdentityReferenceName```
 
+```Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.ActiveDirectoryRights -match "GenericAll"}```
+
 ```Find-InterestingDomainAcl -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
 
 * * *
