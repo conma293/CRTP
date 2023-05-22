@@ -450,7 +450,7 @@ Get-RemoteMachineAccountHash -ComputerName dc01.ecorp.lab -Verbose
 
 # Kerberoasting
 #### Find SPN
-```Get-NetUser –SPN```
+```Get-DomainUser –SPN```
 
 OR ActiveDirectory module:
 ```
