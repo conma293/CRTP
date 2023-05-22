@@ -27,7 +27,8 @@
   - [PS Remoting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ps-remoting)
   - [Remote Registry](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-registry---damp)
 - [Privilege Escalation - Kerberoasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberoasting)
-
+- [Privilege Escalation - Targeted Kerberoasting - AS-REPs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberoasting)
+- [Privilege Escalation - Target a User via Kerberoasting - Set an SPN](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberoasting)
 
 
 # Powershell Basics
