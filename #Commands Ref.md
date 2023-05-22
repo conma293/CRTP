@@ -542,7 +542,8 @@ OR using ActiveDirectory module:
 
 #### Set arbitrary SPN for user
 
-•  Set a SPN for the user (must be unique for the domain)
+•  Set an SPN for the user (must be unique for the domain):
+
 ```Set-DomainObject -Identity support1user -Set @{serviceprincipalname='ops/whatever1'}```
 
 OR using ActiveDirectory module:
