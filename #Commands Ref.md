@@ -514,7 +514,9 @@ OR using ActiveDirectory module:
 
 OR Invoke-ACLScanner shows us all interesting ACLs modifiable by the current user:
 
-```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
+```Invoke-ACLScanner -ResolveGUIDs | select ObjectDN,ActiveDirectoryRights,IdentityReferenceName```
+
+```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "DNSAdmins"}```
 
 * * *
 
