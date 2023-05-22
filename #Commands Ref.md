@@ -10,7 +10,7 @@
   - [Users and Groups of Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
 - [BloodHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
-- [PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
+- [Local PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
 - [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---tickets)
   - [DCSync](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dcsync)
