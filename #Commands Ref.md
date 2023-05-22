@@ -381,7 +381,7 @@ DCSync:
 
 ```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
-# From PowerView notes:
+# PowerView tips on DomainObjectACL commands from Harmj0y:
 #### retrieve *most* users who can perform DC replication for dev.testlab.local (i.e. DCsync)
 ```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')}```
 
