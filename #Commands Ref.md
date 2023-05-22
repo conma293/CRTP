@@ -510,6 +510,7 @@ OR using ActiveDirectory module:
 
 ```Get-ADUser -Filter {DoesNotRequirePreAuth -eq $True} - Properties DoesNotRequirePreAuth```
 
+
 OR Invoke-ACLScanner shows us all interesting ACLs modifiable by the current user:
 
 ```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
