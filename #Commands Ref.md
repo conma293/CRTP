@@ -21,7 +21,7 @@
 - [Persistence using ACLs - Rights Abuse](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---rights-abuse)
   - [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
   - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
-  - [Check ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
+- [Check ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 - [Persistence using ACLs - Security Descriptors](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---security-descriptors)
   - [Remote WMI](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-wmi---nishang)
   - [PS Remoting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ps-remoting)
