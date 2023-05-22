@@ -18,9 +18,7 @@
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
   - [Invoke-Mimikatz.ps1](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
-- [Persistence using ACLs - Rights Abuse](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---rights-abuse)
-  - [AdminSDHolder](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#adminsdholder)
-  - [Domain Replication Privileges](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-replication-privileges)
+- [Persistence using ACLs - Rights Abuse (AdminSDHolder and Domain Replication Privileges)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-
 - [Check ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 - [Persistence using ACLs - Security Descriptors](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---security-descriptors)
   - [Remote WMI](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#remote-wmi---nishang)
