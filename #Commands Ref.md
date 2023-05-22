@@ -431,6 +431,9 @@ link to Nishang - https://github.com/samratashok/nishang/tree/master/Backdoors
 Set-RemotePSRemoting -UserName Josh -ComputerName dc01.ecorp.lab -Verbose
 ```
 
+Note: It may throw an error, check access anyway
+
+
 #### Remote Registry - DAMP
 link to DAMP - https://github.com/HarmJ0y/DAMP
 
