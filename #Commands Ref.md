@@ -369,7 +369,7 @@ misc::skeleton
 ```Set-ADACL -DistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -GUIDRight DCSync -Verbose``` - AD Module
 
 #### Check ACLs
-NOT WORKING!!
+NOT WORKING!! In Progress...
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
 
 try:
@@ -377,9 +377,12 @@ try:
 Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Mary' }
 ```
 
-DCSync (not working): 
+DCSync: 
 
 ```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
+
+From PowerView notes:
+```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')```
 
 Note:  ```Where-Object```  ==  ``` ? ```
 
