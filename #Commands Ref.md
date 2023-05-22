@@ -202,7 +202,7 @@ Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.lab -OutputDirectory 
 ```
 
 * * * 
-# Priv Esc
+# Local Privilege Escalation
 
 Run PowerUp - are you already localadmin?
 ```
