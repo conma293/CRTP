@@ -594,3 +594,4 @@ Once TGS with Delegation enabled is received by the service machine, the TGT ext
 
 
 #### Unconstrained Delegation
+NOTE: Domain Controllers will always report as having delegation enabled.
