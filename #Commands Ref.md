@@ -533,9 +533,11 @@ OR using ActiveDirectory module:
 ```Invoke-ACLScanner -ResolveGUIDs | ?{$_.IdentityReferenceName -match "RDPUsers"}```
 
 Check if the user already has an SPN:
+
 ```Get-DomainUser -Identity supportuser | select serviceprincipalname```
 
 OR using ActiveDirectory module:
+
 ```Get-ADUser -Identity supportuser -Properties ServicePrincipalName | select ServicePrincipalName```
 
 #### Set arbitrary SPN for user
@@ -544,6 +546,7 @@ OR using ActiveDirectory module:
 ```Set-DomainObject -Identity support1user -Set @{serviceprincipalname='ops/whatever1'}```
 
 OR using ActiveDirectory module:
+
 Set-ADUser -Identity support1user -ServicePrincipalNames @{Add='ops/whatever1'}
 
 #### Request a TGS now the user has an SPN 
