@@ -695,6 +695,8 @@ It also introduces s4u - which allows a Service to request a TGS for itself on b
 
 ```Get-DomainUser patsy -Properties samaccountname,msds-allowedtodelegateto | Select -Expand msds-allowedtodelegateto```
 
+```Get-DomainUser WEBSRV01 | Select name,serviceprincipalname,msds-allowedtodelegateto```
+
 Or using ActiveDirectory module:
 
 ```Get-ADObject -Filter {msDS-AllowedToDelegateTo -ne "$null"} -Properties msDS-AllowedToDelegateTo```
