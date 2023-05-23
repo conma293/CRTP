@@ -30,7 +30,8 @@
   - [Unconstrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
     - [Printer Stuff](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#printer-bug---why-wait-when-you-can-spool)
   - [Constrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#constrained-delegation)
-    - [Rubeus SFU](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-user)
+    - [Rubeus SFU - Constrained Delegation User](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-user)
+    - [Rubeus SFU - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-machine)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
   - [child to Forest Root]
