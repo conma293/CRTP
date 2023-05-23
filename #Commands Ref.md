@@ -32,8 +32,8 @@
   - [Constrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#constrained-delegation)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
-  - [child to parent]
-  - [foresttrust and EA]
+  - [child to Forest Root]
+  - [Forest Trust and Enterprise Admin]
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow]()
 - [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
