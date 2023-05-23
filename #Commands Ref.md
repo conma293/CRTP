@@ -816,9 +816,9 @@ Using DNSServer module (needs RSAT DNS):
 
 
 # Forests and Trusts
-https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
-
 https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
+
+https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
 
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
 
