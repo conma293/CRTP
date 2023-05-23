@@ -726,7 +726,8 @@ NOW - we could just do it all in one RUBEUS command:
 This would do all the steps for us!
 
 **** If a /user and rc4/aes256 hash is supplied, the s4u module performs an asktgt action first, using the returned ticket for the steps following. If a TGT /ticket:X is supplied, that TGT is used instead. ****
- -https://github.com/GhostPack/Rubeus#s4u
+
+-https://github.com/GhostPack/Rubeus#s4u
 
 
 Inject PTT:
