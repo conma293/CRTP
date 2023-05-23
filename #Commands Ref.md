@@ -18,6 +18,8 @@
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
   - [Invoke-Mimikatz.ps1](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
+  - [Pass-the-hash](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-hash)
+  - [Pass-the-ticket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-ticket)
 - [Check ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
 - [Persistence using ACLs - Rights Abuse (AdminSDHolder and Domain Replication Privileges)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---rights-abuse)
 - [Persistence using ACLs - Security Descriptors (Remote WMI, PS Remoting, and Remote Registry)](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#persistence-using-acls---security-descriptors)
