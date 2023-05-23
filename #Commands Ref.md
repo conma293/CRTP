@@ -787,6 +787,7 @@ https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-l
 It is possible for the members of the DNSAdmins group to load arbitrary DLLs with the privileges of dns.exe (SYSTEM).
 Often the DC also serves as the DNS, meaning we have a pathway to the DC and Domain Admin accounts.
 
+But we need the DNSAdmins be able to restart the DNS service which is not enabled by default.
 
 Enumerate the members of the DNSAdmins group:
 
