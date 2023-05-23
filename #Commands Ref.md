@@ -827,6 +827,8 @@ https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trus
 
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
 
+https://adsecurity.org/?p=1588
+
 # MS SQL
 
 # Forest Persistence - DCShadow
