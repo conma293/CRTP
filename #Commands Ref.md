@@ -28,8 +28,10 @@
 - [Privilege Escalation - Target a User via Kerberoasting - Set an SPN](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#privilege-escalation---target-a-user-via-kerberoasting-set-spn))
 - [Kerberos Delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberos-delegation)
   - [Unconstrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
-  - [constrained]
-  - [other constrained]
+  - [Constrained delegation]
+  - [Rubeus]
+- [DNS Admins]
+- [MS SQL]
 
 # Powershell Basics
 
