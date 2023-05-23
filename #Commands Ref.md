@@ -614,7 +614,7 @@ A Service which requires authentication from the user to access a subsequent ser
 
 Basically this means if we have compromised a service account/machine and a Domain Admin connects, we can obtain their TGT which is embedded inside the Delegated TSG Ticket. 
 
-Once TGS with Delegation enabled is received by the service machine, the TGT extracted and stored in the machine’s lsass process. This means if we have localadmin on the service machine, we can obtain this TGT hash by dumping creds from lsass.
+Once TGS with Delegation enabled is received by the service machine, the TGT is extracted and stored in the machine’s lsass process. This means if we have localadmin on the service machine, we can obtain this TGT by dumping creds.
 
 
 # Unconstrained Delegation
