@@ -771,7 +771,7 @@ Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonat
 
 * * *
 
-There is also a possiblity of requesting a TGS for more services than is specified as {msDS-AllowedToDelegateTo} IF there is no SNAME validation:
+There is also a possiblity of requesting a TGS for more services than is specified in {msDS-AllowedToDelegateTo} IF there is no SNAME validation:
 
 
 ```
