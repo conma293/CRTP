@@ -802,7 +802,8 @@ Using DNSServer module (needs RSAT DNS):
 
 ```$dnsettings.ServerLevelPluginDll = "\\172.16.50.100\dll\mimilib.dll"```
 
-```Set-DnsServerSetting -InputObject $dnsettings -ComputerName dcorp-dc -Verbose```
+```Set-DnsServerSetting -InputObject $dnsettings -ComputerName dcorp-dc -Verbose 
+```
 
 
 # MS SQL
