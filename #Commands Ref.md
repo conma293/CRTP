@@ -612,7 +612,7 @@ python.exe .\tgsrepcrack.py .\10k-passwords.txt '.\2-
 # Kerberos Delegation
 A Service which requires authentication from the user to access a subsequent service (e.g., a user accessing a SQL database via an HTTP service). In this case delegation is required and the first service (HTTP) will impersonate the user to authenticate to the second service (SQL). This is achieved by enclosing the users TGT within the TGS which is encrypted with the hash of the service account.
 
-Basically this means if we have compromised a service account/machine and a Domain Admin connects, we can obtain their TGT which is embedded inside the Delegated TSG Ticket. 
+Basically this means if we have compromised a service account/machine and a Domain Admin connects, we are able to obtain their TGT as it is embedded inside the Delegated TSG Ticket. 
 
 Once TGS with Delegation enabled is received by the service machine, the TGT is extracted and stored in the machine’s lsass process. This means if we have localadmin on the service machine, we can obtain this TGT by dumping creds.
 
