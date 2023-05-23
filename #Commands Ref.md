@@ -643,10 +643,11 @@ Basically this means if we have compromised a service account/machine and a Doma
 
 Once the delegated TGS is received by the service machine/account with Delegation enabled, the enclosed user TGT is extracted and stored in the machine’s lsass process. This means if we have localadmin on the service machine, we can obtain this TGT by dumping creds.
 
+https://adsecurity.org/?p=1667
+
 https://blog.harmj0y.net/redteaming/another-word-on-delegation/
 
 # Unconstrained Delegation
-https://adsecurity.org/?p=1667
 
 NOTE: Domain Controllers will always report as having delegation enabled.
 
