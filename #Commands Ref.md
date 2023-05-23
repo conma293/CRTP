@@ -28,7 +28,7 @@
 - [Privilege Escalation - Target a User via Kerberoasting - Set an SPN](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#privilege-escalation---target-a-user-via-kerberoasting-set-spn)
 - [Kerberos Delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberos-delegation)
   - [Unconstrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
-   - [Printer Stuff](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#printer-bug---why-wait-when-you-can-spool)
+  -   [Printer Stuff](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#printer-bug---why-wait-when-you-can-spool)
   - [Constrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#constrained-delegation)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
