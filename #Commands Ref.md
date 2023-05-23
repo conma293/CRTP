@@ -646,7 +646,10 @@ Once the delegated TGS is received by the service machine/account with Delegatio
 https://blog.harmj0y.net/redteaming/another-word-on-delegation/
 
 # Unconstrained Delegation
+https://adsecurity.org/?p=1667
+
 NOTE: Domain Controllers will always report as having delegation enabled.
+
 #### Find Machines with Unconstrained Delegation
 ```Get-DomainComputer -UnConstrained```
 
