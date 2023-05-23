@@ -28,9 +28,11 @@
 - [Privilege Escalation - Target a User via Kerberoasting - Set an SPN](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#privilege-escalation---target-a-user-via-kerberoasting-set-spn)
 - [Kerberos Delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberos-delegation)
   - [Unconstrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
-  - [Constrained delegation]
-- [DNS Admins]
-- [MS SQL]
+  - [Constrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#constrained-delegation)
+- [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
+- [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
+- [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
+- [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
 
 # Powershell Basics
 
