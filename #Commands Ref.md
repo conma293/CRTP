@@ -680,11 +680,15 @@ https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-l
 # MS SQL
 # Forests and Trusts?
 https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
+
 https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
+
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
+
 
 # Certificates
 https://blog.harmj0y.net/activedirectory/certified-pre-owned/
+
 https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c1d
 
 ```./certify.exe```
