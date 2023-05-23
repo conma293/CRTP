@@ -245,7 +245,7 @@ If functions not on remote host:-
 
 * * *
 
-# Mimikatz - Tickets
+# Mimikatz 
 https://adsecurity.org/?page_id=1821
 
 NTLM == RC4
