@@ -779,10 +779,10 @@ OR
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
 
 It is possible for the members of the DNSAdmins group to load arbitrary DLLs with the privileges of dns.exe (SYSTEM).
-Often the DC also serves as DNS meaning we have a pathway to the DC.
+Often the DC also serves as the DNS, meaning we have a pathway to the DC and Domain Admin accounts.
 
 
-Enumerate the members of the DNSAdmis group:
+Enumerate the members of the DNSAdmins group:
 
 ```Get-NetGroupMember -GroupName "DNSAdmins"```
 
@@ -797,14 +797,16 @@ Using DNSServer module (needs RSAT DNS):
 ```Set-DnsServerSetting -InputObject $dnsettings -ComputerName dcorp-dc -Verbose```
 
 
-# MS SQL
-# Forests and Trusts?
+# Forests and Trusts
 https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
 
 https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
 
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
 
+# MS SQL
+
+# Forest Persistence - DCShadow
 
 # Certificates
 https://blog.harmj0y.net/activedirectory/certified-pre-owned/
