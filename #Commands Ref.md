@@ -678,3 +678,4 @@ https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation
 
 #Certificates
 https://blog.harmj0y.net/activedirectory/certified-pre-owned/
+https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c1d
