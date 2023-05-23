@@ -686,10 +686,14 @@ klist
 * * *
 
 # Constrained Delegation
+This is when a TGT can be forwarded to only a specified User/Service/Machine/Resource.
+It also introduces s4u - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos
 
 ```Get-DomainUser –TrustedToAuth```
 
 ```Get-DomainComputer –TrustedToAuth```
+
+```Get-DomainUser patsy -Properties samaccountname,msds-allowedtodelegateto | Select -Expand msds-allowedtodelegateto```
 
 Or using ActiveDirectory module:
 
@@ -717,6 +721,7 @@ This would do all the steps for us!
 ```
  If a /user and rc4/aes256 hash is supplied, the s4u module performs an asktgt action first, using the returned ticket for the steps following. If a TGT /ticket:X is supplied, that TGT is used instead.
  ```
+ 
  -https://github.com/GhostPack/Rubeus#s4u
 
 
