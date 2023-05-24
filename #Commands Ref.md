@@ -34,7 +34,7 @@
     - [Rubeus SFU - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-machine)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
-  - [Within Forest - Child to Parent Domain/Forest Root](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---trust)
+  - [Within Forest - Child to Parent Domain/Forest Root(https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---intra-forest-trust)
   - [Across Forests - Directional Trusts and other stuff]
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow]()
@@ -842,6 +842,8 @@ https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
 https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trusts/
 
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
+
+* * *
 
 #### Child to Parent - Intra-Forest Trust
 Therefore, if we get the trust key we can forge an Inter-realm TGT and traverse domains. There are multiple ways to achieve this once in possession of DA prvileges:
