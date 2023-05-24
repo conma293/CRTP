@@ -24,6 +24,9 @@
 # Other resources 
 For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
+Many tools - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+
+
 #### Other CRTP Cheatsheets
 https://github.com/0xJs/CRTP-cheatsheet
 
