@@ -823,6 +823,8 @@ Using DNSServer module (needs RSAT DNS):
 
 
 # Forests and Trusts
+```nltest /trusted_domains```
+
 A Forest is the Security Boundary as defined by MS.
 
 Across Domains - Implicit Trust
