@@ -827,7 +827,9 @@ Across Domains - Implicit Trust
 
 Across Forests - Trust needs to be established
 
-When requesting services from other domains - the TGT is Requested and received from the DC within the current users domain, the TGS corresponding to a service outside of the current domain is then Requested to the same DC, and an Inter-Realm TGT is provided in response. In possession of the Inter-realm TGT, a TGS for the service is requested  from that other domain DC where the service resides.
+When requesting services from other domains - the TGT is Requested and received from the DC within the current users domain, the TGS corresponding to a service outside of the current domain is then Requested to the same DC, and an Inter-Realm TGT is provided in response. In possession of the Inter-realm TGT, a TGS for the service is requested  from that other domain DC where the service resides. This TGS is then presented directly to the cross-domain service.
+
+The Inter-realm TGT is encrypted with the trust key.
 
 https://adsecurity.org/?p=1588
 
