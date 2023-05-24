@@ -831,7 +831,7 @@ When requesting services from other domains - the TGT is Requested and received 
 
 The Inter-realm TGT is encrypted with the trust key.
 
-Essentially if you own DA on any Domain within A Forest, you own every domain within that forest as well as the Forest root itself. This is intended by design as the forest is the security boundary.
+Essentially if you own DA on any Domain within a Forest, you own every domain within that forest as well as the Forest root itself. This is intended by design as the Forest is the security boundary as defined by MS.
 
 https://adsecurity.org/?p=1588
 
