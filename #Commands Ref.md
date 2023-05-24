@@ -541,7 +541,7 @@ python.exe .\tgsrepcrack.py .\10k-worst-pass.txt .\2-
 ```
 
 OR using John:
-```john krbdump --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt ```
+```john krbdump.txt --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt ```
 
 * * *
 
@@ -582,7 +582,7 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 
 ```./john vpn1user.txt --wordlist=wordlist.txt```
 
-```john krbdump --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt ```
+```john asrepdump.txt --wordlist=/usr/share/wordlists/rockyou.txt```
 
 * * * 
 
