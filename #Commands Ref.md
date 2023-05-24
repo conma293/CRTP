@@ -904,7 +904,7 @@ Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:child.pa
 
 ```Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose```
 
-#### Target - Database Links
+#### Crawl Database Links
 ```Get-SQLServerLink -Instance dcorp-mssql -Verbose```
 
 Or
