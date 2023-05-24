@@ -831,6 +831,8 @@ When requesting services from other domains - the TGT is Requested and received 
 
 The Inter-realm TGT is encrypted with the trust key.
 
+Essentially if you own DA on any Domain within A Forest, you own every domain within that forest as well as the Forest root itself. This is intended by design as the forest is the security boundary.
+
 https://adsecurity.org/?p=1588
 
 https://blog.harmj0y.net/redteaming/the-trustpocalypse/
@@ -843,6 +845,7 @@ https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation
 
 #### Child to Parent - Trust
 Therefore, if we get the trust key we can forge an Inter-realm TGT and traverse domains. There are multiple ways to achieve this once in possession of DA prvileges:
+
 
 On the DC:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
