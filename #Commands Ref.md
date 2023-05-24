@@ -861,7 +861,7 @@ OR via DCSync:
 
 We are looking for the **IN** Trust key (from external to current domain), and can then inject this into memory using ```/rc4:``` OR ```/krbtgt:```
 
-```/sids:``` is the SID of the Parent domain and Enterprise Admins RID
+```/sids:``` is the SID of the Parent domain and Enterprise Admins RID ```-519```
 
 
 trust tkt -
