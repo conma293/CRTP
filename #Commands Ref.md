@@ -827,6 +827,8 @@ Across Domains - Implicit Trust
 
 Across Forests - Trust needs to be established
 
+When requesting services from other domains - the TGT is Requested and received from the DC within the current users domain, the TGS for the service is requested from that other domains DC where the service resides.
+
 https://adsecurity.org/?p=1588
 
 https://blog.harmj0y.net/redteaming/the-trustpocalypse/
