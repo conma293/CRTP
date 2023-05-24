@@ -39,8 +39,7 @@
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow]()
 - [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
-* * * 
-- [Building a Lab]()
+
 # Powershell Basics
 
 #### Help
