@@ -857,6 +857,7 @@ OR via DCSync:
 
 
 "_by querying the FOREIGN_DOMAIN_SHORTNAME$ account_": 
+
 -https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
 
 
