@@ -821,6 +821,12 @@ Using DNSServer module (needs RSAT DNS):
 
 
 # Forests and Trusts
+A Forest is the Security Boundary as defined by MS.
+
+Across Domains - Implicit Trust
+
+Across Forests - Trust needs to be established
+
 https://adsecurity.org/?p=1588
 
 https://blog.harmj0y.net/redteaming/the-trustpocalypse/
