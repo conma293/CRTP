@@ -580,7 +580,7 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 
 ```./john vpn1user.txt --wordlist=wordlist.txt```
 
-```john --wordlist /usr/share/wordlists/rockyou.txt --format=krb5tgs dump```
+```john krbdump --format=krb5tgs --wordlist=/usr/share/wordlists/rockyou.txt ```
 
 * * * 
 
