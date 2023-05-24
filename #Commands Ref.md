@@ -155,7 +155,7 @@ Import AD Module without RSAT:
 ```Get-ADUser -Identity bob -Properties *```
 
 #### Group Membership
-
+```new localgroup administrators```
 
 ```Get-DomainGroup -FullData```
 ```Get-DomainGroup "admin"```
