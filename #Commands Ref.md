@@ -829,7 +829,7 @@ Across Forests - Trust needs to be established
 
 When requesting services from other domains - the TGT is Requested and received from the DC within the current users domain, the TGS corresponding to a service outside of the current domain is then Requested to the same DC, and an Inter-Realm TGT is provided in response. In possession of the Inter-realm TGT, a TGS for the service is requested from that other domain's DC wherein the service resides. This TGS is then presented directly to the cross-domain service machine.
 
-The Inter-realm TGT is encrypted with the trust key.
+The Inter-realm TGT is encrypted with the trust key and can be reused to forge cross-domain golden tickets.
 
 Essentially if you own DA on any Domain within a Forest, you own every domain within that forest as well as the Forest root itself. This is intended by design as the Forest is the security boundary as defined by MS.
 
