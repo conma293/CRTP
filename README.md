@@ -1,6 +1,8 @@
 # CRTP Resources
 
 - [Useful Powershell and AD Commands](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md)
+- [Building a Lab](https://github.com/conma293/CRTP/blob/main/BuildLab.md)
+
 
 #### Repos
 - [AD Enumeration Scripts](https://github.com/conma293/ActiveDirectory)
@@ -8,7 +10,7 @@
 - [Tool dump](https://github.com/conma293/mvp)
 
 
-#### Packs
+#### Tools
 - [GhostPack binaries](https://github.com/conma293/CRTP/tree/main/GhostPack)
 - [Impacket](https://github.com/conma293/impacket)
 
@@ -24,7 +26,7 @@
 # Other resources 
 
 
-Many tools - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+Many more AD Tools and Commands - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
 
 For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
