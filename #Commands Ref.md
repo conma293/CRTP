@@ -34,7 +34,7 @@
     - [Rubeus SFU - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-machine)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
-  - [child to Forest Root]
+  - [Child to Parent Domain/Forest Root](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---trust)
   - [Forest Trust and Enterprise Admin]
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow]()
