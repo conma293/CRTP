@@ -728,6 +728,10 @@ Or using ActiveDirectory module:
 ```Get-ADObject -Filter {msDS-AllowedToDelegateTo -ne "$null"} -Properties msDS-AllowedToDelegateTo```
 
 * * *
+There are three steps ```TGT -> TGS -> Delegated TGS (with victim TGT inside)``` achieved by 2 commands -
+1) get the TGT for the SERVICE Machine/User Account
+2) Run Rubeus ```s4u``` to impersonate user of choice and assume their privileges, making sure to set the correct ```/msdsspn:``` as advertised in ```msds-allowedtodelegateto```
+* * *
 
 #### Requesting an initial User or MachineAccount (possessing constrained delegation) TGT:
 Use ```/outfile:``` or ```/nowrap``` if copy pasting - 
