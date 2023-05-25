@@ -173,7 +173,7 @@ Import AD Module without RSAT:
 #### Shares, GPOs, etc
 
 
-```Invoke-ShareFinder –Verbose```
+```Invoke-ShareFinder –Verbose``` - _Groups.xml_ in SYSVOL is always worth a look
 
 ```Invoke-FileFinder –Verbose```
 
