@@ -733,7 +733,7 @@ Or using ActiveDirectory module:
 There are three steps in this attack flow ```TGT -> TGS -> Delegated TGS (with victim TGT inside)``` achieved by Rubeus with 2 distinct commands -
 
 1) get the TGT for the SERVICE Machine/User Account
-2) Run Rubeus ```s4u``` to impersonate the user whose idenity we wish to steal with ```/impersonateuser:```, and making sure to set the correct ```/msdsspn:``` as advertised in ```msds-allowedtodelegateto```
+2) Run Rubeus ```s4u``` to impersonate the user whose idenity we wish to steal with ```/impersonateuser:```, and making sure to set the correct ```/msdsspn:``` as defined in the service account ```msds-allowedtodelegateto``` property.
 * * *
 
 
