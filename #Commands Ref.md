@@ -764,6 +764,8 @@ Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:ecorp.lab /msdssp
 
 ```klist```
 
+* * *
+
 #### Rubeus SFU - constrained delegation machine
 
 We could also just do it all in one command - Rubeus does all the steps for us!
