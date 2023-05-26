@@ -512,7 +512,7 @@ Add FullControl permissions ("GenericAll" rights) for an arbitrary user to Admin
 ```Set-ADACL -DistinguishedName 'CN=AdminSDHolder,CN=System,DC=bcorp,DC=ecorp,DC=lab' -Principal Mary -Verbose``` - AD Module
 
 #### Domain Replication Privileges 
-Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) for an arbitrary user 
+Add DCSync rights ("Replicating Directory Changes*" (x3) permissions) to an arbitrary user 
 
 https://adsecurity.org/?p=1729
 
