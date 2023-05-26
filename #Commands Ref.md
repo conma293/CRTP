@@ -14,7 +14,7 @@
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
     - [Pass-the-hash](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-hash)
     - [Pass-the-ticket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-ticket)
-- [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---tickets)
+- [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz)
   - [DCSync](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dcsync)
   - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden)
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
