@@ -999,6 +999,7 @@ The machine account of the Root Domain Controller is not a localadministrator ac
 
 ```lsadump::dcsync /domain:bcorp.lab /user:bcorp\administrator ```
 
+This gives us the NTLM hash of the Root Domain Administrator account and access to the Enterprise Admins group.
 
 #### Across Forests - Inter-Forest Trust
 There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts. Other than that it is the same:
