@@ -438,10 +438,10 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 # Advanced ACL Enumeration
 
 #### Rights we care about:
--GenericAll 
--ForceChangePassword
--AllExtendedRights
--WriteDACL
+- GenericAll 
+- ForceChangePassword
+- AllExtendedRights
+- WriteDACL
 
 #### ACL Enumeration for a specific object
 Enumerate all ACLs for specific Identity/object:
@@ -451,7 +451,7 @@ Get-ObjectAcl -Identity <User123> -ResolveGUIDs | Foreach-Object {$_ | AddMembe
 
 #### ACLs for current user:
 ```
-Get-DomainUser | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | AddMember -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+Get-DomainUser | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
 ```
 
 GenericAll access rights to an object such as a user, means we can do just about anything including change the password:
@@ -460,7 +460,7 @@ GenericAll access rights to an object such as a user, means we can do just about
 
 #### ACLs for current group:
 ```
-Get-DomainGroup | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | AddMember -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+Get-DomainGroup | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
 ```
 
 likewise, if we have GenericAll access rights a group object, we can simply add ourselves to that group:
