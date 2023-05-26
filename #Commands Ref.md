@@ -942,11 +942,15 @@ https://posts.specterops.io/hunting-in-active-directory-unconstrained-delegation
 * * *
 
 #### Child to Parent - Intra-Forest Trust
-Therefore, if we get the trust key we can forge an Inter-realm TGT and traverse domains. There are multiple ways to achieve this once in possession of DA prvileges:
+If we get the trust key we can forge an Inter-realm TGT and traverse domains. There are multiple ways to achieve this once in possession of DA prvileges:
 
 
 On the DC:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
+
+When trusts are created between domains a 'Trust Account' is created on either side, the NTLM hash of this is the _Trust Key_. Similar to the ```krbtgt``` account within individual domains. 
+
+Therefore within the domain from the perspective of ```laptop01.ecorp.bcorp.lab``` there are two trust accounts - ```ecorp$``` and ```bcorp$``` - both of which have the same password, and thus NTLM Hash or _Trust Key_
 
 OR via DCSync:
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /user:ecorp\bcorp$"'```
