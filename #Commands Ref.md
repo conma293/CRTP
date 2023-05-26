@@ -957,7 +957,10 @@ Dump the krbtgt:
 
 We are looking for the **IN** Trust key (from external to current domain), and can then inject this into memory using ```/rc4:``` OR ```/krbtgt:```
 
-```/sids:``` is the SID of the Parent domain and Enterprise Admins RID ```-519```
+We also need to know the SID for both domains which can be found in numerous ways but most easily with Powerview:
+```Get-DomainSID -Domain ecorp.bcorp.lab``` and ```Get-DomainSID -Domain bcorp.lab```
+
+```/sids:``` is the (extra) SID(s) of the Parent domain and the static Enterprise Admins RID ```-519```
 
 
 trust tkt -
