@@ -908,6 +908,10 @@ Using DNSServer module (needs RSAT DNS):
 
 # Forests and Trusts
 ```nltest /trusted_domains```
+```Get-DomainTrust -API```
+
+Trusted Domain Object (TDO) properties:
+```Get-DomainTrust```
 
 A Forest is the Security Boundary as defined by MS.
 
