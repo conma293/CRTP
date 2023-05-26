@@ -473,7 +473,7 @@ ACL properties for specific object:
 ```
 AceType : AccessAllowed
 ObjectDN : CN=Victor,OU=users,DC=ecorp,DC=lab
-ActiveDirectoryRights : ReadProperty, ..., **WriteDacl**
+ActiveDirectoryRights : ReadProperty, ..., WriteDacl
 ...
 Identity : ECORP\Bob
 ```
