@@ -37,6 +37,7 @@
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
   - [Within Forest - Child to Parent Domain/ForestRoot](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---intra-forest-trust)
+  - [Unconstrained Printer Forestry]
   - [Across Forests - BiDirectional Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#across-forests---inter-forest-trust)
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forest-persistence---dcshadow)
