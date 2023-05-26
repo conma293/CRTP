@@ -159,6 +159,8 @@ Import AD Module without RSAT:
 #### Group Membership
 ```net localgroup administrators```
 
+```whoami /groups```
+
 ```Get-DomainGroup -FullData```
 ```Get-DomainGroup "admin"```
 ```Get-DomainGroup –UserName "bob"```
