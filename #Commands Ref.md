@@ -447,7 +447,7 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 #### ACL Enumeration for a specific object
 Enumerate all ACLs for specific Identity/object:
 ```
-Get-ObjectAcl -Identity <User123> -ResolveGUIDs | Foreach-Object {$_ | AddMember -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
+Get-ObjectAcl -Identity <User123> -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
 ```
 
 #### ACLs for current user:
