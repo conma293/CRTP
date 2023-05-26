@@ -434,8 +434,6 @@ This appends the resolved user or group name to each ACE and recurses through:
 Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
 ```
 
-
-
 # Advanced ACL Enumeration
 
 #### Rights we care about:
@@ -475,11 +473,10 @@ ACL properties for specific object:
 ```
 AceType : AccessAllowed
 ObjectDN : CN=Victor,OU=users,DC=ecorp,DC=lab
-ActiveDirectoryRights : ReadProperty, ..., WriteDacl```
+ActiveDirectoryRights : ReadProperty, ..., **WriteDacl**
 ...
 Identity : ECORP\Bob
 ```
-
 
 If we identify through the above enumeration techniques that we have ```WriteDacl``` permissions to an object, such as to the Victor object shown above, we can modify the ActiveDirectory rights to ```GenericAll``` in order to be able to change ther user account password and take control of the account like we did with Bob:
 
