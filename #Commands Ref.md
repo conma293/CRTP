@@ -472,7 +472,7 @@ ACL properties for specific object:
 
 ```
 AceType : AccessAllowed
-ObjectDN : CN=Victor,OU=users,DC=ecorp,DC=lab
+ObjectDN : CN=Victor,OU=dbusers,DC=ecorp,DC=lab
 ActiveDirectoryRights : ReadProperty, ..., WriteDacl
 ...
 Identity : ECORP\Bob
@@ -491,8 +491,8 @@ Get-ObjectAcl -Identity <Victor> -ResolveGUIDs | Foreach-Object {$_ | Add-Member
 
 ```
 AceType : AccessAllowed
-ObjectDN : CN=Victor,OU=users,DC=ecorp,DC=lab
-ActiveDirectoryRights : GenericAll```
+ObjectDN : CN=Victor,OU=dbusers,DC=ecorp,DC=lab
+ActiveDirectoryRights : GenericAll
 ...
 Identity : ECORP\Bob
 ```
