@@ -962,6 +962,7 @@ We also need to know the SID for both domains which can be found in numerous way
 
 ```/sids:``` is the (extra) SID(s) of the Parent domain and the static Enterprise Admins RID ```-519```
 
+You can save them as below or inject directly into memory with ```/ptt```
 
 trust tkt -
 ```
