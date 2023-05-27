@@ -12,8 +12,9 @@
 - [BloodHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
 - [Local PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
-    - [Pass-the-hash](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-hash)
-    - [Pass-the-ticket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-ticket)
+    - [Powershell Remoting]()
+    - [Pass-the-](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-hash)
+    - [PSExec and Impacket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-ticket)
 - [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz)
   - [DCSync](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dcsync)
   - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden)
@@ -294,7 +295,7 @@ If functions not on remote host:-
 https://adsecurity.org/?page_id=1821
 
 NTLM == RC4
-[Basic Mimikatz](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
+[Basic Mimikatz Commands](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
 #### DCSync
 Does NOT need localadmin to run, just DC Replication privs:
 ```
