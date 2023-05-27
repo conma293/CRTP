@@ -281,7 +281,7 @@ If functions not on remote host:-
 https://adsecurity.org/?page_id=1821
 
 NTLM == RC4
-
+[Basic Mimikatz](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
 #### DCSync
 Does NOT need localadmin to run, just DC Replication privs:
 ```
