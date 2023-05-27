@@ -33,8 +33,8 @@
   - [Unconstrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
     - [Printer Bug](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#printer-bug---why-wait-when-you-can-spool)
   - [Constrained delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#constrained-delegation)
-    - [Rubeus SFU - Constrained Delegation User](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-user)
-    - [Rubeus SFU - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-sfu---constrained-delegation-machine)
+    - [Rubeus S4U - Constrained Delegation User](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
+    - [Rubeus S4U - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-machine)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
   - [Within Forest - Child to Parent Domain/ForestRoot](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---intra-forest-trust)
@@ -831,7 +831,7 @@ There are three steps in this attack flow ```TGT -> TGS -> Delegated TGS (with v
 * * *
 
 
-#### Rubeus SFU - constrained delegation user 
+#### Rubeus S4U - constrained delegation user 
 
 
 #### Requesting an initial User or MachineAccount (possessing constrained delegation) TGT:
@@ -859,7 +859,7 @@ Rubeus.exe s4u /ticket: /impersonateuser:administrator /domain:ecorp.lab /msdssp
 
 * * *
 
-#### Rubeus SFU - constrained delegation machine
+#### Rubeus S4U - constrained delegation machine
 
 We could also just do it all in one command - Rubeus does all the steps for us!
 
@@ -873,7 +873,7 @@ Rubeus.exe s4u /user:WEBSRV01$ /rc4:2b576acbe6bcfda7294d6bd18041b8fe /impersonat
 -https://github.com/GhostPack/Rubeus#s4u
 
 * * *
-#### Rubeus SFU - Alternative Service
+#### Rubeus S4U - Alternative Service
 There is also a possiblity of requesting a TGS for more services than is specified in {msDS-AllowedToDelegateTo} IF there is no SNAME validation:
 
 ```
