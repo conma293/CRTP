@@ -7,3 +7,4 @@ Follow this excellent guide -https://robertscocca.medium.com/building-an-active-
 - Make sure you add an SPN as shown in the guide
 - Make sure your (web)server has an active SPN
 - Set delegation for your webserver to test Un/Constrained delegation
+  - When setting constrained delegation ensure to set 'any protocol' for delegation - NOT 'just kerberos'
