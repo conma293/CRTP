@@ -947,9 +947,7 @@ Using DNSServer module (needs RSAT DNS):
 
 # Forests and Trusts
 ```nltest /trusted_domains```
-
 ```Get-DomainTrust -NET```
-
 ```Get-DomainTrust -API```
 
 Trusted Domain Object (TDO) properties:
