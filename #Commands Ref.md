@@ -1030,6 +1030,8 @@ The machine account of the Root Domain Controller is not a localadministrator ac
 
 This gives us the NTLM hash of the Root Domain Administrator account and access to the Enterprise Admins group.
 
+
+Note: if you have privs you can turn a machine into unconstrained delegation by setting the ACL to perform this attack!
 * * *
 
 #### Across Forests - Inter-Forest Trust
