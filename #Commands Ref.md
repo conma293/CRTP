@@ -902,10 +902,10 @@ OR
 * * *
 
 # Resource-Based Constrained Delegation
-In RBCD its the backend service which sets the delegation parameters for the frontend service in the form of a SID in the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property.
-For this we need GenericWrite privileges on a server configured with Resource-Based Constrained Delegation, we can then update the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to that of a Computer SID we control.
+In Resource-Based Constrained Delegation (RBCD) it is the backend service which sets the delegation parameters for the frontend service in the form of a SID in its _msDS-AllowedToActOnBehalfOfOtherIdentity_ property.
+For this we need GenericWrite privileges on a server configured with RBCD, we can then update the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to that of a Computer SID we control.
 
-For thiswe can simply create a new machine account, identify the corresponding SID, set that in the Servers _msDS-AllowedToActOnBehalfOfOtherIdentity_ property, and then run ```Rubeus s4u``` as we did for constrained delegation - 
+For this we can simply create a new machine account, identify the corresponding SID, set that in the RBCD Server's _msDS-AllowedToActOnBehalfOfOtherIdentity_ property, and then run ```Rubeus s4u``` as we did for constrained delegation - 
 
 ```
 New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
