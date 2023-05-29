@@ -460,6 +460,8 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 - AllExtendedRights
 - WriteDACL
 
+[more](https://github.com/blackc03r/OSCP-Cheatsheets/blob/master/offensive-security-experiments/active-directory-kerberos-abuse/abusing-active-directory-acls-aces.md)
+
 #### ACL Enumeration for a specific object
 Enumerate all ACLs for specific Identity/object:
 ```
