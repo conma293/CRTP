@@ -153,6 +153,8 @@ Import AD Module without RSAT:
 ```Get-ADComputer -Filter *  -Properties DNSHostName | %{Test- Connection -Count 1 -ComputerName $_.DNSHostName}```
 
 #### User Search
+```net user <user> /domain```
+
 ```Get-DomainUser```
 ```Get-DomainUser –Identity bob```
 
@@ -163,6 +165,8 @@ Import AD Module without RSAT:
 ```net localgroup administrators```
 
 ```whoami /groups```
+
+```net group "domain admins" /domain```
 
 ```Get-DomainGroup -FullData```
 ```Get-DomainGroup "admin"```
