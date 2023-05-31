@@ -222,7 +222,7 @@ SharpHound Collectors - https://github.com/BloodHoundAD/BloodHound/blob/master/C
 Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.lab -OutputDirectory C:\Temp -ZipFileName loot123.zip
 ```
 
-OpSec Safe - https://github.com/OPENCYBER-FR/RustHound
+RustHound compile new for Op-Sec:  https://github.com/OPENCYBER-FR/RustHound
 * * * 
 # Local Privilege Escalation
 
