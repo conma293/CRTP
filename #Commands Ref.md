@@ -10,6 +10,7 @@
   - [Users and Groups of Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
 - [BloodHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
+  - [RustHound](https://github.com/OPENCYBER-FR/RustHound)
 - [Local PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#priv-esc)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
     - [Powershell Remoting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powershell-remoting)
