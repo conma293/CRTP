@@ -1,6 +1,6 @@
 # CRTP Resources
 
-- [Useful Powershell and AD Commands](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md)
+- [Active Directory Attacks and Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md)
 - [Building a Lab](https://github.com/conma293/CRTP/blob/main/#BuildLab.md)
 
 
@@ -15,7 +15,7 @@
 - [Impacket](https://github.com/conma293/impacket)
 
 
-#### Basic Pentesting
+#### Pentesting
 - [OSCP Checklists](https://github.com/conma293/OSCP-tools)
 
 
