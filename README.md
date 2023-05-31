@@ -1,7 +1,7 @@
 # CRTP Resources
 
 - [Useful Powershell and AD Commands](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md)
-- [Building a Lab](https://github.com/conma293/CRTP/blob/main/BuildLab.md)
+- [Building a Lab](https://github.com/conma293/CRTP/blob/main/#BuildLab.md)
 
 
 #### Repos
