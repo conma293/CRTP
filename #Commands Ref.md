@@ -1141,4 +1141,6 @@ https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c
 
 ```./certify.exe```
 
+```./certify.exe find /vulnerable```
+
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
