@@ -15,8 +15,8 @@
 - [Impacket](https://github.com/conma293/impacket)
 
 
-#### OSCP
-- [OSCP stuff](https://github.com/conma293/OSCP-tools)
+#### Basic Pentesting
+- [OSCP Checklists](https://github.com/conma293/OSCP-tools)
 
 
 
