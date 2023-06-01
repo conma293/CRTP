@@ -778,7 +778,7 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 
 ```.\Rubeus.exe asreproast```
 
-- ```/domain:```
+- ```/domain:``` - specify domain/dc
 - ```/dc:```
 
 - ```/format:hashcat```
