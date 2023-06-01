@@ -222,7 +222,29 @@ SharpHound Collectors - https://github.com/BloodHoundAD/BloodHound/blob/master/C
 Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.lab -OutputDirectory C:\Temp -ZipFileName loot123.zip
 ```
 
-RustHound compile new for Op-Sec:  https://github.com/OPENCYBER-FR/RustHound
+#### RustHound 
+Compile new for OpSec:  https://github.com/OPENCYBER-FR/RustHound
+
+
+- Install Rust (and cargo)
+  - Download from source
+```
+sudo apt-get install cargo
+
+python x.py build
+python x.py dist
+python x.py install
+```
+
+- Create Rusthound executable
+
+```
+git clone https://github.com/OPENCYBER-FR/RustHound.git
+
+make install_windows_deps
+make windows
+```
+
 * * * 
 # Local Privilege Escalation
 
