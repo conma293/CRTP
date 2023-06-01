@@ -24,7 +24,7 @@
 - [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
   - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#basic)
   - [List Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#list-tickets)
-  - [Pass-the-key/O-PTH](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
+  - [Pass-the-key/Over-PTH](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
   - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
