@@ -30,6 +30,8 @@ Many more AD Tools and Commands - https://github.com/swisskyrepo/PayloadsAllTheT
 
 For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
+Some precompiled binaries - https://github.com/tijme/binaries
+
 #### Other CRTP Cheatsheets
 https://github.com/0xJs/CRTP-cheatsheet
 
