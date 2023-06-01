@@ -750,6 +750,8 @@ https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 
 - ```/simple /nowrap``` - hashes are output in the console one per line &&  results will not be line wrapped
 - ```/outfile:hash.txt``` 
+
+[Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
 * * *
 
 
@@ -784,6 +786,8 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 - ```/format:hashcat```
 - ```/outfile:```
 
+
+[Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
 #### Cracking hashes
 
 ```./john vpn1user.txt --wordlist=wordlist.txt```
@@ -843,6 +847,8 @@ OR
 python.exe .\tgsrepcrack.py .\10k-passwords.txt '.\2-
 40a10000-student1@ops~whatever1- dollarcorp.moneycorp.LOCAL.kirbi'
 ```
+
+* * *
 
 # Kerberos Delegation
 A Service which requires authentication from the user to access a subsequent service (e.g., a user accessing a SQL database via an HTTP service). In this case delegation is required and the first service (HTTP) will impersonate the user to authenticate to the second service (SQL). This is achieved by enclosing the users TGT within the TGS which is encrypted with the hash of the service account.
