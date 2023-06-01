@@ -12,7 +12,8 @@
 
 #### Tools
 - [GhostPack binaries](https://github.com/conma293/CRTP/tree/main/GhostPack)
-- [Impacket](https://github.com/conma293/impacket)
+- [Impacket](https://github.com/conma293/CRTP/tree/main/Impacket)
+- [Impacket Win binaries]()
 
 
 #### Pentesting
