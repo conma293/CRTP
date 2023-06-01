@@ -226,8 +226,7 @@ Invoke-Bloodhound -CollectionMethod All -Domain CONTROLLER.lab -OutputDirectory 
 Compile new for OpSec:  https://github.com/OPENCYBER-FR/RustHound
 
 
-- Install Rust (and cargo)
-  - Download from source
+- Install Rust from source (and ```apt install cargo```)
 ```
 sudo apt-get install cargo
 
