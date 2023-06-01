@@ -748,7 +748,7 @@ https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 - ```/creduser:domain\Administrator``` and ```/credpassword:```
 
 - ```/simple /nowrap```
-
+- ```/outfile:hash.txt```
 * * *
 
 
