@@ -28,7 +28,7 @@
   - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
-  - [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
+  - [S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
 - [ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
   - [PowerView get-DomainObjectACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powerview-tips-on-domainobjectacl)
   - [Further ACL Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#further-acl-enumeration)
