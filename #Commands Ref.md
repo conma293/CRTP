@@ -777,6 +777,12 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 
 ```.\Rubeus.exe asreproast```
 
+- ```/domain:```
+- ```/dc:```
+
+- ```/format:hashcat```
+- ```/outfile:```
+
 #### Cracking hashes
 
 ```./john vpn1user.txt --wordlist=wordlist.txt```
