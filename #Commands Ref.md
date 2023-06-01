@@ -28,7 +28,7 @@
   - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
-  - [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
+  - [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
 - [ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
   - [PowerView get-DomainObjectACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powerview-tips-on-domainobjectacl)
   - [Further ACL Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#further-acl-enumeration)
@@ -478,7 +478,7 @@ Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
 - [Full kerberoast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-1)
 
 ```Rubeus.exe asreproast /nowrap```
-- [Full aseproast]()
+- [Full aseproast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#get-as-reps)
 
 #### Golden/Silver
 Hash of a user:
@@ -507,7 +507,7 @@ We can purge by LUID also:
 
 #### S4U
 Kerberos Delegation and S4U:
-- [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#unconstrained-delegation)
+- [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
 
 
 # Check ACLs
