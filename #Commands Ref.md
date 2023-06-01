@@ -321,6 +321,7 @@ If functions not on remote host:-
 
 ```Rubeus.exe asktgt /user:webadmin /password:Password01 /ptt```
 
+- [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
 * * *
 
 # Mimikatz 
