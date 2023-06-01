@@ -752,6 +752,7 @@ https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 - ```/outfile:hash.txt``` 
 
 [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
+
 * * *
 
 
