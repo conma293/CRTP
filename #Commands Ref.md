@@ -456,6 +456,7 @@ misc::skeleton
 
 * * *
 # Rubeus
+https://github.com/GhostPack/Rubeus
 https://www.hackingarticles.in/a-detailed-guide-on-rubeus/
 
 #### Brute
