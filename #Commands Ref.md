@@ -14,7 +14,7 @@
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
     - [Powershell Remoting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powershell-remoting)
     - [PSExec and Impacket](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-pass-the-ticket)
-- [OverPass-the-hash/Pass-the-key](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-overpass-the-hash)
+    - [OverPass-the-hash/Pass-the-key](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz-overpass-the-hash)
 - [Mimikatz and Ticket Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz)
   - [DCSync](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dcsync)
   - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden)
