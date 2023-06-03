@@ -25,7 +25,7 @@
   - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#basic)
   - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [List Tickets and tgtdeleg](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#list-tickets)
-  - [Pass-the-key/Over-PTH](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
+  - [Pass-the-key/Over-PTH - asktgt and asktgs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
   - [Golden/Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#goldensilver)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
   - [S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
