@@ -551,6 +551,7 @@ Kerberos Delegation and S4U:
 - [unconstrained s4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
 - [constrained s4u]
 
+* * *
 
 # Check ACLs
 Check Domain Admins permissions for a specific user:
