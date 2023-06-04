@@ -22,7 +22,7 @@
   - [Invoke-Mimikatz.ps1](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#invoke-mimikatz)
   - [Misc Attacks](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#mimikatz---misc-attacks)
 - [Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
-  - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#basic)
+  - [Brute](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#brute)
   - [Roasting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#roasting)
   - [List Tickets, hash, and tgtdeleg](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#list-tickets)
   - [Pass-the-key/Over-PTH - asktgt and asktgs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
