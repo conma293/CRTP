@@ -557,8 +557,8 @@ We can purge by LUID also:
 
 #### S4U
 Kerberos Delegation and S4U:
-- [unconstrained s4u](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
-- [constrained s4u]
+- [Unconstrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
+- [Constrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
 
 * * *
 
