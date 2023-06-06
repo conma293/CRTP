@@ -333,8 +333,12 @@ Basically Powershell remoting possible from linux host:-
 # Mimikatz 
 https://adsecurity.org/?page_id=1821
 
-NTLM == RC4
 [Basic Mimikatz Commands](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
+
+NTLM == RC4
+
+
+
 #### DCSync
 Does NOT need localadmin to run, just DC Replication privs:
 ```
