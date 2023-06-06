@@ -851,6 +851,8 @@ optional:
 - ```/format:hashcat```
 - ```/outfile:```
 
+[Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
+
 #### Impacket
 OR Impacket:-
 
@@ -858,7 +860,6 @@ OR Impacket:-
 GetNPUsers.py $DOMAIN/$DOMAIN_USER:$PASSWORD -dc-ip $DOMAIN_CONTROLLER_IP -outputfile Output_TGSs
 ```
 
-[Rubeus](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus)
 #### Cracking hashes
 
 ```./john vpn1user.txt --wordlist=wordlist.txt```
