@@ -29,7 +29,7 @@
   - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden-1)
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver-1)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
-  - [S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
+  - [S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#s4u)
 - [ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
   - [Check ACLs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#check-acls)
   - [PowerView get-DomainObjectACL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powerview-tips-on-domainobjectacl)
