@@ -120,6 +120,7 @@ OR If already running-
 
 #### Kerberos Tickets
 ```klist```
+```klist sessions```
 
 # Tool Download
 
