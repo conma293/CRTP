@@ -484,6 +484,9 @@ Get tickets currently on System:
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
 
+"_retrieve a usable TGT for the current user without needing elevation on the host_" -https://github.com/GhostPack/Rubeus#tgtdeleg
+
+
 #### Hash
 Hash of a user:
 ```rubeus.exe hash /user:Josh /domain:ecorp.local /password:Password@1```
