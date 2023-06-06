@@ -1331,7 +1331,13 @@ https://blog.harmj0y.net/activedirectory/certified-pre-owned/
 
 https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c1d
 
+
+
 ```./certify.exe```
+
+
+ESC1 - ESC10
+
 
 ```./certify.exe find /vulnerable```
 
