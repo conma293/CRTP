@@ -518,6 +518,8 @@ optional:
 rubeus.exe golden /user:DAdmin123 /rc4:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /printcmd
 ```
 
+* * * 
+
 #### Silver:
 ```/rc4:``` or ```/aes256:``` etc as service hash
 
