@@ -649,7 +649,7 @@ ActiveDirectoryRights : ReadProperty, ..., WriteDacl
 Identity : ECORP\Bob
 ```
 
-If we identify through the above enumeration techniques that we have ```WriteDacl``` permissions to an object, such as to the Victor object shown above, we can modify the ActiveDirectory rights to ```GenericAll``` in order to be able to change ther user account password and take control of the account like we did with Bob:
+If we identify through the above enumeration techniques that we have ```WriteDacl``` permissions to an object, such as to the 'Victor' user object shown above, we can modify the ActiveDirectory rights to ```GenericAll``` in order to be able to change ther user account password and take control of the account like we did with Bob:
 
 ```Add-DomainObjectAcl -TargetIdentity Victor -PrincipalIdentity Bob -Rights All```
 
