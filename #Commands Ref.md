@@ -1033,7 +1033,7 @@ Rubeus (optional ```/domain``` ```/dc``` ; and ```/ptt```):
 
 #### Example self chain:
 
-```Rubeus.exe tgtdeleg```
+```Rubeus.exe tgtdeleg /nowrap```
 https://github.com/GhostPack/Rubeus#tgtdeleg
 
 ```
