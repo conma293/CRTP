@@ -467,6 +467,8 @@ Brute Password spray:
 
 ```Rubeus.exe brute /password:Password01 /noticket```
 
+* * * 
+
 #### Roasting
 ```Rubeus.exe kerberoast /nowrap```
 - [Full kerberoast](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-1)
