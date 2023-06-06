@@ -331,9 +331,9 @@ Basically Powershell remoting possible from linux host:-
 * * *
 
 # Mimikatz 
-https://adsecurity.org/?page_id=1821
-
 [Basic Mimikatz Commands](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
+
+https://adsecurity.org/?page_id=1821
 
 NTLM == RC4
 
