@@ -1002,11 +1002,11 @@ Rubeus ptt /ticket:
 * * *
 
 # Constrained Delegation
-This is when a TGS with an embedded TGT can be forwarded only to a specified service(s) defined in the User/Machine object's *msds-allowedtodelegateto* property.
+This is when a TGS with an embedded TGT for the authenticating user can be forwarded only to the specified service(s) defined in the User/Machine object's *msds-allowedtodelegateto* property.
 
 It also introduces ```s4u``` - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
 
-**Note:** Whats important here is that unlike unconstrained delegation, we dont need a user to access the delegating machine for this attack flow to work, as the service object can request a TGS for itself on behalf of any arbitrary user without that users interaction.
+**Note:** Whats important here is that unlike unconstrained delegation, we dont need a user to access the delegating machine for this attack flow to work, as the service object can request a TGS for itself on behalf of an arbitrary user without that users interaction.
 
 ```Get-DomainUser –TrustedToAuth```
 
