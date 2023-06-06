@@ -1002,9 +1002,11 @@ Rubeus ptt /ticket:
 * * *
 
 # Constrained Delegation
-This is when a TGT can be forwarded only to a specified Service defined in the specific User/Machine *msds-allowedtodelegateto* property.
+This is when a TGS with an embedded TGT can be forwarded only to a specified service(s) defined in the User/Machine object's *msds-allowedtodelegateto* property.
 
 It also introduces ```s4u``` - which allows a Service to request a TGS for itself on behalf of a user who may or may not be authenticating via Kerberos.
+
+**Note:** Whats important here is that unlike unconstrained delegation, we dont need a user to access the delegating machine for this attack flow to work, as the service object can request a TGS for itself on behalf of any arbitrary user without that users interaction.
 
 ```Get-DomainUser –TrustedToAuth```
 
@@ -1097,11 +1099,12 @@ OR
 
 # Resource-Based Constrained Delegation
 In Resource-Based Constrained Delegation (RBCD) it is the backend service which sets the delegation parameters for the frontend service in the form of a SID in its _msDS-AllowedToActOnBehalfOfOtherIdentity_ property.
-For this we need GenericWrite privileges on a server configured with RBCD, we can then update the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to that of a Computer SID we control.
 
-For this we can simply create a new machine account, identify the corresponding SID, set that in the RBCD Server's _msDS-AllowedToActOnBehalfOfOtherIdentity_ property, and then run ```Rubeus s4u``` as we did for constrained delegation - 
+For this we need write privileges on a server configured with RBCD, we can then update the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to that of a SID for a Computer object with an SPN that we control.
 
-**Note:** The most important thing to understand here is unlike constrained/unconstrained delegation, we dont need access to the machine. All we need is write access to an appropriate ACL ("Owner" "WriteProperty" "GenericWrite") of ANY computer object. We can then set the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to a SID that we control (any domain account account that has an SPN i.e., a machine account we can create).
+For this we can simply create a new machine account, identify the corresponding SID, set that in the RBCD Server's _msDS-AllowedToActOnBehalfOfOtherIdentity_ property, and then run ```Rubeus s4u``` as we did for constrained delegation.
+
+**Note:** The most important thing to understand here is unlike unconstrained/constrained delegation, we dont need access to the machine. All we need is write access to an appropriate ACL ("Owner" "WriteProperty" "GenericWrite") of ANY computer object. We can then set the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to a SID that we control (any domain account account that has an SPN i.e., a machine account we can create).
 
 Therefore if we have ```"Owner"``` ```"WriteProperty"``` or ```"GenericWrite"``` permissions to ANY computer object within an environment, we can attain localadmin on that machine by way of RBCD.
 
