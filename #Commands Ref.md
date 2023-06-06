@@ -1134,10 +1134,8 @@ optional verify amended property:
 
 ```
 $RawBytes = Get-DomainComputer "target_computer" -Properties 'msds-allowedtoactonbehalfofotheridentity' | select -expand msds-allowedtoactonbehalfofotheridentity
-
-$Descriptor = New-Object Security.AccessControl.RawSecurityDescriptor -ArgumentList 
-
-$RawBytes, 0 $Descriptor.DiscretionaryAcl
+$Descriptor = New-Object Security.AccessControl.RawSecurityDescriptor -ArgumentList $RawBytes, 0 
+$Descriptor.DiscretionaryAcl
 ```
 
 **NOTE:** In Constrained and Resource-Based Constrained Delegation if we don't have the password/hash of the account with TRUSTED_TO_AUTH_FOR_DELEGATION that we try to abuse, we can use the very nice trick "tgt::deleg" from kekeo or "tgtdeleg" from rubeus and fool Kerberos to give us a valid TGT for that account. Then we just use the ticket instead of the hash of the account to perform the attack.
