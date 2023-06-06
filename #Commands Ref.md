@@ -331,7 +331,7 @@ Basically Powershell remoting possible from linux host:-
 * * *
 
 # Mimikatz 
-[Basic Mimikatz Commands](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
+[Basic Mimikatz Commands - OSCP AD Cheatsheet](https://github.com/conma293/OSCP-tools/blob/master/cheatsheets/BasicAD.md#mimikatz)
 
 https://adsecurity.org/?page_id=1821
 
