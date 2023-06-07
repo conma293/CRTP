@@ -1389,6 +1389,8 @@ ESC1 is best as it allows arbitrary alt user in the SAN. and you can even make y
 
 even better is the - EDITF_ATTRIBUTESUBJECTALTNAME2 flag. As Microsoft describes, “If this flag is set on the CA, any request (including when the subject is built from Active Directory®) can have user defined values in the subject alternative name.” _This means that ANY template configured for domain authentication that also allows unprivileged users to enroll (e.g., the default User template) can be abused to obtain a certificate that allows us to authenticate as a domain admin_
 
+more yummy permissions to achieve this - ManageCA (aka “CA Administrator”) and ManageCertificates (aka “Certificate Manager/Officer”) permissions.
+
 
 Attack flow -
 
