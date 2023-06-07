@@ -1373,6 +1373,8 @@ By default during certificate-based authentication, certificates are mapped to A
 
 So, if an attacker can specify an arbitrary SAN when requesting a certificate that enables domain authentication, and the CA creates and signs a certificate using the attacker-supplied SAN, the attacker can become any user in the domain!
 
+- kind of similar to alternate service in constrained delegation vut fir a user - gimme a cert for this user account object thats authorised, and add this one too while your at it.
+
 
 ```./certify.exe find /vulnerable```
 
