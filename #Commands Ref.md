@@ -1385,7 +1385,10 @@ _Domain escalation scenarios can result from various AD CS template misconfigura
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
 
 
-ESC1 is best, and you can make your own - _we have seen in multiple environments is Domain Computers having FullControl or WriteDacl permissions over a certificate template’s AD object_
+ESC1 is best as it allows arbitrary alt user in the SAN. and you can even make your own! - _we have seen in multiple environments is Domain Computers having FullControl or WriteDacl permissions over a certificate template’s AD object_
+
+even better is the - EDITF_ATTRIBUTESUBJECTALTNAME2 flag. As Microsoft describes, “If this flag is set on the CA, any request (including when the subject is built from Active Directory®) can have user defined values in the subject alternative name.” _This means that ANY template configured for domain authentication that also allows unprivileged users to enroll (e.g., the default User template) can be abused to obtain a certificate that allows us to authenticate as a domain admin_
+
 
 Attack flow -
 
