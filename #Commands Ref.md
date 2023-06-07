@@ -1367,13 +1367,15 @@ ESC1 - ESC10
 
 ESC1 in particular is everywhere
 
-A Subject Alternative Name (SAN) is an extension that allows additional identities to be bound to a certificate beyond just the subject of the certificate.
+_A Subject Alternative Name (SAN) is an extension that allows additional identities to be bound to a certificate beyond just the subject of the certificate._
 
-By default during certificate-based authentication, certificates are mapped to Active Directory accounts based on a user principal name (UPN) specified in the SAN. 
+_By default during certificate-based authentication, certificates are mapped to Active Directory accounts based on a user principal name (UPN) specified in the SAN. _
 
-So, if an attacker can specify an arbitrary SAN when requesting a certificate that enables domain authentication, and the CA creates and signs a certificate using the attacker-supplied SAN, the attacker can become any user in the domain!
+_So, if an attacker can specify an arbitrary SAN when requesting a certificate that enables domain authentication, and the CA creates and signs a certificate using the attacker-supplied SAN, the attacker can become any user in the domain!_
 
 - kind of similar to alternate service in constrained delegation vut fir a user - gimme a cert for this user account object thats authorised, and add this one too while your at it.
+
+_Domain escalation scenarios can result from various AD CS template misconfigurations that allow unprivileged users to supply an arbitrary SAN in a certificate enrollment._
 
 
 ```./certify.exe find /vulnerable```
