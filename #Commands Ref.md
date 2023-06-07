@@ -1389,7 +1389,7 @@ ESC1 is best as it allows arbitrary alt user in the SAN. popular default user or
 
 ESC4 - and you can even make your own! - _we have seen in multiple environments is Domain Computers having FullControl or WriteDacl permissions over a certificate template’s AD object_
 
-ESC6 - even better is the EDITF_ATTRIBUTESUBJECTALTNAME2 flag. As Microsoft describes, “If this flag is set on the CA, any request (including when the subject is built from Active Directory®) can have user defined values in the subject alternative name.” _This means that ANY template configured for domain authentication that also allows unprivileged users to enroll (e.g., the default User template) can be abused to obtain a certificate that allows us to authenticate as a domain admin_
+ESC6 - even better is the EDITF_ATTRIBUTESUBJECTALTNAME2 flag. As Microsoft describes, “If this flag is set on the CA, any request (including when the subject is built from Active Directory®) can have user defined values in the subject alternative name.” _This means that ANY template configured for domain authentication that also allows unprivileged users to enroll (e.g., the default User template) can be abused to obtain a certificate that allows us to authenticate as a domain admin_  RIP DEAD XX
 
 ESC 7more yummy permissions to achieve this - ManageCA (aka “CA Administrator”) and ManageCertificates (aka “Certificate Manager/Officer”) permissions.
 
