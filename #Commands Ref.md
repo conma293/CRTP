@@ -1385,7 +1385,7 @@ _Domain escalation scenarios can result from various AD CS template misconfigura
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
 
 
-
+ESC1 is best, and you can make your own - _we have seen in multiple environments is Domain Computers having FullControl or WriteDacl permissions over a certificate template’s AD object_
 
 Attack flow -
 
