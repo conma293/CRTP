@@ -47,7 +47,7 @@
     - [Rubeus S4U - Constrained Delegation User](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
     - [Rubeus S4U - Constrained Delegation Machine](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-machine)
   - [Resource-Based Constrained Delegation](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#resource-based-constrained-delegation)
-- [noPac]
+- [noPac](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#nopac)
 - [DNS Admins](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#dns-admins)
 - [Forest Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forests-and-trusts)
   - [Within Forest - Child to Parent Domain/ForestRoot](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#child-to-parent---intra-forest-trust)
