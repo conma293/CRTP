@@ -1,4 +1,4 @@
-# Commands
+# Powershell and AD Commands
 - [Powershell Basics](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#powershell-basics)
 - [Running Powershell - AMSI and EP Bypass](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#running-powershell)
 - [Download Cradles](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#tool-download)
