@@ -114,6 +114,17 @@ OR If already running-
 
 ```$Env:PSExecutionPolicyPreference = 'Bypass'```
 
+OR just one file - 
+
+```Get-Content .runme.ps1 | PowerShell.exe -noprofile -```
+
+```TYPE .runme.ps1 | PowerShell.exe -noprofile -```
+
+```Get-Content .runme.ps1 | Invoke-Expression```
+
+```GC .runme.ps1 | iex```
+
+
 #### MS Bypass
 ```Set-MpPreference -DisableIOAVProtection $true```
 
