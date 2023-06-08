@@ -1367,6 +1367,8 @@ Enterprise Admin = Domain Admin of every Domain in the Forest
 # MS SQL
 #### Enumerate
 
+```setspn -T domain -Q MSSQLSvc/*```
+
 ```Get-SQLInstanceDomain```
 
 ```Get-SQLConnectionTestThreaded```
