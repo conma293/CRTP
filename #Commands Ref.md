@@ -1149,6 +1149,8 @@ $Descriptor.DiscretionaryAcl
 
 -https://github.com/In3x0rabl3/OSEP/blob/main/osep_reference.md#pass-the-hash--cme--impacket--nc
 
+* * * 
+
 #### Using new machine to create DC$ name search order attack to get DA
 You can also create a new machine account, request a TGT, then remove the SPN and rename the same as a Domain Controller without the ```$``` - if vulnerable the Domain controller will research all machine names appending the ```$``` and will grant a TGS with permissions of the DC to your rogue DC-named machine account!
 
