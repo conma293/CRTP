@@ -1408,6 +1408,7 @@ https://posts.specterops.io/certificates-and-pwnage-and-patches-oh-my-8ae0f4304c
 
 https://github.com/GhostPack/Certify
 
+
 ```./certify.exe```
 
 
@@ -1444,7 +1445,11 @@ ESC 7more yummy permissions to achieve this - ManageCA (aka â€œCA Administratorâ
 ESC8 web enrollment ca and spoolsample
 
 
+```ENROLLEE_SUPPLIES_SUBJECT``` (ESC1)
 
+ManageCA means set ```EDITF_ATTRIBUTESUBJECTALTNAME2``` (ESC7)
+
+Full Control means set ```CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT``` and remove the ```PEND_ALL_REQUESTS``` issuance requirement (ESC4)
 
 
 Attack flow -
