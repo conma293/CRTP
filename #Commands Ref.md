@@ -1419,6 +1419,8 @@ crack with hashcat:
 
 ```hashcat -m 5600 hash.txt dict.txt```
 
+or use impacket ntlmrelayx to relay pth
+
 # Forest Persistence - DCShadow
 ```Set-DCShadowPermissions```
 
