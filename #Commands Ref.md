@@ -585,6 +585,8 @@ Kerberos Delegation and S4U:
 * * *
 
 # Check ACLs
+```Find-InterestingDomainAcl -ResolveGUIDs```
+
 Check Domain Admins permissions for a specific user:
 
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
