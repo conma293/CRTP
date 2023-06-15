@@ -14,8 +14,8 @@
 - [GhostPack binaries](https://github.com/conma293/CRTP/tree/main/GhostPack)
 - [Impacket](https://github.com/conma293/CRTP/tree/main/Impacket)
 - [Impacket Win binaries]()
-- Nishang
-- PowerSploit
+- [Nishang](https://github.com/conma293/CRTP/tree/main/nishang-0.7.6)
+- [PowerSploit](https://github.com/conma293/CRTP/tree/main/PowerSploit)
 
 
 #### Pentesting
