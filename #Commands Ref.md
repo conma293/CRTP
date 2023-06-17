@@ -214,6 +214,10 @@ Import AD Module without RSAT:
 ```Get-DomainGroup "admin"```
 ```Get-DomainGroup –UserName "bob"```
 
+```Get-DomainGroup | where Name -like "*Admins*" | select SamAccountName```
+
+* * *
+
 ```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
 
 ```Get-DomainGroupMember -Identity "Domain Admin*" | select GroupName, MemberName```
