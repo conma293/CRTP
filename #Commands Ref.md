@@ -3,6 +3,7 @@
 - [Running Powershell - AMSI and EP Bypass](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#running-powershell)
 - [Download Cradles](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#tool-download)
 - [Active Directory Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#active-directory-enumeration)
+  - [Domain Info](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-info)
   - [Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#machines)
   - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-search)
   - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#group-membership)
