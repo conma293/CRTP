@@ -160,6 +160,17 @@ Import AD Module without RSAT:
 
 ```iex (new-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1');Import-ActiveDirectory```
 
+#### Domain info
+
+```Get-Domain```
+
+```Get-DomainController | select Forest, Name, OSVersion | fl```
+
+```Get-ForestDomain```
+
+```Get-DomainPolicyData```
+```Get-DomainPolicyData | select -expand SystemAccess```
+
 * * * 
 #### Machines
 
