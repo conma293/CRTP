@@ -238,7 +238,7 @@ Import AD Module without RSAT:
 
 ```Get-NetFileServer```
 
-```Get-NetGPO```
+```Get-DomainGPO```
 
 ```Get-DomainOU -Properties Name | sort -Property Name```
 
