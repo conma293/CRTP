@@ -6,7 +6,7 @@
   - [Domain Info](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-info)
   - [Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#machines)
   - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-search)
-  - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#group-membership)
+  - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#groups)
   - [Shares, GPOs etc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#shares-gpos-etc)
   - [Users and Groups of Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
@@ -203,7 +203,7 @@ Import AD Module without RSAT:
 ```Get-ADUser -Filter * -Properties *```
 ```Get-ADUser -Identity bob -Properties *```
 
-#### Group Membership
+#### Groups
 ```net localgroup administrators```
 
 ```whoami /groups```
@@ -216,7 +216,7 @@ Import AD Module without RSAT:
 
 ```Get-DomainGroup | where Name -like "*Admins*" | select SamAccountName```
 
-* * *
+#### Group Membership
 
 ```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
 
@@ -227,7 +227,7 @@ Import AD Module without RSAT:
 ```Get-ADGroupMember -Identity "Domain Admins" -Recursive```
 
 
-
+* * *
 
 #### Shares, GPOs, etc
 
