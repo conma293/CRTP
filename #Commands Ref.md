@@ -234,6 +234,8 @@ Import AD Module without RSAT:
 
 ```Get-NetGPO```
 
+```Get-DomainOU -Properties Name | sort -Property Name```
+
 * * *
 #### Users and Groups of Machines
 ```Get-NetLocalGroup -ComputerName <hostname>``` List all the local groups on a machine (needs admin privs on non-
