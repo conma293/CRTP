@@ -161,6 +161,10 @@ Import AD Module without RSAT:
 
 ```iex (new-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/ADModule/master/Import-ActiveDirectory.ps1');Import-ActiveDirectory```
 
+```Get-Domain*``` - Powerview
+
+```Get-AD*``` - RSAT AD Module
+
 #### Domain info
 
 ```Get-Domain```
@@ -193,6 +197,8 @@ Import AD Module without RSAT:
 
 ```Get-DomainUser```
 ```Get-DomainUser –Identity bob```
+
+```Get-DomainUser -Identity bob -Properties DisplayName, MemberOf | fl```
 
 ```Get-ADUser -Filter * -Properties *```
 ```Get-ADUser -Identity bob -Properties *```
