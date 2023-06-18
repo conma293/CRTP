@@ -241,7 +241,7 @@ Import AD Module without RSAT:
 
 ```Get-DomainGPO```
 
-```Get-DomainOU -Properties Name | sort -Property Name```
+```Get-DomainOU -Properties Name | sort -Property Name``` - useful to see groups of machines that have GPOs applied to them
 
 ```Get-DomainGPOLocalGroup | select GPODisplayName, GroupName```
 
