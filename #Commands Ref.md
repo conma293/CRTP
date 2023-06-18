@@ -172,6 +172,7 @@ Import AD Module without RSAT:
 ```Get-DomainController | select Forest, Name, OSVersion | fl```
 
 ```Get-ForestDomain```
+```Get-ForestDomain | select Name, DomainControllers, Forest | fl```
 
 ```Get-DomainPolicyData```
 ```Get-DomainPolicyData | select -expand SystemAccess```
