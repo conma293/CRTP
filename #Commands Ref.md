@@ -241,9 +241,11 @@ Import AD Module without RSAT:
 
 ```Get-DomainGPO```
 
-```Get-DomainOU -Properties Name | sort -Property Name``` - useful to see groups of machines that have GPOs applied to them
+```Get-DomainOU -Properties Name | sort -Property Name``` - useful to see groups of machines (that may have GPOs applied to them)
 
-```Get-DomainGPOLocalGroup | select GPODisplayName, GroupName```
+```Get-DomainGPOLocalGroup | select GPODisplayName, GroupName``` - shows all GPOs that alter localadmin - returns name of GPO and Group/User Name being affected
+
+```Get-DomainGPOUserLocalGroupMapping -LocalGroup Administrators | select ObjectName, GPODisplayName, ContainerName, ComputerName | fl``` - returns all computers within OUs that have a domain group inherit localadmin privileges
 
 * * *
 #### Users and Groups of Machines
