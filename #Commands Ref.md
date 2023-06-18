@@ -223,7 +223,7 @@ Import AD Module without RSAT:
 
 ```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse```
 
-```Get-DomainGroupMember -Identity "Domain Admin*" -Recurse | select GroupName, MemberName```
+```Get-DomainGroupMember -Identity "*Admin*" -Recurse | select GroupName, MemberName```
 
 ```Get-DomainGroupMember -Identity "Domain Admins" | select GroupName, MemberName, MemberDistinguishedName```
 
