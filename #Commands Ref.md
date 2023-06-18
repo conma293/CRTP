@@ -201,6 +201,8 @@ Import AD Module without RSAT:
 
 ```Get-DomainUser -Identity bob -Properties DisplayName, MemberOf | fl```
 
+```Get-DomainUser -Identity bob |select -Expand MemberOf | fl```
+
 ```Get-ADUser -Filter * -Properties *```
 ```Get-ADUser -Identity bob -Properties *```
 
