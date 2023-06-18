@@ -5,7 +5,7 @@
 - [Active Directory Enumeration](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#active-directory-enumeration)
   - [Domain Info](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#domain-info)
   - [Machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#machines)
-  - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-search)
+  - [Users](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users)
   - [Groups](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#groups)
   - [Shares, OUs, GPO Mapping etc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#shares-gpos-etc)
   - [Users and Groups on remote machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
