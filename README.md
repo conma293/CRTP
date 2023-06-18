@@ -35,6 +35,8 @@ For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
 Some precompiled binaries - https://github.com/tijme/binaries
 
+Sharp precompiled binaries - https://github.com/Flangvik/SharpCollection
+
 PowerSharp Pack - https://github.com/S3cur3Th1sSh1t/PowerSharpPack/tree/master
 
 #### Other CRTP Cheatsheets
