@@ -193,7 +193,7 @@ Import AD Module without RSAT:
 
 ```Get-ADComputer -Filter *  -Properties DNSHostName | %{Test- Connection -Count 1 -ComputerName $_.DNSHostName}```
 
-#### User Search
+#### Users 
 ```net user <user> /domain```
 
 ```Get-DomainUser```
@@ -201,7 +201,7 @@ Import AD Module without RSAT:
 
 ```Get-DomainUser -Identity bob -Properties DisplayName, MemberOf | fl```
 
-```Get-DomainUser -Identity bob |select -Expand MemberOf | fl```
+```Get-DomainUser -Identity bob |select -Expand MemberOf```
 
 ```Get-ADUser -Filter * -Properties *```
 ```Get-ADUser -Identity bob -Properties *```
