@@ -28,16 +28,17 @@
 
 # Other resources 
 
+#### Tools
 
-Many more AD Tools and Commands - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
+Sharp precompiled binaries (ALL) - https://github.com/Flangvik/SharpCollection
+
+Selection of precompiled binaries - https://github.com/tijme/binaries
 
 For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
 
-Some precompiled binaries - https://github.com/tijme/binaries
-
-Sharp precompiled binaries - https://github.com/Flangvik/SharpCollection
-
 PowerSharp Pack - https://github.com/S3cur3Th1sSh1t/PowerSharpPack/tree/master
+
+Many more AD Tools and Commands - https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Active%20Directory%20Attack.md
 
 #### Other CRTP Cheatsheets
 https://github.com/0xJs/CRTP-cheatsheet
