@@ -269,6 +269,18 @@ dc machines)
 ```Invoke-UserHunter``` for users/groups you want - will show all active sessions for users/users of specified groups
 
 ```Invoke-UserHunter -GroupName "RDPUsers"```
+* * * 
+#### AD Search
+https://github.com/tomcarver16/ADSearch
+
+optional - ```--json```
+
+
+```ADSearch.exe --search "objectCategory=user"```
+
+```ADSearch.exe --search "(&(objectCategory=group)(cn=*Admins))"```
+
+```ADSearch.exe --search "(&(objectCategory=group)(cn=MS SQL Admins))" --attributes cn,member```
 
 * * *
 #### Bloodhound
