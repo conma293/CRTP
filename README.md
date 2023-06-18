@@ -30,11 +30,11 @@
 
 #### Tools
 
-Sharp precompiled binaries (ALL) - https://github.com/Flangvik/SharpCollection
+Sharp precompiled binaries - https://github.com/Flangvik/SharpCollection
 
-Selection of precompiled binaries - https://github.com/tijme/binaries
+a smaller selection of precompiled binaries - https://github.com/tijme/binaries
 
-For CrackMap go - https://github.com/Porchetta-Industries/CrackMapExec
+CrackMap - https://github.com/Porchetta-Industries/CrackMapExec
 
 PowerSharp Pack - https://github.com/S3cur3Th1sSh1t/PowerSharpPack/tree/master
 
