@@ -10,6 +10,7 @@
   - [Shares, OUs, GPO Mapping etc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#shares-gpos-etc)
   - [Users and Groups on remote machines](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#users-and-groups-of-machines)
   - [User Hunting](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#user-hunting)
+- [ADSearch](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ad-search)
 - [BloodHound/SharpHound/RustHound](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#bloodhound)
 - [Local PrivEsc](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#local-privilege-escalation)
 - [Lateral Movement](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#lateral-movement)
