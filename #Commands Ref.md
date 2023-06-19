@@ -1035,7 +1035,7 @@ OR Using ActiveDirectory module:
 ```Get-ADUser -Filter {TrustedForDelegation -eq $True}```
 
 #### Compromise the server(s) where unconstrained delegation is enabled 
-```Enter-PSSesstion -ComputerName appsrv01```
+```Enter-PSSession -ComputerName appsrv01```
 
 ```Find-LocalAdminAccess```
 
