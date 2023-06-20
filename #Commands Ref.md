@@ -1100,7 +1100,7 @@ It also introduces ```s4u``` - which allows a Service to request a TGS for itsel
 
 ```Get-DomainComputer –TrustedToAuth```
 
-```Get-DomainUser patsy -Properties samaccountname,msds-allowedtodelegateto | Select -Expand msds-allowedtodelegateto```
+```Get-DomainUser Bob -Properties samaccountname,msds-allowedtodelegateto | Select -Expand msds-allowedtodelegateto```
 
 ```Get-DomainComputer WEBSRV01 | Select name,serviceprincipalname,msds-allowedtodelegateto```
 
