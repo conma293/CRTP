@@ -1446,9 +1446,15 @@ Enterprise Admin = Domain Admin of every Domain in the Forest
 
 ```Get-SQLConnectionTestThreaded```
 
+```Get-SQLConnectionTest -Instance "sql-02.ecorp.lab,1433" | fl```
+
+```Get-SQLServerInfo -Instance "sql-02.ecorp.lab,1433"```
+
 ```Get-SQLInstanceDomain | Get-SQLConnectionTestThreaded - Verbose```
 
 ```Get-SQLInstanceDomain | Get-SQLServerInfo -Verbose```
+
+```Get-SQLInstanceDomain | Get-SQLConnectionTest | ? { $_.Status -eq "Accessible" } | Get-SQLServerInfo```
 
 #### Crawl Database Links
 ```Get-SQLServerLink -Instance dcorp-mssql -Verbose```
