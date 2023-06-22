@@ -1444,8 +1444,6 @@ Enterprise Admin = Domain Admin of every Domain in the Forest
 
 ```Get-SQLInstanceDomain```
 
-```Get-SQLConnectionTestThreaded```
-
 ```Get-SQLConnectionTest -Instance "sql-02.ecorp.lab,1433" | fl```
 
 ```Get-SQLServerInfo -Instance "sql-02.ecorp.lab,1433"```
