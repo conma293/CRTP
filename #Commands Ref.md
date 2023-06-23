@@ -201,6 +201,9 @@ Import AD Module without RSAT:
 ```net user <user> /domain```
 
 ```Get-DomainUser```
+
+```Get-DomainUser | select logoncount, displayname, samaccountname, memberof```
+
 ```Get-DomainUser –Identity bob```
 
 ```Get-DomainUser -Identity bob -Properties DisplayName, MemberOf | fl```
