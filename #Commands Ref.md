@@ -187,6 +187,8 @@ Import AD Module without RSAT:
 ```Get-DomainComputer -Ping```
 ```Get-DomainComputer -FullData```
 
+```Get-DomainComputer | select logoncount, samaccountname, dnshostname, distinguishedname, serviceprincipalname```
+
 ```Get-ADComputer -Filter * | select Name```
 
 ```Get-ADComputer -Filter 'OperatingSystem -like "*Server 2016*"' - Properties OperatingSystem | select Name,OperatingSystem```
