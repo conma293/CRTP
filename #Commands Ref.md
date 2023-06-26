@@ -62,6 +62,8 @@
 
 # Powershell Basics
 
+https://www.theochem.ru.nl/~pwormer/teachmat/PS_cheat_sheet.html
+
 #### Help
 ```
 Get-Help Get-Help
