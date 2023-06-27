@@ -666,7 +666,7 @@ We can purge by LUID also:
 
 Check Domain Admins permissions for a specific user:
 
-```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ?{$_.IdentityReference -match 'Mary'}```
+```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | ? { $_.IdentityReference -match 'Mary' }```
 
 ```Get-DomainObjectAcl -Identity "Domain Admins" -ResolveGUIDs | Where-Object { $_.IdentityReference -match 'Mary' }```
 
@@ -674,11 +674,11 @@ Check Domain Admins permissions for a specific user:
 
 Does user 'Mary' have access rights to perform DCSync: 
 
-```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? {($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll'))}```
+```Get-DomainObjectAcl -DistinguishedName "dc=bcorp,dc=ecorp,dc=lab" -ResolveGUIDs | ? { ($_.IdentityReference -match "Mary") -and (($_.ObjectType -match 'replication') -or ($_.ActiveDirectoryRights -match 'GenericAll')) }```
 
 # PowerView tips on DomainObjectACL:
 #### retrieve *most* users who can perform DC replication for dev.testlab.local (i.e. DCsync)
-```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? {($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll')}```
+```Get-DomainObjectAcl "dc=dev,dc=testlab,dc=local" -ResolveGUIDs | ? { ($_.ObjectType -match 'replication-get') -or ($_.ActiveDirectoryRights -match 'GenericAll') }```
 
 #### enumerate who has rights to the 'matt' user in 'testlab.local', resolving rights GUIDs to names
 ```Get-DomainObjectAcl -Identity matt -ResolveGUIDs -Domain testlab.local```
@@ -696,7 +696,7 @@ Does user 'Mary' have access rights to perform DCSync:
 
 This appends the resolved user or group name to each ACE and recurses through:
 ```
-Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
+Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object { $_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_ }
 ```
 
 # Further ACL Enumeration
@@ -712,12 +712,12 @@ Get-DomainObjectAcl -Identity Josh -ResolveGUIDs | Foreach-Object {$_ | Add-Memb
 #### ACL Enumeration for a specific object
 Enumerate all ACLs for specific Identity/object:
 ```
-Get-ObjectAcl -Identity <User123> -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_}
+Get-ObjectAcl -Identity <User123> -ResolveGUIDs | Foreach-Object { $_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_ }
 ```
 
 #### ACLs for current user:
 ```
-Get-DomainUser | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+Get-DomainUser | Get-ObjectAcl -ResolveGUIDs | Foreach-Object { $_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_ } | Foreach-Object { if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_} }
 ```
 
 GenericAll access rights to an object such as a user, means we can do just about anything including change the password:
@@ -726,7 +726,7 @@ GenericAll access rights to an object such as a user, means we can do just about
 
 #### ACLs for current group:
 ```
-Get-DomainGroup | Get-ObjectAcl -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+Get-DomainGroup | Get-ObjectAcl -ResolveGUIDs | Foreach-Object { $_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_ } | Foreach-Object { if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_} }
 ```
 
 likewise, if we have GenericAll access rights a group object, we can simply add ourselves to that group:
@@ -753,7 +753,7 @@ If we identify through the above enumeration techniques that we have ```WriteDac
 Verify it worked:
 
 ```
-Get-ObjectAcl -Identity <Victor> -ResolveGUIDs | Foreach-Object {$_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_} | Foreach-Object {if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_}}
+Get-ObjectAcl -Identity <Victor> -ResolveGUIDs | Foreach-Object { $_ | Add-Member -NotePropertyName Identity -NotePropertyValue (ConvertFrom-SID $_.SecurityIdentifier.value) -Force; $_ } | Foreach-Object { if ($_.Identity -eq $("$env:UserDomain\$env:Username")) {$_} }
 ```
 
 ```
