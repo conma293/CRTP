@@ -2,8 +2,7 @@ Follow this excellent guide -https://robertscocca.medium.com/building-an-active-
 
 - Create users, groups, and OUs
 - Make sure you have at least one user in the Domain Admins group
-- Make sure you add a local administrators group and GPO so some admin users other than Domain Admin inherit localadmin onto machines within certain OUs you set
-  - [guide](https://thesysadminchannel.com/add-local-administrators-via-gpo-group-policy/)
+- Make sure you add a local administrators group and GPO so some admin users other than Domain Admin inherit localadmin onto machines within certain OUs you set - [guide](https://thesysadminchannel.com/add-local-administrators-via-gpo-group-policy/)
 - Set a GPO to disable Windows Defender as shown in the guide
 - Make sure you add an SPN as shown in the guide
 - Make sure your (web)server has an active SPN
