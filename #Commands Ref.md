@@ -609,7 +609,9 @@ rubeus.exe golden /user:DAdmin123 /rc4:EA2344691D140975946372D18949706857EB9C5F6
 
 #### Diamond:
 ```/krbkey:``` krbtgt hash (must be the same hash type as being passed for the user!)
+
 ```/ticketuserid``` - RID of User to be impersonated (likely -500 for builtin or -1104 for DA User)
+
 ```/groups``` - Group RID to be impersonated (likely 512)
 
 optional:
