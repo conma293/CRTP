@@ -208,7 +208,7 @@ Import AD Module without RSAT:
 
 ```Get-DomainUser```
 
-```Get-DomainUser | select logoncount, displayname, samaccountname, memberof```
+```Get-DomainUser | select logoncount, displayname, samaccountname, memberof | fl```
 
 ```Get-DomainUser –Identity bob```
 
