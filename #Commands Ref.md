@@ -61,7 +61,7 @@
 - [Forest Persistence - DC Shadow](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forest-persistence---dcshadow)
 - [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
 - LAPS
-- Kerberos Relay
+- [Kerberos Relay](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberos-relay)
 
 # Powershell Basics
 
@@ -1640,4 +1640,6 @@ https://github.com/dirkjanm/krbrelayx
 
 https://github.com/ShorSec/KrbRelayUp
 
+https://dirkjanm.io/krbrelayx-unconstrained-delegation-abuse-toolkit/
 
+https://offsec.almond.consulting/ldap-relays-for-initial-foothold-in-dire-situations.html
