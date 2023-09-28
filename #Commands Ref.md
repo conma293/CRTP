@@ -61,6 +61,7 @@
 - [Forest Persistence - DC Shadow](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forest-persistence---dcshadow)
 - [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
 - LAPS
+- Kerberos Relay
 
 # Powershell Basics
 
@@ -1620,5 +1621,23 @@ Full Control means set ```CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT``` and remove the ``
 
 # LAPS
 ```Get-DomainComputer | ? { $_."ms-Mcs-AdmPwdExpirationTime" -ne $null } | select dnsHostName```
+
+# Kerberos Relay
+
+Kerberos Relay
+
+
+Force a machine/SPN to connect to a Rogue RPC Server and an arbitrary SPN i.e., 
+Now we have a TGS because we have relayed the LDAP Request which has the same TGS/ServiceAcctHash
+This means we can own ldap - very similar to unconstrained delegation
+
+From here as we own LDAP - we can set any AD Object we want... so - lets set up an RBCD/ShadowCreds property on (any) target machine, we can then own that machine.
+We can either create a machineaccount or use a MachineAccount$ TGT we own, to perform RBCD attack to gain access to that target machine, like any RBCD attack.
+
+https://github.com/cube0x0/KrbRelay
+
+https://github.com/dirkjanm/krbrelayx
+
+https://github.com/ShorSec/KrbRelayUp
 
 
