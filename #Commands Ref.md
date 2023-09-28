@@ -1624,22 +1624,23 @@ Full Control means set ```CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT``` and remove the ``
 
 # Kerberos Relay
 
-Kerberos Relay
+Kerberos Relay is the ability to relay Kerberos Authentication remotely - it is similar to delegation but we dont need access to the machine. Requires SMB Signing to be off (or can use ADCS route if available, which doesnt touch SMB Signing)
 
+- Force a machine to connect to a Rogue RPC Server and an arbitrary SPN 
+- Now we have a TGS for the arbitrary SPN, we can relay this to an SPN of our choice, as it has the same TGS/ServiceAcctHash (often HOST\DC1 --> LDAP\DC1).
+- This means we can own ldap - very similar to unconstrained delegation where we force a machine to connect, and constrained delegation where we can specify an alt service.
 
-Force a machine to connect to a Rogue RPC Server and an arbitrary SPN 
-Now we have a TGS for the arbitrary SPN, we can relay this to an SPN of our choice, as it has the same TGS/ServiceAcctHash (often HOST\DC1 --> LDAP\DC1).
-This means we can own ldap - very similar to unconstrained delegation where we force a machine to connect, and constrained delegation where we can specify an alt service.
+- From here as we own LDAP - we can set any AD Object we want... so - lets set up an RBCD/ShadowCreds property on (any) target machine, we can then own that machine.
+- We can either create a machineaccount or use a MachineAccount$ TGT we own, to then perform the RBCD attack, and subsequent S4U to gain access to that target machine, like any RBCD attack.
 
-From here as we own LDAP - we can set any AD Object we want... so - lets set up an RBCD/ShadowCreds property on (any) target machine, we can then own that machine.
-We can either create a machineaccount or use a MachineAccount$ TGT we own, to then perform the RBCD attack, and subsequent S4U to gain access to that target machine, like any RBCD attack.
-
+#### Tools
 https://github.com/cube0x0/KrbRelay
 
 https://github.com/dirkjanm/krbrelayx
 
 https://github.com/ShorSec/KrbRelayUp
 
+#### Further Reading
 https://dirkjanm.io/krbrelayx-unconstrained-delegation-abuse-toolkit/
 
 https://offsec.almond.consulting/ldap-relays-for-initial-foothold-in-dire-situations.html
