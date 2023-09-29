@@ -59,8 +59,8 @@
   - [Across Forests - BiDirectional Trusts](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#across-forests---inter-forest-trust)
 - [MS SQL](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#ms-sql)
 - [Forest Persistence - DC Shadow](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#forest-persistence---dcshadow)
-- [Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
-- LAPS
+- [AD Certificates](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#certificates)
+- [LAPS](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#laps)
 - [Kerberos Relay](https://github.com/conma293/CRTP/blob/main/%23Commands%20Ref.md#kerberos-relay)
 
 # Powershell Basics
